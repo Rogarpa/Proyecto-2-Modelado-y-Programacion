@@ -13,7 +13,7 @@ public class Lobo implements Cloneable{
         Object clone=null;
 
         try{
-            clone=super.clone
+            clone=super.clone;
         }catch(CloneNotSupportedException e){
             e.printStackTrace();
         }

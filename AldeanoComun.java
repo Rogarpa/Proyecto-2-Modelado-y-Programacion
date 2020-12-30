@@ -1,6 +1,6 @@
 public class AldeanoComun extends Aldeano{
 
-    private unico;
+    private Object unico;
 
     /**
     *Metodo para crear hombres lobos con prototype.
@@ -10,7 +10,7 @@ public class AldeanoComun extends Aldeano{
         Object clone=null;
 
         try{
-            clone=super.clone
+            clone=super.clone;
         }catch(CloneNotSupportedException e){
             e.printStackTrace();
         }

@@ -7,7 +7,7 @@ public class Angel implements Angelical{
     *Metodo para obtener la unica instancia de la clase.
     *@return la instancia.
     */
-    public Vidente getinstance(){
+    public Angel getinstance(){
         return this.uniqueinstanceof;
     }
 

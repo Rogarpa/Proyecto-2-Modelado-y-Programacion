@@ -1,7 +1,7 @@
 
 public class Vidente extends Aldeano{
 
-    private static Aldeano uniqueinstanceof;
+    private static Vidente uniqueinstanceof;
 
     /**
     *Metodo para obtener la unica instancia de la clase.
