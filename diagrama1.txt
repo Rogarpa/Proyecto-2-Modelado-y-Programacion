@@ -1,0 +1,67 @@
+
+@startuml
+
+interface Jugador{
++getId():int
++morir():void
++clone():Jugador
+}
+
+class Lobo{
++aldea:Aldea
++id:int
++nickname:String
++clone():Lobo
++getId():int
++getAldea():Aldea
++getNickname():String
+}
+
+class Aldeano{
++aldea:Aldea
++id:int
++nickname:String
++getId():int
++getAldea():Aldea
++getNickname():String
+}
+
+class Cazador{
+-static uniqueinstance:Cazador
++static getinstanceof()
+-Cazador()
+}
+
+class Vidente{
+-static uniqueinstance:Vidente
++static getinstanceof()
+-Vidente()
+}
+
+class Caballero{
+-static uniqueinstance:Caballero
++static getinstanceof()
+-Caballero()
+}
+
+class Angel{
+-static uniqueinstance:Angel
++static getinstanceof()
+-Angel()
++mefui():void
+}
+
+class AldeanoComun{
++clone():AldeanoComun
+}
+
+Aldeano..|>Jugador
+Lobo..|>Jugador
+Cazador..|>Aldeano
+Caballero..|>Aldeano
+Vidente..|>Aldeano
+AldeanoComun..|>Aldeano
+Angelical..|>Aldeano
+Angel..o Angelical
+
+@enduml
