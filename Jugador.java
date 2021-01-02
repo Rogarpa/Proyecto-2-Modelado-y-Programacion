@@ -10,4 +10,10 @@ public interface Jugador{
     *Metodo para cuando un personaje muera.
     */
     public void morir();
+
+    /**
+    *Metodo para clonar que devuelve un jugador.
+    *@return un Jugador.
+    */
+    public Jugador clone();
 }

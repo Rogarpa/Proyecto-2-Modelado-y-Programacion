@@ -28,4 +28,5 @@ public class Cazador extends Aldeano{
 
     @Override
     public void morir(){}
+
 }

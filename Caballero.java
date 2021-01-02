@@ -31,4 +31,5 @@ public class Caballero extends Aldeano{
     public void morir(){
 
     }
+
 }

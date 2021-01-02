@@ -8,21 +8,8 @@ public abstract class Lobo implements Jugador,Cloneable{
     private int id;
     private String nickname;
 
-    /**
-    *Metodo para crear hombres lobos con prototype.
-    *@return un prototype de lobo.
-    */
-    public Object clone(){
-        /**Object clone=null;
-
-        try{
-            clone=super.clone;
-        }catch(CloneNotSupportedException e){
-            e.printStackTrace();
-        }
-        return clone;*/
-        return null;
-    }
+    @Override
+    public abstract Jugador clone();
 
     /**
     *Metodo que obtiene el id del Aldeano.

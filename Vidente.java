@@ -25,4 +25,7 @@ public class Vidente extends Aldeano{
     *Meotdo para que la vidente pueda usar su poder.
     */
     public void descubriridentidad(int id){}
+
+    @Override
+    public void morir(){}
 }

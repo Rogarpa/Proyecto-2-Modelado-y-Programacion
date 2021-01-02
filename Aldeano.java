@@ -30,9 +30,7 @@ public abstract class Aldeano implements Jugador{
     }
 
     @Override
-    public void morir(){
-
-    }
+    public abstract void morir();
 
     /**
     *Metodo para obtener su ropa.
@@ -54,4 +52,7 @@ public abstract class Aldeano implements Jugador{
     public void getCabello(){
         System.out.println(this.cabello);
     }
+
+    @Override
+    public abstract Jugador clone();
 }

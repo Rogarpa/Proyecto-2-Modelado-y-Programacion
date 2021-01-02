@@ -28,4 +28,5 @@ public class Angel extends Aldeano{
 
     @Override
     public void morir(){}
+
 }
