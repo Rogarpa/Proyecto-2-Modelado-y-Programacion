@@ -1,5 +1,5 @@
 
-public class Lobo implements Cloneable{
+public abstract class Lobo implements Jugador,Cloneable{
 
     private Aldea aldea;
     private int id;
@@ -10,14 +10,15 @@ public class Lobo implements Cloneable{
     *@return un prototype de lobo.
     */
     public Object clone(){
-        Object clone=null;
+        /**Object clone=null;
 
         try{
             clone=super.clone;
         }catch(CloneNotSupportedException e){
             e.printStackTrace();
         }
-        return clone;
+        return clone;*/
+        return null;
     }
 
     /**

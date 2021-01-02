@@ -20,4 +20,9 @@ public class Caballero extends Aldeano{
     *Metodo para que el caballero pueda usar su poder.
     */
     public void setRehen(){}
+
+    @Override
+    public void morir(){
+        
+    }
 }

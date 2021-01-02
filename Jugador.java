@@ -2,8 +2,9 @@ public interface Jugador{
 
     /**
     *Metodo para obtener el Id
+    *@return el id.
     */
-    public void getId();
+    public int getId();
 
     /**
     *Metodo para cuando un personaje muera.

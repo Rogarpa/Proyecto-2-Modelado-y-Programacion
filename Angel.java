@@ -1,5 +1,5 @@
 
-public class Angel implements Angelical{
+public class Angel extends Aldeano{
 
     private static Angel uniqueinstanceof;
 

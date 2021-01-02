@@ -1,6 +1,15 @@
 
 @startuml
 
+Aldeano..|>Jugador
+Lobo..|>Jugador
+Cazador..|>Aldeano
+Caballero..|>Aldeano
+Vidente..|>Aldeano
+AldeanoComun..|>Aldeano
+Angelical..|>Aldeano
+Angel..o Angelical
+
 interface Jugador{
 +getId():int
 +morir():void
@@ -55,13 +64,35 @@ class AldeanoComun{
 +clone():AldeanoComun
 }
 
-Aldeano..|>Jugador
-Lobo..|>Jugador
-Cazador..|>Aldeano
-Caballero..|>Aldeano
-Vidente..|>Aldeano
-AldeanoComun..|>Aldeano
-Angelical..|>Aldeano
-Angel..o Angelical
+MagiaCaballero..>Magia
+MagiaCazador..>Magia
+MagiaAngel..>Magia
+MagiaVidente..>Magia
 
+interface Magia{
++actua():void
+}
+
+class MagiaAngel{
+-aDormir:Lobo
++MagiaAngel(aDormir:Lobo,aldeaSobreLaCualActuar:Aldea)
++actua():void
+}
+
+class MagiaCazador{
+-aDisparar:Jugador
++MagiaCazador(aDisparar:Jugador,aldeaSobreLaCualActuar:Aldea)
++actua():void
+}
+
+class MagiaVidente{
+-aVer:Jugador
++MagiaVidente(aVer:Jugador,aldeaSobreLaCualActuar:Aldea)
++actua():void
+}
+class Caballero{
+-sacrificar:Jugador
++MagiaCaballero(sacrificar:Jugador,aldeaSobreLaCualActuar:Aldea)
++actua():void
+}
 @enduml

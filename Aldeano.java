@@ -1,13 +1,10 @@
 
-public class Aldeano{
+public abstract class Aldeano implements Jugador{
     private Aldea aldea;
     private int id;
     private String nickname;
 
-    /**
-    *Metodo que obtiene el id del Aldeano.
-    *@return el id
-    */
+    @Override
     public int getId(){
         return this.id;
     }
@@ -28,4 +25,8 @@ public class Aldeano{
         return this.nickname;
     }
 
+    @Override
+    public void morir(){
+        
+    }
 }
