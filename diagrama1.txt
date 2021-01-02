@@ -1,13 +1,16 @@
 
 @startuml
+ 
+Aldeano..>Jugador
+Lobo..>Jugador
 
-Aldeano..|>Jugador
-Lobo..|>Jugador
-Cazador..|>Aldeano
-Caballero..|>Aldeano
-Vidente..|>Aldeano
-AldeanoComun..|>Aldeano
-Angel..|>Aldeano
+    'Relaciones que van hacia aldeano'
+
+Cazador--|>Aldeano
+Caballero--|>Aldeano
+Vidente--|>Aldeano
+AldeanoComun--|>Aldeano
+Angel--|>Aldeano
 
 interface Jugador{
 +getId():int
