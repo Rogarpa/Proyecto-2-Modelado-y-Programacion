@@ -1,7 +1,5 @@
 public class AldeanoComun extends Aldeano{
 
-    private Object unico;
-
     /**
     *Metodo para crear hombres lobos con prototype.
     *@return un prototype de lobo.

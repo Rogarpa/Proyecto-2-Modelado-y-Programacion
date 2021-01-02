@@ -20,4 +20,7 @@ public class Angel extends Aldeano{
     *Meotdo para que la vidente pueda usar su poder.
     */
     public void mefui(){}
+
+    @Override
+    public void morir(){}
 }

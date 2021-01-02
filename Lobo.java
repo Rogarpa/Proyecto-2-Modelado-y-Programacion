@@ -1,6 +1,9 @@
 
-public abstract class Lobo implements Jugador,Cloneable{
+public class Lobo implements Jugador,Cloneable{
 
+    private String arma;
+    private String ropa;
+    private String cabello;
     private Aldea aldea;
     private int id;
     private String nickname;
@@ -44,4 +47,7 @@ public abstract class Lobo implements Jugador,Cloneable{
     public String getNickname(){
         return this.nickname;
     }
+
+    @Override
+    public void morir(){}
 }

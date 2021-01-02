@@ -7,8 +7,7 @@ Cazador..|>Aldeano
 Caballero..|>Aldeano
 Vidente..|>Aldeano
 AldeanoComun..|>Aldeano
-Angelical..|>Aldeano
-Angel..o Angelical
+Angel..|>Aldeano
 
 interface Jugador{
 +getId():int
@@ -17,9 +16,12 @@ interface Jugador{
 }
 
 class Lobo{
-+aldea:Aldea
-+id:int
-+nickname:String
+-cabello:String
+-arma:String
+-ropa:String
+-aldea:Aldea
+-id:int
+-nickname:String
 +clone():Lobo
 +getId():int
 +getAldea():Aldea
@@ -27,9 +29,12 @@ class Lobo{
 }
 
 class Aldeano{
-+aldea:Aldea
-+id:int
-+nickname:String
+-cabello:String
+-arma:String
+-ropa:String
+-aldea:Aldea
+-id:int
+-nickname:String
 +getId():int
 +getAldea():Aldea
 +getNickname():String
@@ -39,18 +44,21 @@ class Cazador{
 -static uniqueinstance:Cazador
 +static getinstanceof()
 -Cazador()
++setEsbirro():void
 }
 
 class Vidente{
 -static uniqueinstance:Vidente
 +static getinstanceof()
 -Vidente()
++descubrirIdentidad():void
 }
 
 class Caballero{
 -static uniqueinstance:Caballero
 +static getinstanceof()
 -Caballero()
++setRehen():void
 }
 
 class Angel{
@@ -62,6 +70,7 @@ class Angel{
 
 class AldeanoComun{
 +clone():AldeanoComun
++morir():void
 }
 
 MagiaCaballero..>Magia
@@ -90,7 +99,8 @@ class MagiaVidente{
 +MagiaVidente(aVer:Jugador,aldeaSobreLaCualActuar:Aldea)
 +actua():void
 }
-class Caballero{
+
+class MagiaCaballero{
 -sacrificar:Jugador
 +MagiaCaballero(sacrificar:Jugador,aldeaSobreLaCualActuar:Aldea)
 +actua():void

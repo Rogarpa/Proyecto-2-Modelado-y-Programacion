@@ -20,4 +20,7 @@ public class Cazador extends Aldeano{
     *Metodo para que el cazador pueda usar su poder.
     */
     public void setEsbirro(){}
+
+    @Override
+    public void morir(){}
 }

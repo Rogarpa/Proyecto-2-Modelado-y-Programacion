@@ -1,5 +1,9 @@
 
 public abstract class Aldeano implements Jugador{
+
+    private String ropa;
+    private String cabello;
+    private String arma;
     private Aldea aldea;
     private int id;
     private String nickname;
@@ -27,6 +31,6 @@ public abstract class Aldeano implements Jugador{
 
     @Override
     public void morir(){
-        
+
     }
 }
