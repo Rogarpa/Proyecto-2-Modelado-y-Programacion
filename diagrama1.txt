@@ -15,7 +15,7 @@ interface Jugador{
 +clone():Jugador
 }
 
-class Lobo{
+abstract Lobo{
 -cabello:String
 -arma:String
 -ropa:String
@@ -26,9 +26,12 @@ class Lobo{
 +getId():int
 +getAldea():Aldea
 +getNickname():String
++getArma():void
++getCabello():void
++getRopa():void
 }
 
-class Aldeano{
+abstract Aldeano{
 -cabello:String
 -arma:String
 -ropa:String
@@ -38,37 +41,41 @@ class Aldeano{
 +getId():int
 +getAldea():Aldea
 +getNickname():String
++getArma():void
++getCabello():void
++getRopa():void
 }
 
 class Cazador{
--static uniqueinstance:Cazador
-+static getinstanceof()
+-static uniqueinstanceof:Cazador
++static getinstance()
 -Cazador()
 +setEsbirro():void
 }
 
 class Vidente{
--static uniqueinstance:Vidente
-+static getinstanceof()
+-static uniqueinstanceof:Vidente
++static getinstance()
 -Vidente()
 +descubrirIdentidad():void
 }
 
 class Caballero{
--static uniqueinstance:Caballero
-+static getinstanceof()
+-static uniqueinstanceof:Caballero
++static getinstance()
 -Caballero()
 +setRehen():void
 }
 
 class Angel{
--static uniqueinstance:Angel
-+static getinstanceof()
+-static uniqueinstanceof:Angel
++static getinstance()
 -Angel()
 +mefui():void
 }
 
 class AldeanoComun{
++AldeanoComun()
 +clone():AldeanoComun
 +morir():void
 }

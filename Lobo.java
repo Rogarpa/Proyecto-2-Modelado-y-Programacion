@@ -1,5 +1,5 @@
 
-public class Lobo implements Jugador,Cloneable{
+public abstract class Lobo implements Jugador,Cloneable{
 
     private String arma;
     private String ropa;
@@ -50,4 +50,25 @@ public class Lobo implements Jugador,Cloneable{
 
     @Override
     public void morir(){}
+
+    /**
+    *Metodo para obtener su ropa.
+    */
+    public void getRopa(){
+        System.out.println(this.ropa);
+    }
+
+    /**
+    *Metodo para obtener su arma.
+    */
+    public void getArma(){
+        System.out.println(this.arma);
+    }
+
+    /**
+    *Metodo para obtener el cabello.
+    */
+    public void getCabello(){
+        System.out.println(this.cabello);
+    }
 }

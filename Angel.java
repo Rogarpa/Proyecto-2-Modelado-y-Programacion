@@ -7,14 +7,19 @@ public class Angel extends Aldeano{
     *Metodo para obtener la unica instancia de la clase.
     *@return la instancia.
     */
-    public Angel getinstance(){
-        return this.uniqueinstanceof;
+    public static Angel getinstance(){
+        uniqueinstanceof=new Angel();
+        return uniqueinstanceof;
     }
 
     /**
     *El constructor de la clase.
     */
-    private Angel(){}
+    private Angel(){
+        cabello="Rubio de lado.";
+        arma="Espada bendita.";
+        ropa="Toga y alas.";
+    }
 
     /**
     *Meotdo para que la vidente pueda usar su poder.

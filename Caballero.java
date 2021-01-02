@@ -7,14 +7,20 @@ public class Caballero extends Aldeano{
     *Metodo para obtener la unica instancia del Caballero.
     *@return la unica instancia.
     */
-    public Caballero getinstance(){
-        return this.uniqueinstanceof;
+    public static Caballero getinstance(){
+        uniqueinstanceof=new Caballero();
+        return uniqueinstanceof;
+
     }
 
     /**
     *Constructor de la clase.
     */
-    private Caballero(){}
+    private Caballero(){
+        cabello="Desconocido por el casco.";
+        arma="Cuchillo oxidado.";
+        ropa="Armadura de hierro forjado.";
+    }
 
     /**
     *Metodo para que el caballero pueda usar su poder.
@@ -23,6 +29,6 @@ public class Caballero extends Aldeano{
 
     @Override
     public void morir(){
-        
+
     }
 }

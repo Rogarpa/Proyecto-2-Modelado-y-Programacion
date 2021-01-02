@@ -7,14 +7,19 @@ public class Vidente extends Aldeano{
     *Metodo para obtener la unica instancia de la clase.
     *@return la instancia.
     */
-    public Vidente getinstance(){
-        return this.uniqueinstanceof;
+    public static Vidente getinstance(){
+        uniqueinstanceof=new Vidente();
+        return uniqueinstanceof;
     }
 
     /**
     *El constructor de la clase.
     */
-    private Vidente(){}
+    private Vidente(){
+        cabello="Desconocido, tapado por turbante.";
+        arma="Ninguna, solo una bola de cristal.";
+        ropa="Holzkary moderno, tradicional gitano.";
+    }
 
     /**
     *Meotdo para que la vidente pueda usar su poder.

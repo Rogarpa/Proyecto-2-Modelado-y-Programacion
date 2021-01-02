@@ -20,4 +20,13 @@ public class AldeanoComun extends Aldeano{
     public void morir(){
 
     }
+
+    /**
+    *Constructor de la clase.
+    */
+    public AldeanoComun(){
+        cabello="Peinado hacia atras.";
+        arma="Lanza de Madera";
+        ropa="Camisa de Seda, pantalones hilados de algodón.";
+    }
 }

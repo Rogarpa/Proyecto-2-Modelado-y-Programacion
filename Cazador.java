@@ -7,14 +7,19 @@ public class Cazador extends Aldeano{
     *Metodo para obtener la unica instancia de la clase.
     *@return la instancia.
     */
-    public Cazador getinstance(){
-        return this.uniqueinstanceof;
+    public static Cazador getinstance(){
+        uniqueinstanceof=new Cazador();
+        return uniqueinstanceof;
     }
 
     /**
     *Constructor de la clase.
     */
-    private Cazador(){}
+    public Cazador(){
+        cabello="Negro, tapado por su sombrero bombardero ruso.";
+        ropa="Chamarra de lana y pantalones igual de lana.";
+        arma="Rifle de candado.";
+    }
 
     /**
     *Metodo para que el cazador pueda usar su poder.
