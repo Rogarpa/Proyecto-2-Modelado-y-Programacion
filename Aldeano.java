@@ -53,6 +53,4 @@ public abstract class Aldeano implements Jugador{
         System.out.println(this.cabello);
     }
 
-    @Override
-    public abstract Jugador clone();
 }

@@ -14,6 +14,6 @@ public interface Jugador{
     /**
     *Metodo para clonar que devuelve un jugador.
     *@return un Jugador.
-    */
-    public Jugador clone();
+    *
+    public Jugador clone();*/
 }
