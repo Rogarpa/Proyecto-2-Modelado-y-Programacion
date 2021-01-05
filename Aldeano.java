@@ -29,22 +29,25 @@ public abstract class Aldeano implements Jugador{
     /**
     *Metodo para obtener su ropa.
     */
-    public void getRopa(){
+    public String getRopa(){
         System.out.println(this.ropa);
+        return this.ropa;
     }
 
     /**
     *Metodo para obtener su arma.
     */
-    public void getArma(){
+    public String getArma(){
         System.out.println(this.arma);
+        return this.arma;
     }
 
     /**
     *Metodo para obtener el cabello.
     */
-    public void getCabello(){
+    public String getCabello(){
         System.out.println(this.cabello);
+        return this.cabello;
     }
 
 }

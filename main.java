@@ -2,11 +2,15 @@
 public class main{
     public static void main(String[] args){
 
+        Aldea primera=new Aldea();
         Aldeano uno=new AldeanoComun();
         Aldeano moni=Vidente.getinstance();
         Aldeano dos=Cazador.getinstance();
         Aldeano tres=Caballero.getinstance();
         Aldeano cuatro=new Lobo();
+        Aldeano cinco=Angel.getinstance();
+
+        Magia magia=new MagiaCazador(tres,primera);
 
         uno.getArma();
         moni.getRopa();
@@ -18,6 +22,10 @@ public class main{
         dos.getCabello();
         tres.getArma();
         cuatro.getArma();
+
+        primera.matar(dos,cuatro);
+
+
 
     }
 }

@@ -124,7 +124,11 @@ EstadoNoche..|>EstadoAldea
 EstadoDia..|>EstadoAldea
 
 class Aldea{
+-dia:EstadoAldea
+-noche:EstadoAldea
+-EstadoActual:EstadoAldea
 +Aldea()
++Aldea(EstadoActual:EstadoAldea)
 +convocarJuicio():void
 +convocarBanquete():void
 +recuentoNoche():void
@@ -132,6 +136,7 @@ class Aldea{
 +amanece():void
 -matar(Personaje:aMatar,Personaje asesino):void
 }
+
 interface EstadoAldea{
 +convocarJuicio():void
 +convocarBanquete():void

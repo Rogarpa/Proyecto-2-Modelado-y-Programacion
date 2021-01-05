@@ -1,11 +1,26 @@
 
 public class Aldea implements EstadoAldea{
 
+    private EstadoAldea noche;
+    private EstadoAldea dia;
+
+    private EstadoAldea EstadoActual;
+
     /**
     *Constructor de la Clase.
     */
     public Aldea(){
+        dia=new EstadoDia(this);
+        noche=new EstadoNoche(this);
 
+        EstadoActual=dia;
+    }
+
+    public Aldea(EstadoAldea EstadoActual){
+        this.EstadoActual=EstadoActual;
+
+        dia=new EstadoDia(this);
+        noche= new EstadoNoche(this);
     }
 
 
@@ -41,6 +56,6 @@ public class Aldea implements EstadoAldea{
     */
     public void matar(Aldeano aMatar,Aldeano asesino){
         aMatar.morir();
-        System.out.println(aMatar.getNickname()+" fue asesinado por "+asesino.getNickname()+"con "+asesino.getArma());
+        System.out.println(aMatar.getNickname()+" fue asesinado por "+asesino.getNickname()+" con "+asesino.getArma());
     }
 }
