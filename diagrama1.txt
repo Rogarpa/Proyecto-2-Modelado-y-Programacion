@@ -1,8 +1,7 @@
 
 @startuml
- 
+
 Aldeano..>Jugador
-Lobo..>Jugador
 
     'Relaciones que van hacia aldeano'
 
@@ -11,27 +10,19 @@ Caballero--|>Aldeano
 Vidente--|>Aldeano
 AldeanoComun--|>Aldeano
 Angel--|>Aldeano
+Lobo--|>Aldeano
 
 interface Jugador{
 +getId():int
 +morir():void
-+clone():Jugador
++getAldea():Aldea
++getNickname():String
 }
 
 abstract Lobo{
--cabello:String
--arma:String
--ropa:String
--aldea:Aldea
--id:int
--nickname:String
 +clone():Lobo
-+getId():int
-+getAldea():Aldea
-+getNickname():String
-+getArma():void
-+getCabello():void
-+getRopa():void
++morir():void
++Lobo():Lobo
 }
 
 abstract Aldeano{
@@ -47,6 +38,7 @@ abstract Aldeano{
 +getArma():void
 +getCabello():void
 +getRopa():void
++morir():void
 }
 
 class Cazador{

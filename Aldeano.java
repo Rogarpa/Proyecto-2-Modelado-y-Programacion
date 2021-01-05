@@ -13,18 +13,12 @@ public abstract class Aldeano implements Jugador{
         return this.id;
     }
 
-    /**
-    *Metodo que obtiene la aldea a la que pertenece el Aldeano.
-    *@return la aldea.
-    */
+    @Override
     public Aldea getAldea(){
         return this.aldea;
     }
 
-    /**
-    *Metodo para obtener el nombre del Aldeano.
-    *@return el nombre.
-    */
+    @Override
     public String getNickname(){
         return this.nickname;
     }

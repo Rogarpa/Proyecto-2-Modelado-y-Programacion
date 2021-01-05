@@ -4,7 +4,7 @@ public class AldeanoComun extends Aldeano{
     *Metodo para crear hombres lobos con prototype.
     *@return un prototype de lobo.
     */
-    public Jugador clone(){
+    public AldeanoComun clone(){
         /**Object clone=null;
 
         try{
