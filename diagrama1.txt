@@ -79,6 +79,8 @@ class AldeanoComun{
 +morir():void
 }
 
+    'Relaciones de Magia.'
+
 MagiaCaballero..>Magia
 MagiaCazador..>Magia
 MagiaAngel..>Magia
@@ -110,5 +112,51 @@ class MagiaCaballero{
 -sacrificar:Jugador
 +MagiaCaballero(sacrificar:Jugador,aldeaSobreLaCualActuar:Aldea)
 +actua():void
+}
+
+    'Patron State'
+
+    'Relaciones de Aldea'
+
+EstadoAldea..o Aldea
+EstadoAldea o..Aldea
+EstadoNoche..|>EstadoAldea
+EstadoDia..|>EstadoAldea
+
+class Aldea{
++Aldea()
++convocarJuicio():void
++convocarBanquete():void
++recuentoNoche():void
++anochece():void
++amanece():void
+-matar(Personaje:aMatar,Personaje asesino):void
+}
+interface EstadoAldea{
++convocarJuicio():void
++convocarBanquete():void
++recuentoNoche():void
++anochece():void
++amanece():void
+}
+
+class EstadoDia{
+-narrador:Aldea
++convocarJuicio():void
++convocarBanquete():void
++recuentoNoche():void
++anochece():void
++amanece():void
++EstadoDia(Aldea narrador)
+}
+
+class EstadoNoche{
+-narrador:Aldea
++convocarJuicio():void
++convocarBanquete():void
++recuentoNoche():void
++anochece():void
++amanece():void
++EstadoNoche(Aldea narrador)
 }
 @enduml
