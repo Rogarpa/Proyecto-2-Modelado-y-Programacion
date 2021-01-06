@@ -26,27 +26,27 @@ public class Aldea implements EstadoAldea{
 
     @Override
     public void convocarJuicio(){
-
+        EstadoActual.convocarJuicio();
     }
 
     @Override
     public void recuentoNoche(){
-
+        EstadoActual.recuentoNoche();
     }
 
     @Override
     public void convocarBanquete(){
-
+        EstadoActual.convocarBanquete();
     }
 
     @Override
     public void anochece(){
-
+        EstadoActual.anochece();
     }
 
     @Override
     public void amanece(){
-
+        EstadoActual.amanece(); 
     }
 
     /**
@@ -58,4 +58,15 @@ public class Aldea implements EstadoAldea{
         aMatar.morir();
         System.out.println(aMatar.getNickname()+" fue asesinado por "+asesino.getNickname()+" con "+asesino.getArma());
     }
+
+    /**
+    *Metodo para cambiár el Estado de la Aldea.
+    *@param EstadoActual el nuevo estado.
+    */
+    public void setEstadoActual(EstadoAldea EstadoActual){
+        this. EstadoActual = EstadoActual;
+    }
+
+    public EstadoAldea getAnocheciendo(){ return noche;}
+    public EstadoAldea getAmaneciendo(){ return dia;}
 }
