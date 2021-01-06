@@ -122,13 +122,14 @@ EstadoAldea..o Aldea
 EstadoAldea o..Aldea
 EstadoNoche..|>EstadoAldea
 EstadoDia..|>EstadoAldea
-
+ 
 class Aldea{
 -dia:EstadoAldea
 -noche:EstadoAldea
 -EstadoActual:EstadoAldea
 +Aldea()
 +Aldea(EstadoActual:EstadoAldea)
++setEstadoActual(estadoNuevo: EstadoAldea)
 +convocarJuicio():void
 +convocarBanquete():void
 +recuentoNoche():void
@@ -164,4 +165,46 @@ class EstadoNoche{
 +amanece():void
 +EstadoNoche(Aldea narrador)
 }
+                'Patron Builder'
+
+    BuilderPersonajes ..o DirectorBuilderPersonajes 
+    Jugador ..o DirectorBuilderPersonajes    
+    BuilderAldeano ..|> BuilderPersonajes
+
+class DirectorBuilderPersonajes{
+    # builderActual: BuilderPersonajes
+    # personajeAConstruir: Personaje
+
+
+    Director(tipoBuilder: BuilderPersonajes)
+    +cambiarBuilder(tipoBuilder: BuilderPersonajes): void
+    
+    +creaLoboSimple(id: int, nickname: String, aldeaHogar: a): LoboSimple
+    +creaAldeanoComun(id: int, nickname: String, aldeaHogar: a): AldeanoComun 
+    +creaAngel(id: int, nickname: String, aldeaHogar: a): Angel
+    +creaVidente(id: int, nickname: String, aldeaHogar: a): Vidente
+    +creaCazador(id: int, nickname: String, aldeaHogar: a): Cazador
+    +creaCaballero(id: int, nickname: String, aldeaHogar: a): Caballero
+
+}
+
+interface "BuilderPersonajes"{
+    + setCabello(): void
+    + setArma(): void
+    + setRopa(): void
+    + setAldea(): void
+}
+
+class "BuilderAldeano"{
+    # personajeAConstruir: Aldeano
+
+    + BuilderAldeano(id: int, nickname: String, aldeHogar: Aldea):
+    + setCabello(): void
+    + setArma(): void
+    + setRopa(): void
+    + setAldea(): void
+
+    + getPersonaje(): Jugador
+}
+
 @enduml
