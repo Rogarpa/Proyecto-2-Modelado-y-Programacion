@@ -1,0 +1,2 @@
+inventar problemática ficticia para patron adapter y iterator
+solo si varias cosas quieren crear más de una es válido singleton

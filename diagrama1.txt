@@ -1,6 +1,11 @@
 
 @startuml
 
+class main{
+
+}
+
+
 Aldeano..>Jugador
 
     'Relaciones que van hacia aldeano'
@@ -128,9 +133,8 @@ class Aldea{
 -noche:EstadoAldea
 -EstadoActual:EstadoAldea
 +Aldea()
-+setEstadoActual(EstadoActual:AldeaEstado):void
 +Aldea(EstadoActual:EstadoAldea)
-+setEstadoActual(estadoNuevo: EstadoAldea)
++setEstadoActual(EstadoActual:AldeaEstado):void
 +convocarJuicio():void
 +convocarBanquete():void
 +recuentoNoche():void
@@ -170,17 +174,18 @@ class EstadoNoche{
 }
                 'Patron Builder'
 
-    BuilderPersonajes ..o DirectorBuilderPersonajes 
-    Jugador ..o DirectorBuilderPersonajes    
-    BuilderAldeano ..|> BuilderPersonajes
+    BuilderJugador ..o DirectorBuilderJugador 
+    Jugador ..o DirectorBuilderJugador    
+    BuilderAldeano ..|> BuilderJugador
+    main "use"..|> MenusJuego
 
-class DirectorBuilderPersonajes{
-    # builderActual: BuilderPersonajes
-    # personajeAConstruir: Personaje
+class DirectorBuilderJugador{
+    # builderActual: BuilderJugador
+    # personajeAConstruir: Jugador
 
 
-    Director(tipoBuilder: BuilderPersonajes)
-    +cambiarBuilder(tipoBuilder: BuilderPersonajes): void
+    Director(tipoBuilder: BuilderJugador)
+    +cambiarBuilder(tipoBuilder: BuilderJugador): void
     
     +creaLoboSimple(id: int, nickname: String, aldeaHogar: a): LoboSimple
     +creaAldeanoComun(id: int, nickname: String, aldeaHogar: a): AldeanoComun 
@@ -191,7 +196,7 @@ class DirectorBuilderPersonajes{
 
 }
  
-interface "BuilderPersonajes"{
+interface "BuilderJugador"{
     + setCabello(): void
     + setArma(): void
     + setRopa(): void 
@@ -210,4 +215,13 @@ class "BuilderAldeano"{
     + getPersonaje(): Jugador
 }
 
+class MenusJuego{
+    +run():void
+    +seleccionarTipoJuego(): void 
+    +getJugadores():int
+    +getint():int
+    +getString():String
+    +juego():void    
+}
 @enduml
+
