@@ -15,7 +15,7 @@ public class Cazador extends Aldeano{
     /**
     *Constructor de la clase.
     */
-    public Cazador(){
+    protected Cazador(){
         cabello="Negro, tapado por su sombrero bombardero ruso.";
         ropa="Chamarra de lana y pantalones igual de lana.";
         arma="Rifle de candado.";

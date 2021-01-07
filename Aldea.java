@@ -46,7 +46,7 @@ public class Aldea implements EstadoAldea{
 
     @Override
     public void amanece(){
-        EstadoActual.amanece(); 
+        EstadoActual.amanece();
     }
 
     /**

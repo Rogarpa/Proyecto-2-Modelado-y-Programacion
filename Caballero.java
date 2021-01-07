@@ -16,7 +16,7 @@ public class Caballero extends Aldeano{
     /**
     *Constructor de la clase.
     */
-    private Caballero(){
+    protected Caballero(){
         cabello="Desconocido por el casco.";
         arma="Cuchillo oxidado.";
         ropa="Armadura de hierro forjado.";

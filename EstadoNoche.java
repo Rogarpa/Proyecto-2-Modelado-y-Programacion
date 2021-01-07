@@ -37,6 +37,7 @@ public class EstadoNoche implements EstadoAldea{
     @Override
     public void amanece(){
         System.out.println("Esta amaneciendo.");
+        System.out.println(narrador.getAmaneciendo());
     }
 
 }

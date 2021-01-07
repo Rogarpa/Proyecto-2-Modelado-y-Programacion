@@ -15,7 +15,7 @@ public class Vidente extends Aldeano{
     /**
     *El constructor de la clase.
     */
-    private Vidente(){
+    protected Vidente(){
         cabello="Desconocido, tapado por turbante.";
         arma="Ninguna, solo una bola de cristal.";
         ropa="Holzkary moderno, tradicional gitano.";

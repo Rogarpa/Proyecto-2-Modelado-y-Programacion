@@ -26,12 +26,12 @@ abstract Lobo{
 }
 
 abstract Aldeano{
--cabello:String
--arma:String
--ropa:String
--aldea:Aldea
--id:int
--nickname:String
+#cabello:String
+#arma:String
+#ropa:String
+#aldea:Aldea
+#id:int
+#nickname:String
 +getId():int
 +getAldea():Aldea
 +getNickname():String
@@ -44,7 +44,7 @@ abstract Aldeano{
 class Cazador{
 -static uniqueinstanceof:Cazador
 +static getinstance()
--Cazador()
+#Cazador()
 +setEsbirro():void
 +morir():void
 }
@@ -52,7 +52,7 @@ class Cazador{
 class Vidente{
 -static uniqueinstanceof:Vidente
 +static getinstance()
--Vidente()
+#Vidente()
 +descubrirIdentidad():void
 +morir():void
 }
@@ -60,7 +60,7 @@ class Vidente{
 class Caballero{
 -static uniqueinstanceof:Caballero
 +static getinstance()
--Caballero()
+#Caballero()
 +setRehen():void
 +morir():void
 }
@@ -68,7 +68,7 @@ class Caballero{
 class Angel{
 -static uniqueinstanceof:Angel
 +static getinstance()
--Angel()
+#Angel()
 +mefui():void
 +morir():void
 }
@@ -122,7 +122,7 @@ EstadoAldea..o Aldea
 EstadoAldea o..Aldea
 EstadoNoche..|>EstadoAldea
 EstadoDia..|>EstadoAldea
- 
+
 class Aldea{
 -dia:EstadoAldea
 -noche:EstadoAldea
@@ -150,7 +150,7 @@ interface EstadoAldea{
 }
 
 class EstadoDia{
--narrador:Aldea
+#narrador:Aldea
 +convocarJuicio():void
 +convocarBanquete():void
 +recuentoNoche():void
@@ -160,7 +160,7 @@ class EstadoDia{
 }
 
 class EstadoNoche{
--narrador:Aldea
+#narrador:Aldea
 +convocarJuicio():void
 +convocarBanquete():void
 +recuentoNoche():void
@@ -170,8 +170,8 @@ class EstadoNoche{
 }
                 'Patron Builder'
 
-    BuilderPersonajes ..o DirectorBuilderPersonajes 
-    Jugador ..o DirectorBuilderPersonajes    
+    BuilderPersonajes ..o DirectorBuilderPersonajes
+    Jugador ..o DirectorBuilderPersonajes
     BuilderAldeano ..|> BuilderPersonajes
 
 class DirectorBuilderPersonajes{
@@ -181,20 +181,20 @@ class DirectorBuilderPersonajes{
 
     Director(tipoBuilder: BuilderPersonajes)
     +cambiarBuilder(tipoBuilder: BuilderPersonajes): void
-    
+
     +creaLoboSimple(id: int, nickname: String, aldeaHogar: a): LoboSimple
-    +creaAldeanoComun(id: int, nickname: String, aldeaHogar: a): AldeanoComun 
+    +creaAldeanoComun(id: int, nickname: String, aldeaHogar: a): AldeanoComun
     +creaAngel(id: int, nickname: String, aldeaHogar: a): Angel
     +creaVidente(id: int, nickname: String, aldeaHogar: a): Vidente
     +creaCazador(id: int, nickname: String, aldeaHogar: a): Cazador
     +creaCaballero(id: int, nickname: String, aldeaHogar: a): Caballero
 
 }
- 
+
 interface "BuilderPersonajes"{
     + setCabello(): void
     + setArma(): void
-    + setRopa(): void 
+    + setRopa(): void
     + setAldea(): void
 }
 
