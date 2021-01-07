@@ -15,7 +15,7 @@ public class Angel extends Aldeano{
     /**
     *El constructor de la clase.
     */
-    private Angel(){
+    protected Angel(){
         cabello="Rubio de lado.";
         arma="Espada bendita.";
         ropa="Toga y alas.";
