@@ -27,6 +27,8 @@ public class Angel extends Aldeano{
     public void mefui(){}
 
     @Override
-    public void morir(){}
+    public Magia morir(){
+        return null;
+    }
 
 }

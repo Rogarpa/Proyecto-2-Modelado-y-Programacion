@@ -27,5 +27,7 @@ public class Vidente extends Aldeano{
     public void descubriridentidad(int id){}
 
     @Override
-    public void morir(){}
+    public Magia morir(){
+        return null;
+    }
 }

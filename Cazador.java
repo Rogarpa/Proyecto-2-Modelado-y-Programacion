@@ -27,6 +27,8 @@ public class Cazador extends Aldeano{
     public void setEsbirro(){}
 
     @Override
-    public void morir(){}
+    public Magia morir(){
+        return null;
+    }
 
 }

@@ -24,7 +24,7 @@ public abstract class Aldeano implements Jugador{
     }
 
     @Override
-    public abstract void morir();
+    public abstract Magia morir();
 
     /**
     *Metodo para obtener su ropa.

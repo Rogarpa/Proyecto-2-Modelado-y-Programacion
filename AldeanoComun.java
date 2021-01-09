@@ -17,8 +17,8 @@ public class AldeanoComun extends Aldeano{
     }
 
     @Override
-    public void morir(){
-
+    public Magia morir(){
+        return null;
     }
 
     /**

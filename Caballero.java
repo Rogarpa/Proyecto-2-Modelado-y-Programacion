@@ -28,8 +28,8 @@ public class Caballero extends Aldeano{
     public void setRehen(){}
 
     @Override
-    public void morir(){
-
+    public Magia morir(){
+        return null;
     }
 
 }
