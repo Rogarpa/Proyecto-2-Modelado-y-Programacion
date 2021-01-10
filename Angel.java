@@ -24,11 +24,14 @@ public class Angel extends Aldeano{
     /**
     *Meotdo para que la vidente pueda usar su poder.
     */
-    public void mefui(){}
+    public Lobo mefui(){
+        return null;
+    }
 
     @Override
     public Magia morir(){
-        return null;
+        Magia magia=new MagiaAngel(this.mefui(),this.getAldea());
+        return magia;
     }
 
 }

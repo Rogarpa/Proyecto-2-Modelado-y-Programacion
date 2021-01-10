@@ -75,6 +75,7 @@ public class Aldea implements EstadoAldea{
         *       aLinchar=e;
         *   }
         *}
+        *aLinchar,morir();
         */
         return "La aldea voto matar a"/**e.getNickname()+"con id"+e.getId()*/;
     }

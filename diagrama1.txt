@@ -50,7 +50,7 @@ class Cazador{
 -static uniqueinstanceof:Cazador
 +static getinstance()
 #Cazador()
-+setEsbirro():void
++setEsbirro():Jugador
 +morir():Magia
 }
 
@@ -58,7 +58,7 @@ class Vidente{
 -static uniqueinstanceof:Vidente
 +static getinstance()
 #Vidente()
-+descubrirIdentidad():void
++descubrirIdentidad():Jugador
 +morir():Magia
 }
 
@@ -66,7 +66,7 @@ class Caballero{
 -static uniqueinstanceof:Caballero
 +static getinstance()
 #Caballero()
-+setRehen():void
++setRehen():Jugador
 +morir():Magia
 }
 
@@ -74,7 +74,7 @@ class Angel{
 -static uniqueinstanceof:Angel
 +static getinstance()
 #Angel()
-+mefui():void
++mefui():Lobo
 +morir():Magia
 }
 

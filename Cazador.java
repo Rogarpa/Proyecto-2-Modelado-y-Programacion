@@ -24,11 +24,14 @@ public class Cazador extends Aldeano{
     /**
     *Metodo para que el cazador pueda usar su poder.
     */
-    public void setEsbirro(){}
+    public Jugador setEsbirro(){
+        return null;
+    }
 
     @Override
     public Magia morir(){
-        return null;
+        Magia magia=new MagiaCazador(this.setEsbirro(),this.getAldea());
+        return magia;
     }
 
 }

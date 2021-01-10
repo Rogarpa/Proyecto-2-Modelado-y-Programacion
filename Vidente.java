@@ -24,10 +24,13 @@ public class Vidente extends Aldeano{
     /**
     *Meotdo para que la vidente pueda usar su poder.
     */
-    public void descubriridentidad(int id){}
+    public Jugador descubrirIdentidad(int id){
+        return null;
+    }
 
     @Override
     public Magia morir(){
-        return null;
+        Magia magia=new MagiaVidente(this.descubrirIdentidad(id),this.getAldea());
+        return magia;
     }
 }

@@ -25,11 +25,14 @@ public class Caballero extends Aldeano{
     /**
     *Metodo para que el caballero pueda usar su poder.
     */
-    public void setRehen(){}
+    public Jugador setRehen(){
+        return null;
+    }
 
     @Override
     public Magia morir(){
-        return null;
+        Magia magia=new MagiaCaballero(this.setRehen(),this.getAldea());
+        return magia;
     }
 
 }
