@@ -1,2 +1,7 @@
-inventar problemática ficticia para patron adapter y iterator
+inventar problemática ficticia para patron adapter y iterator.
 solo si varias cosas quieren crear más de una es válido singleton
+String linchar(id: int).
+Varias estructuras e inventar justificación de optimización.
+Modificado en diagrama que morir regrese Magia.
+Deben de tener en el constructor escoger sobre quien va actuar su magia los especiales.
+Busqueda en aldea 
