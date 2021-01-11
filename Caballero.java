@@ -2,6 +2,7 @@
 public class Caballero extends Aldeano{
 
     private static Caballero uniqueinstanceof;
+    private Aldeano rehen;
 
     /**
     *Metodo para obtener la unica instancia del Caballero.
@@ -25,13 +26,21 @@ public class Caballero extends Aldeano{
     /**
     *Metodo para que el caballero pueda usar su poder.
     */
-    public Jugador setRehen(){
-        return null;
+    public void setRehen(Aldeano rehen){
+        this.rehen=rehen;
+    }
+
+    /**
+    *Metodo para obtener al rehen del caballero.
+    *@return el rehen.
+    */
+    public Aldeano getRehen(){
+        return this.rehen;
     }
 
     @Override
     public Magia morir(){
-        Magia magia=new MagiaCaballero(this.setRehen(),this.getAldea());
+        Magia magia=new MagiaCaballero(this.getRehen(),this.getAldea());
         return magia;
     }
 

@@ -3,15 +3,16 @@ public class main{
     public static void main(String[] args){
 
         Aldea primera=new Aldea();
-        Aldeano uno=new AldeanoComun();
-        Aldeano moni=Vidente.getinstance();
-        Aldeano dos=Cazador.getinstance();
-        Aldeano tres=Caballero.getinstance();
-        Aldeano cuatro=new Lobo();
-        Aldeano cinco=Angel.getinstance();
+        AldeanoComun uno=new AldeanoComun();
+        Vidente moni=Vidente.getinstance();
+        Cazador dos=Cazador.getinstance();
+        Caballero tres=Caballero.getinstance();
+        Lobo cuatro=new Lobo();
+        Angel cinco=Angel.getinstance();
 
         Magia magia=new MagiaCazador(tres,primera);
 
+        tres.setRehen(cinco);
         uno.getArma();
         moni.getRopa();
         dos.getCabello();
@@ -22,6 +23,8 @@ public class main{
         dos.getCabello();
         tres.getArma();
         cuatro.getArma();
+        cinco.mefui(cuatro);
+        System.out.println(tres.getRehen());
 
         primera.matar(dos,cuatro);
 

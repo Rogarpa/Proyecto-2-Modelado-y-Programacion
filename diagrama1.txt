@@ -47,34 +47,42 @@ abstract Aldeano{
 }
 
 class Cazador{
+-esbirro:Aldeano
 -static uniqueinstanceof:Cazador
 +static getinstance()
 #Cazador()
-+setEsbirro():Jugador
++setEsbirro(esbirro:Aldeano):void
++getEsbirro():Aldeano
 +morir():Magia
 }
 
 class Vidente{
+-identidad:Aldeano
 -static uniqueinstanceof:Vidente
 +static getinstance()
 #Vidente()
-+descubrirIdentidad():Jugador
++descubrirIdentidad(identidad:Aldeano):void
++getIdentidad():Aldeano
 +morir():Magia
 }
 
 class Caballero{
+-rehen:Aldeano
 -static uniqueinstanceof:Caballero
 +static getinstance()
 #Caballero()
-+setRehen():Jugador
++setRehen(rehen:Aldeano):void
++getRehen():Aldeano
 +morir():Magia
 }
 
 class Angel{
+-lobo:Aldeano
 -static uniqueinstanceof:Angel
 +static getinstance()
 #Angel()
-+mefui():Lobo
++mefui(lobo:Aldeano):void
++getLobo():Aldeano
 +morir():Magia
 }
 
@@ -96,8 +104,8 @@ interface Magia{
 }
 
 class MagiaAngel{
--aDormir:Lobo
-+MagiaAngel(aDormir:Lobo,aldeaSobreLaCualActuar:Aldea)
+-aDormir:Jugador
++MagiaAngel(aDormir:Jugador,aldeaSobreLaCualActuar:Aldea)
 +actua():void
 }
 

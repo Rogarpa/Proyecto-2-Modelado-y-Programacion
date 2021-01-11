@@ -2,6 +2,7 @@
 public class Angel extends Aldeano{
 
     private static Angel uniqueinstanceof;
+    private Aldeano lobo;
 
     /**
     *Metodo para obtener la unica instancia de la clase.
@@ -24,13 +25,22 @@ public class Angel extends Aldeano{
     /**
     *Meotdo para que la vidente pueda usar su poder.
     */
-    public Lobo mefui(){
-        return null;
+    public void mefui(Aldeano lobo){
+        this.lobo=lobo;
     }
+
+    /**
+    *Metodo para obtener el lobo a morir.
+    *@return el lobo.
+    */
+    public Aldeano getLobo(){
+        return this.lobo;
+    }
+
 
     @Override
     public Magia morir(){
-        Magia magia=new MagiaAngel(this.mefui(),this.getAldea());
+        Magia magia=new MagiaAngel(this.getLobo(),this.getAldea());
         return magia;
     }
 

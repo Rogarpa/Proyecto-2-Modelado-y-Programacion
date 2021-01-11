@@ -2,6 +2,7 @@
 public class Cazador extends Aldeano{
 
     private static Cazador uniqueinstanceof;
+    private Aldeano esbirro;
 
     /**
     *Metodo para obtener la unica instancia de la clase.
@@ -24,13 +25,21 @@ public class Cazador extends Aldeano{
     /**
     *Metodo para que el cazador pueda usar su poder.
     */
-    public Jugador setEsbirro(){
-        return null;
+    public void setEsbirro(Aldeano esbirro){
+        this.esbirro=esbirro;
+    }
+
+    /**
+    *Metodo para obtener el rehen.
+    *@return el rehen.
+    */
+    public Aldeano getEsbirro(){
+        return this.esbirro;
     }
 
     @Override
     public Magia morir(){
-        Magia magia=new MagiaCazador(this.setEsbirro(),this.getAldea());
+        Magia magia=new MagiaCazador(this.getEsbirro(),this.getAldea());
         return magia;
     }
 

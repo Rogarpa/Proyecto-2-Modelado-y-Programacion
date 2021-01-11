@@ -2,6 +2,7 @@
 public class Vidente extends Aldeano{
 
     private static Vidente uniqueinstanceof;
+    private Aldeano identidad;
 
     /**
     *Metodo para obtener la unica instancia de la clase.
@@ -24,9 +25,10 @@ public class Vidente extends Aldeano{
     /**
     *Meotdo para que la vidente pueda usar su poder.
     */
-    public Jugador descubrirIdentidad(int id){
+    public Aldeano descubrirIdentidad(int id){
         return null;
     }
+
 
     @Override
     public Magia morir(){
