@@ -21,14 +21,14 @@ Lobo--|>Aldeano
 
 interface Jugador{
 +getId():int
-+morir():void
++morir():Magia
 +getAldea():Aldea
 +getNickname():String
 }
 
 abstract Lobo{
 +clone():Lobo
-+morir():void
++morir():Magia
 +Lobo():Lobo
 }
 
@@ -45,45 +45,45 @@ abstract Aldeano{
 +getArma():void
 +getCabello():void
 +getRopa():void
-+morir():void
++morir():Magia
 }
 
 class Cazador{
 -static uniqueinstanceof:Cazador
 +static getinstance()
 #Cazador()
-+setEsbirro():void
-+morir():void
++setEsbirro():Jugador
++morir():Magia
 }
 
 class Vidente{
 -static uniqueinstanceof:Vidente
 +static getinstance()
 #Vidente()
-+descubrirIdentidad():void
-+morir():void
++descubrirIdentidad():Jugador
++morir():Magia
 }
 
 class Caballero{
 -static uniqueinstanceof:Caballero
 +static getinstance()
 #Caballero()
-+setRehen():void
-+morir():void
++setRehen():Jugador
++morir():Magia
 }
 
 class Angel{
 -static uniqueinstanceof:Angel
 +static getinstance()
 #Angel()
-+mefui():void
-+morir():void
++mefui():Lobo
++morir():Magia
 }
 
 class AldeanoComun{
 +AldeanoComun()
 +clone():AldeanoComun
-+morir():void
++morir():Magia
 }
 
     'Relaciones de Magia.'
@@ -142,7 +142,8 @@ class Aldea{
 +recuentoNoche():void
 +anochece():void
 +amanece():void
--matar(Personaje:aMatar,Personaje asesino):void
++matar(Personaje:aMatar,Personaje asesino):void
++linchar(int:id);String
 +getAnocheciendo():EstadoAldea
 +getAmaneciendo():EstadoAldea
 }
@@ -176,8 +177,8 @@ class EstadoNoche{
 }
                 'Patron Builder'
 
-    BuilderJugador ..o DirectorBuilderJugador 
-    Jugador ..o DirectorBuilderJugador    
+    BuilderJugador ..o DirectorBuilderJugador
+    Jugador ..o DirectorBuilderJugador
     BuilderAldeano ..|> BuilderJugador
     main "use"..|> MenusJuego
 
@@ -188,7 +189,7 @@ class DirectorBuilderJugador{
 
     Director(tipoBuilder: BuilderJugador)
     +cambiarBuilder(tipoBuilder: BuilderJugador): void
-    
+
     +creaLoboSimple(id: int, nickname: String, aldeaHogar: a): LoboSimple
     +creaAldeanoComun(id: int, nickname: String, aldeaHogar: a): AldeanoComun
     +creaAngel(id: int, nickname: String, aldeaHogar: a): Angel
@@ -197,7 +198,7 @@ class DirectorBuilderJugador{
     +creaCaballero(id: int, nickname: String, aldeaHogar: a): Caballero
 
 }
- 
+
 interface "BuilderJugador"{
     + setCabello(): void
     + setArma(): void
@@ -219,11 +220,10 @@ class "BuilderAldeano"{
 
 class MenusJuego{
     +run():void
-    +seleccionarTipoJuego(): void 
+    +seleccionarTipoJuego(): void
     +getJugadores():int
     +getint():int
     +getString():String
-    +juego():void    
+    +juego():void
 }
 @enduml
-

@@ -6,6 +6,10 @@ public class Aldea implements EstadoAldea{
 
     private EstadoAldea EstadoActual;
 
+    //LinkedList<Jugador> todos=new LinkedList();
+    //ArrayList<Jugador> lobos=new ArrayList();
+    //
+
     /**
     *Constructor de la Clase.
     */
@@ -57,6 +61,23 @@ public class Aldea implements EstadoAldea{
     public void matar(Aldeano aMatar,Aldeano asesino){
         aMatar.morir();
         System.out.println(aMatar.getNickname()+" fue asesinado por "+asesino.getNickname()+" con "+asesino.getArma());
+    }
+
+    /**
+    *Metodo para cuando se muera alguien por linchamiento.
+    *@param id el id del Jugador que fue votado para morir.
+    */
+    public String linchar(int id){
+        /**
+        *Aldeano aLinchar= null;
+        *for(Jugador e:todos){
+        *   if(e.getId()==id){
+        *       aLinchar=e;
+        *   }
+        *}
+        *aLinchar,morir();
+        */
+        return "La aldea voto matar a"/**e.getNickname()+"con id"+e.getId()*/;
     }
 
     /**

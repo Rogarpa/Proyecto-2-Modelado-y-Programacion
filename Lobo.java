@@ -18,6 +18,8 @@ public class Lobo extends Aldeano{
 
 
     @Override
-    public void morir(){}
+    public Magia morir(){
+        return null;
+    }
 
 }
