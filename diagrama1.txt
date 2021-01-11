@@ -17,6 +17,8 @@ AldeanoComun--|>Aldeano
 Angel--|>Aldeano
 Lobo--|>Aldeano
 
+    'verificar entradas nulas con compaeTo o equals'
+
 interface Jugador{
 +getId():int
 +morir():void
