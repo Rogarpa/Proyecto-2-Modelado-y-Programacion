@@ -40,7 +40,7 @@ public class Angel extends Aldeano{
 
     @Override
     public Magia morir(){
-        Magia magia=new MagiaAngel(this.getLobo(),this.getAldea());
+        Magia magia=new MagiaAngel(this.lobo,this.getAldea());
         return magia;
     }
 

@@ -4,14 +4,14 @@ class DirectorBuilderJugador{
 
 
     Director(BuilderJugador tipoBuilder){
-        
+
     }
-    
+
     public void cambiarBuilder(BuilderJugador tipoBuilder){
         builderActual = tipoBuilder;
     }
-    
-    public LoboSimple creaLoboSimple(int id, String nickname, String aldeaHogar){}
+
+    public Lobo creaLobo(int id, String nickname, String aldeaHogar){}
     public AldeanoComun  creaAldeanoComun(int id, String nickname, String aldeaHogar){}
     public Angel creaAngel(int id, String nickname, String aldeaHogar){}
     public Vidente creaVidente(int id, String nickname, String aldeaHogar){}

@@ -198,7 +198,7 @@ class DirectorBuilderJugador{
     Director(tipoBuilder: BuilderJugador)
     +cambiarBuilder(tipoBuilder: BuilderJugador): void
 
-    +creaLoboSimple(id: int, nickname: String, aldeaHogar: a): LoboSimple
+    +creaLobo(id: int, nickname: String, aldeaHogar: a): Lobo
     +creaAldeanoComun(id: int, nickname: String, aldeaHogar: a): AldeanoComun
     +creaAngel(id: int, nickname: String, aldeaHogar: a): Angel
     +creaVidente(id: int, nickname: String, aldeaHogar: a): Vidente
