@@ -13,7 +13,7 @@ public class Lobo extends Aldeano{
 
     @Override
     public Lobo clone(){
-        return null;
+        return new Lobo();
     }
 
 

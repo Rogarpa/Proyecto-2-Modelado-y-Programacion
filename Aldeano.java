@@ -1,5 +1,5 @@
 
-public abstract class Aldeano implements Jugador{
+public abstract class Aldeano implements Jugador,Cloneable{
 
     protected String ropa;
     protected String cabello;
@@ -48,6 +48,19 @@ public abstract class Aldeano implements Jugador{
     public String getCabello(){
         System.out.println(this.cabello);
         return this.cabello;
+    }
+
+    @Override
+    public Object clone(){
+        Object clone=null;
+
+        try{
+            clone=super.clone();
+        }catch(CloneNotSupportedException e){
+            e.printStackTrace();
+        }
+
+        return clone;
     }
 
 }

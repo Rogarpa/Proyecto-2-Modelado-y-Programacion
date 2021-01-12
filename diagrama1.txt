@@ -26,7 +26,7 @@ interface Jugador{
 +getNickname():String
 }
 
-abstract Lobo{
+class Lobo{
 +clone():Lobo
 +morir():Magia
 +Lobo():Lobo
@@ -46,6 +46,7 @@ abstract Aldeano{
 +getCabello():void
 +getRopa():void
 +morir():Magia
++clone():Object
 }
 
 class Cazador{

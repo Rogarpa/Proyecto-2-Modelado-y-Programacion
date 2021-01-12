@@ -12,6 +12,7 @@ public class main{
 
         Magia magia=new MagiaCazador(tres,primera);
 
+        cuatro.clone();
         tres.setRehen(cinco);
         uno.getArma();
         moni.getRopa();

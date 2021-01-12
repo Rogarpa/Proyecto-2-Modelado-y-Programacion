@@ -13,7 +13,7 @@ public class AldeanoComun extends Aldeano{
             e.printStackTrace();
         }
         return clone;*/
-        return null;
+        return new AldeanoComun();
     }
 
     @Override
