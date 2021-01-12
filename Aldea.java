@@ -88,6 +88,22 @@ public class Aldea implements EstadoAldea{
         this. EstadoActual = EstadoActual;
     }
 
+    /**
+    *Metodo para buscar a algun aldeano en especifico.
+    *@param id el id del aldeano que buscamos.
+    *@return el aldeano que buscamos.
+    */
+    public Aldeano juicio(int id){
+        /**
+        *for(Aldeano elem:todos){
+        *   if(elem.getId()==id){
+        *     return elem;
+        *   }
+        *}
+        */
+        return null;
+    }
+
     public EstadoAldea getAnocheciendo(){ return noche;}
     public EstadoAldea getAmaneciendo(){ return dia;}
 }
