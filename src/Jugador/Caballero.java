@@ -16,8 +16,10 @@ public class Caballero extends Aldeano{
 
     /**
     *Constructor de la clase.
+    *@param rehen el aldeano sobre el cual actuar.
     */
-    protected Caballero(){
+    protected Caballero(Aldeano rehen){
+        this.rehen=rehen;
         cabello="Desconocido por el casco.";
         arma="Cuchillo oxidado.";
         ropa="Armadura de hierro forjado.";

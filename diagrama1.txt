@@ -53,7 +53,7 @@ class Cazador{
 -esbirro:Aldeano
 -static uniqueinstanceof:Cazador
 +static getinstance()
-#Cazador()
+#Cazador(esbirro:Aldeano)
 +setEsbirro(esbirro:Aldeano):void
 +getEsbirro():Aldeano
 +morir():Magia
@@ -63,9 +63,8 @@ class Vidente{
 -identidad:Aldeano
 -static uniqueinstanceof:Vidente
 +static getinstance()
-#Vidente()
+#Vidente(identidad:Aldeano)
 +descubrirIdentidad(identidad:Aldeano):void
-+getIdentidad():Aldeano
 +morir():Magia
 }
 
@@ -73,7 +72,7 @@ class Caballero{
 -rehen:Aldeano
 -static uniqueinstanceof:Caballero
 +static getinstance()
-#Caballero()
+#Caballero(rehen:Aldeano)
 +setRehen(rehen:Aldeano):void
 +getRehen():Aldeano
 +morir():Magia
@@ -83,7 +82,7 @@ class Angel{
 -lobo:Aldeano
 -static uniqueinstanceof:Angel
 +static getinstance()
-#Angel()
+#Angel(lobo:Aldeano)
 +mefui(lobo:Aldeano):void
 +getLobo():Aldeano
 +morir():Magia
@@ -234,5 +233,6 @@ class MenusJuego{
     +getint():int
     +getString():String
     +juego():void
+    +rifa(lista:ArrayList<String>):LinkedList<Aldeano>
 }
 @enduml

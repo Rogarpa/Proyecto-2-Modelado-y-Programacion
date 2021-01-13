@@ -5,5 +5,5 @@ public class MenusUsuario{
     public int getint(){}
     public String getString(){}
     public void juego(){}
-public 
+    public LinkedList<Aldeano> rifa(ArrayList<String> lista){} 
 }

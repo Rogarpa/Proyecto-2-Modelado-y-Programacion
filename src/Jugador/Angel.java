@@ -15,8 +15,10 @@ public class Angel extends Aldeano{
 
     /**
     *El constructor de la clase.
+    *@param lobo el aldeano sobre el que va a actuar.
     */
-    protected Angel(){
+    protected Angel(Aldeano lobo){
+        this.lobo=lobo;
         cabello="Rubio de lado.";
         arma="Espada bendita.";
         ropa="Toga y alas.";

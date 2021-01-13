@@ -3,5 +3,9 @@ solo si varias cosas quieren crear más de una es válido singleton
 String linchar(id: int);YA HECHO.
 Varias estructuras e inventar justificación de optimización.
 Modificado en diagrama que morir regrese Magia.;YA HECHO
-Deben de tener en el constructor escoger sobre quien va actuar su magia los especiales.
 Busqueda en aldea;YA HECHO.
+
+Modificado el constructor de los "Aldeanos Especiales" todos.;YA HECHO
+Deben de tener en el constructor escoger sobre quien va actuar su magia los especiales.;YA HECHO
+
+Metodo rifa en "MenusJuego".;EMPEZADO

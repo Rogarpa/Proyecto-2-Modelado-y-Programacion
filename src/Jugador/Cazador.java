@@ -15,8 +15,10 @@ public class Cazador extends Aldeano{
 
     /**
     *Constructor de la clase.
+    *@param esbirro el aldeano sobre el cual va a actuar su magia.
     */
-    protected Cazador(){
+    protected Cazador(Aldeano esbirro){
+        this.esbirro=esbirro;
         cabello="Negro, tapado por su sombrero bombardero ruso.";
         ropa="Chamarra de lana y pantalones igual de lana.";
         arma="Rifle de candado.";
