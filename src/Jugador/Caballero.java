@@ -27,6 +27,7 @@ public class Caballero extends Aldeano{
 
     /**
     *Metodo para que el caballero pueda usar su poder.
+    *@param rehen el aldeano sobre el que va a actuar.
     */
     public void setRehen(Aldeano rehen){
         this.rehen=rehen;

@@ -25,9 +25,10 @@ public class Angel extends Aldeano{
     }
 
     /**
-    *Meotdo para que la vidente pueda usar su poder.
+    *Metodo para que el angel pueda usar su poder.
+    *@param lobo el aldenao sobre el cual va a actuar.
     */
-    public void mefui(Aldeano lobo){
+    public void setLobo(Aldeano lobo){
         this.lobo=lobo;
     }
 

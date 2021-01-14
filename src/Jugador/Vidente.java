@@ -26,6 +26,7 @@ public class Vidente extends Aldeano{
 
     /**
     *Meotdo para que la vidente pueda usar su poder.
+    *@param id el id del aldeano sobre el que va a actuar.
     */
     public Aldeano descubrirIdentidad(int id){
         return null;

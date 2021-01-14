@@ -25,7 +25,8 @@ public class Cazador extends Aldeano{
     }
 
     /**
-    *Metodo para que el cazador pueda usar su poder.
+    *Metodo para que el cazador pueda saber sobre quien usar su poder.
+    *@param esbirro el aldeano sobre el que va a actuar.
     */
     public void setEsbirro(Aldeano esbirro){
         this.esbirro=esbirro;

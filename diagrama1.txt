@@ -83,7 +83,7 @@ class Angel{
 -static uniqueinstanceof:Angel
 +static getinstance()
 #Angel(lobo:Aldeano)
-+mefui(lobo:Aldeano):void
++setLobo(lobo:Aldeano):void
 +getLobo():Aldeano
 +morir():Magia
 }
