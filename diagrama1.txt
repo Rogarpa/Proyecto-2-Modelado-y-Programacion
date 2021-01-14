@@ -150,8 +150,9 @@ class Aldea{
 +recuentoNoche():void
 +anochece():void
 +amanece():void
-+matar(Personaje:aMatar,Personaje asesino):void
++matar(Aldeano:aMatar,Aldeano asesino):void
 +linchar(int:id);String
++juicio(int:id):Aldeano
 +getAnocheciendo():EstadoAldea
 +getAmaneciendo():EstadoAldea
 }
