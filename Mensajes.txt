@@ -1,0 +1,18 @@
+
+Mensajes:
+
+"Se hace de noche y la Aldea se va a dormir.Todos Cierran los ojos."
+"Los hombres lobo se levantan."
+"A quién deciden matar?."
+"La vidente se levanta.A quien quieres espiar."
+"El cazador ha muerto y por lo tanto alguien más morira."
+"El caballero murio por lo tanto un aldeano aleatorio morira."
+"El Angel ha muerto por lo tanto un hombre-lobo va a perecer."
+"Se vuelve/vuelve a dormir."
+"Se hace de día,todos se levantan y abren los ojos."
+"Durante la noche murieron:"
+"Murió el jugador, quien era un:"
+"Los hombres lobo ganan."
+"Quienes creen que son hombres lobo?"
+"A continuación se hara la votación para el linchamiento."
+"Los aldeanos ganan."
