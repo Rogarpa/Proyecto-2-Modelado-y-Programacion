@@ -130,4 +130,14 @@ public class MenusUsuario implements ObservadorVista{
 
         return num;
     }
+
+    @Override
+    public void mostrar(String mensaje){
+        System.out.println(mensaje);
+    }
+
+    @Override
+    public void actualiza(){
+        System.out.println("Mensaje de actualización");
+    }
 }

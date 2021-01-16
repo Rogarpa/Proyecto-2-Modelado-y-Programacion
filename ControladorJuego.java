@@ -2,6 +2,8 @@ public class ControladorJuego implements ControladorSujeto {
     protected MenusJuego menusAControlar;
     protected Aldea aldeaAControlar;
 
+    protected LinkedList<ObservadorVista> observadores= new LinkedList<ObservadorVista>();;
+
     public ControladorJuego(Aldea aldeaAControlar, MenusJuego menusAControlar){
         this.aldeaAControlar = aldeaAControlar;
         this.menusAControlar = menusAControlar;
@@ -17,9 +19,9 @@ public class ControladorJuego implements ControladorSujeto {
         int opcionInicial = menusAControlar.menuInicial;
         switch (opcionInicial) {
             case value:
-                
+
                 break;
-        
+
             default:
                 break;
         }
@@ -29,7 +31,7 @@ public class ControladorJuego implements ControladorSujeto {
         int tipoJuego = menusAControlar.seleccionarTipoJuego();
         switch (tipoJuego) {
             case 1:
-                iniciarTipoJuego1();    
+                iniciarTipoJuego1();
                 break;
             case 1:
                 iniciarTipoJuego2();
@@ -41,7 +43,7 @@ public class ControladorJuego implements ControladorSujeto {
                 break;
         }
     }
-    
+
     public void iniciarTipoJuego1(){
         //aquí comienza a rellenar aldea y la manda a mostrar() de menusAControlar al finalizar
     }
@@ -50,5 +52,15 @@ public class ControladorJuego implements ControladorSujeto {
     }
     public void iniciarTipoJuego3(){
 
+    }
+
+    @Override
+    public void suscribir(ObservadorVista aSuscribir){
+        observadoresr.add(aSuscribir);
+    }
+
+    @Override
+    public void desuscribir(ObservadorVista aDesuscribir){
+        observadores.remove(aDesuscribir);
     }
 }
