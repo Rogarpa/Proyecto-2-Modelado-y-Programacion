@@ -211,12 +211,12 @@ class DirectorBuilderJugador{
     Director(tipoBuilder: BuilderJugador)
     +cambiarBuilder(tipoBuilder: BuilderJugador): void
 
-    +creaLobo(id: int, nickname: String, aldeaHogar: a): Lobo
-    +creaAldeanoComun(id: int, nickname: String, aldeaHogar: a): AldeanoComun
-    +creaAngel(id: int, nickname: String, aldeaHogar: a): Angel
-    +creaVidente(id: int, nickname: String, aldeaHogar: a): Vidente
-    +creaCazador(id: int, nickname: String, aldeaHogar: a): Cazador
-    +creaCaballero(id: int, nickname: String, aldeaHogar: a): Caballero
+    +creaLobo(id: int, nickname: String, aldeaHogar: a): void
+    +creaAldeanoComun(id: int, nickname: String, aldeaHogar: a): void
+    +creaAngel(id: int, nickname: String, aldeaHogar: a): void
+    +creaVidente(id: int, nickname: String, aldeaHogar: a): void
+    +creaCazador(id: int, nickname: String, aldeaHogar: a): void
+    +creaCaballero(id: int, nickname: String, aldeaHogar: a): void
 
 }
 
@@ -236,7 +236,7 @@ class "BuilderAldeano"{
     + setRopa(): void
     + setAldea(): void
 
-    + getPersonaje(): Jugador
+    + getPersonaje(): Aldeano
 }
     'MVC puro y duro'
 MenusJuego ..> ObservadorVista

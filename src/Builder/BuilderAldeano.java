@@ -11,5 +11,5 @@ public class BuilderAldeano implements BuilderJugador{
     public void setRopa(){}
     public void setAldea(){}
 
-    public Jugador getPersonaje(){}
+    public Aldeano getPersonaje(){}
 }
