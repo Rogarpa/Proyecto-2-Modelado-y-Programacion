@@ -19,9 +19,6 @@ public class Vidente extends Aldeano{
     */
     protected Vidente(Aldeano identidad){
         this.identidad=identidad;
-        cabello="Desconocido, tapado por turbante.";
-        arma="Ninguna, solo una bola de cristal.";
-        ropa="Holzkary moderno, tradicional gitano.";
     }
 
     /**

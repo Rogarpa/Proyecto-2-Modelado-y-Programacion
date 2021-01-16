@@ -20,9 +20,6 @@ public class Caballero extends Aldeano{
     */
     protected Caballero(Aldeano rehen){
         this.rehen=rehen;
-        cabello="Desconocido por el casco.";
-        arma="Cuchillo oxidado.";
-        ropa="Armadura de hierro forjado.";
     }
 
     /**

@@ -19,9 +19,6 @@ public class Angel extends Aldeano{
     */
     protected Angel(Aldeano lobo){
         this.lobo=lobo;
-        cabello="Rubio de lado.";
-        arma="Espada bendita.";
-        ropa="Toga y alas.";
     }
 
     /**

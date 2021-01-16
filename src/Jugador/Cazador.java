@@ -19,9 +19,6 @@ public class Cazador extends Aldeano{
     */
     protected Cazador(Aldeano esbirro){
         this.esbirro=esbirro;
-        cabello="Negro, tapado por su sombrero bombardero ruso.";
-        ropa="Chamarra de lana y pantalones igual de lana.";
-        arma="Rifle de candado.";
     }
 
     /**
