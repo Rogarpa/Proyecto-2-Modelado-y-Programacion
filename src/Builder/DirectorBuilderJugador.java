@@ -7,10 +7,20 @@ class DirectorBuilderJugador{
 
     }
 
+    /**
+    *Metodo para cuando querramos cambiar el tipo de Builder a otro.
+    *@param tipoBuilder el tipo de builder al cual cambiar.
+    */
     public void cambiarBuilder(BuilderJugador tipoBuilder){
         builderActual = tipoBuilder;
     }
 
+    /**
+    *Metodo para cuando queramos crear un Lobo.
+    *@param id el id del aldeano.
+    *@param nickname el nombre del aldeano.
+    *@param aldeaHogar la aldea a la que pertenece.
+    */
     public void creaLobo(int id, String nickname, Aldea aldeaHogar){
         BuilderAldeano builder=new BuilderAldeano(id,nickname,aldeaHogar);
         builder.setArma("Garras y dientes afilados.");
@@ -19,6 +29,12 @@ class DirectorBuilderJugador{
         builder.setAldea(aldeaHogar);
     }
 
+    /**
+    *Metodo para cuando queramos crear un aldeano comun.
+    *@param id el id del aldeano.
+    *@param nickname el nombre del aldeano.
+    *@param aldeaHogar la aldea a la que pertenece.
+    */
     public void creaAldeanoComun(int id, String nickname, Aldea aldeaHogar){
         BuilderAldeano builder=new BuilderAldeano(id,nickname,aldeaHogar);
         builder.setArma("Lanza de madera con punta de hierro.");
@@ -27,6 +43,12 @@ class DirectorBuilderJugador{
         builder.setAldea(aldeaHogar);
     }
 
+    /**
+    *Metodo para cuando queramos crear al Angel.
+    *@param id el id del aldeano.
+    *@param nickname el nombre del aldeano.
+    *@param aldeaHogar la aldea a la que pertenece.
+    */
     public void creaAngel(int id, String nickname, Aldea aldeaHogar){
         BuilderAldeano builder=new BuilderAldeano(id,nickname,aldeaHogar);
         builder.setArma("Espada bendita con mango de oro.");
@@ -35,6 +57,12 @@ class DirectorBuilderJugador{
         builder.setAldea(aldeaHogar);
     }
 
+    /**
+    *Metodo para cuando querramos crear a la Vidente.
+    *@param id el id del aldeano.
+    *@param nickname el nombre del aldeano.
+    *@param aldeaHogar la aldea a la que pertenece.
+    */
     public void creaVidente(int id, String nickname, Aldea aldeaHogar){
         BuilderAldeano builder=new BuilderAldeano(id,nickname,aldeaHogar);
         builder.setArma("Ninguna, solo una bola de cristal.");
@@ -43,6 +71,12 @@ class DirectorBuilderJugador{
         builder.setAldea(aldeaHogar);
     }
 
+    /**
+    *Metodo para cuando queramos crear al Cazador.
+    *@param id el id del aldeano.
+    *@param nickname el nombre del aldeano.
+    *@param aldeaHogar la aldea a la que pertenece.
+    */
     public void creaCazador(int id, String nickname,Aldea aldeaHogar){
         BuilderAldeano builder=new BuilderAldeano(id,nickname,aldeaHogar);
         builder.setArma("Rifle de candado.");
@@ -51,6 +85,12 @@ class DirectorBuilderJugador{
         builder.setAldea(aldeaHogar);
     }
 
+    /**
+    *Metodo para cuando querramos crear al Caballero.
+    *@param id el id del aldeano.
+    *@param nickname el nombre del aldeano.
+    *@param aldeaHogar la aldea a la que pertenece.
+    */
     public void creaCaballero(int id, String nickname,Aldea aldeaHogar){
         BuilderAldeano builder=new BuilderAldeano(id,nickname,aldeaHogar);
         builder.setArma("Espada oxidada con Rosa de los vientos.");
