@@ -2,6 +2,8 @@ public class ControladorJuego implements ControladorSujeto {
     protected MenusJuego menusAControlar;
     protected Aldea aldeaAControlar;
 
+    protected LinkedList<ObservadorVista> observadores= new LinkedList<ObservadorVista>();;
+
     public ControladorJuego(Aldea aldeaAControlar, MenusJuego menusAControlar){
         this.aldeaAControlar = aldeaAControlar;
         this.menusAControlar = menusAControlar;
@@ -17,9 +19,9 @@ public class ControladorJuego implements ControladorSujeto {
         int opcionInicial = menusAControlar.menuInicial;
         switch (opcionInicial) {
             case value:
-                
+
                 break;
-        
+
             default:
                 break;
         }
@@ -66,5 +68,15 @@ public class ControladorJuego implements ControladorSujeto {
         for(String nuevoNickname: listaNicknames)   
             nuevoNickname = menusAControlar.getNicknameJugadorNuevo();
         return listaNicknames;
+    }
+
+    @Override
+    public void suscribir(ObservadorVista aSuscribir){
+        observadoresr.add(aSuscribir);
+    }
+
+    @Override
+    public void desuscribir(ObservadorVista aDesuscribir){
+        observadores.remove(aDesuscribir);
     }
 }
