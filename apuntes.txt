@@ -19,3 +19,9 @@ Rifa reciba arreglo de cadenas y
 iniciaMenuVotacion() en alde rompe MVC
 
 En los menus no veo necesario instanciar para poder empezar a enviar a imprimir.
+Busqueda en aldea;YA HECHO.
+
+Modificado el constructor de los "Aldeanos Especiales" todos.;YA HECHO
+Deben de tener en el constructor escoger sobre quien va actuar su magia los especiales.;YA HECHO
+
+Metodo rifa en "MenusJuego".;EMPEZADO

@@ -15,8 +15,10 @@ public class Vidente extends Aldeano{
 
     /**
     *El constructor de la clase.
+    *@param identidad el aldenao sobre el cual va a actuar su magia.
     */
-    protected Vidente(){
+    protected Vidente(Aldeano identidad){
+        this.identidad=identidad;
         cabello="Desconocido, tapado por turbante.";
         arma="Ninguna, solo una bola de cristal.";
         ropa="Holzkary moderno, tradicional gitano.";
@@ -24,6 +26,7 @@ public class Vidente extends Aldeano{
 
     /**
     *Meotdo para que la vidente pueda usar su poder.
+    *@param id el id del aldeano sobre el que va a actuar.
     */
     public Aldeano descubrirIdentidad(int id){
         return null;

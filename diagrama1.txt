@@ -53,7 +53,7 @@ class Cazador{
 -esbirro:Aldeano
 -static uniqueinstanceof:Cazador
 +static getinstance()
-#Cazador()
+#Cazador(esbirro:Aldeano)
 +setEsbirro(esbirro:Aldeano):void
 +getEsbirro():Aldeano
 +morir():Magia
@@ -63,9 +63,8 @@ class Vidente{
 -identidad:Aldeano
 -static uniqueinstanceof:Vidente
 +static getinstance()
-#Vidente()
+#Vidente(identidad:Aldeano)
 +descubrirIdentidad(identidad:Aldeano):void
-+getIdentidad():Aldeano
 +morir():Magia
 }
 
@@ -73,7 +72,7 @@ class Caballero{
 -rehen:Aldeano
 -static uniqueinstanceof:Caballero
 +static getinstance()
-#Caballero()
+#Caballero(rehen:Aldeano)
 +setRehen(rehen:Aldeano):void
 +getRehen():Aldeano
 +morir():Magia
@@ -83,8 +82,8 @@ class Angel{
 -lobo:Aldeano
 -static uniqueinstanceof:Angel
 +static getinstance()
-#Angel()
-+mefui(lobo:Aldeano):void
+#Angel(lobo:Aldeano)
++setLobo(lobo:Aldeano):void
 +getLobo():Aldeano
 +morir():Magia
 }
@@ -155,6 +154,7 @@ class Aldea{
 +convocarBanquete():void
 +anochece():void
 +amanece():void
+<<<<<<< HEAD
 +matar(Personaje:aMatar,Personaje asesino):void
     'ver si cumple con MVC'
 +linchar(int:id):String
@@ -163,6 +163,11 @@ class Aldea{
 +juicio(id: int):Aldeano
 
 
+=======
++matar(Aldeano:aMatar,Aldeano asesino):void
++linchar(int:id);String
++juicio(int:id):Aldeano
+>>>>>>> 6bf5f4bb013726e9642f615edf162e195fe8de75
 +getAnocheciendo():EstadoAldea
 +getAmaneciendo():EstadoAldea
 }
@@ -250,6 +255,7 @@ class MenusJuego{
     +getint():int
     +getString():String
     +juego():void
+    +rifa(lista:ArrayList<String>):LinkedList<Aldeano>
 }
 
 class ControladorJuego{

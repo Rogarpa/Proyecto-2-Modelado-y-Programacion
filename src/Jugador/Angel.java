@@ -15,17 +15,20 @@ public class Angel extends Aldeano{
 
     /**
     *El constructor de la clase.
+    *@param lobo el aldeano sobre el que va a actuar.
     */
-    protected Angel(){
+    protected Angel(Aldeano lobo){
+        this.lobo=lobo;
         cabello="Rubio de lado.";
         arma="Espada bendita.";
         ropa="Toga y alas.";
     }
 
     /**
-    *Meotdo para que la vidente pueda usar su poder.
+    *Metodo para que el angel pueda usar su poder.
+    *@param lobo el aldenao sobre el cual va a actuar.
     */
-    public void mefui(Aldeano lobo){
+    public void setLobo(Aldeano lobo){
         this.lobo=lobo;
     }
 
