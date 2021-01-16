@@ -25,3 +25,7 @@ Modificado el constructor de los "Aldeanos Especiales" todos.;YA HECHO
 Deben de tener en el constructor escoger sobre quien va actuar su magia los especiales.;YA HECHO
 
 Metodo rifa en "MenusJuego".;EMPEZADO
+
+
+
+Se modificó el 

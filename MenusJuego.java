@@ -66,12 +66,30 @@ public class MenusUsuario implements ObservadorVista{
         return getInputInt(indicacion, error, 1, 3);
     }
 
+    public void instruccionesTipoJuego(int numeroTipoJuego){
+        //necesita más desarrollo de introduccion
+        System.out.println("Bienvenida a la aldea");
+        String s = "Usted ha escogido el tipo de juego" + numeroTipoJuego + " con capacidad para %s jugadores";
+        switch (numeroTipoJuego) {
+            case 1:
+                System.out.println(s.format(s,10));
+                break;
+            case 2:
+                System.out.println(s.format(s,15));
+                break;
+            case 3:
+                System.out.println(s.format(s,15));
+            default:
+                break;
+        }
+
+        System.out.println("A continuación se solicitarán los nicknames de cada uno de los jugadores.");
+    }
 
     public String getNicknameJugadorNuevo(){
         return getInputString("Introduce el Nickname que usarás dentro del juego.", "Nickname invalido");
     }
 
-    public String
 
     public String getInputString(String indicacion, String error){
         int entradaNumerica=0;

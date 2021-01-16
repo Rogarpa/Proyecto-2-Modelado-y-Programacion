@@ -139,13 +139,14 @@ EstadoNoche..|>EstadoAldea
 EstadoDia..|>EstadoAldea
 
 class Aldea{
+#controladorAldea:ControladorJuego
 #dia:EstadoAldea
 #noche:EstadoAldea
 #EstadoActual:EstadoAldea
 
 #todos:LinkedList<Aldeano>    'agregarestructuras de personajes'
 
-+Aldea()
++Aldea(controladorAldea: ControladorJuego)
 +Aldea(EstadoActual:EstadoAldea)
 
 +setEstadoActual(EstadoActual:AldeaEstado):void
@@ -154,7 +155,6 @@ class Aldea{
 +convocarBanquete():void
 +anochece():void
 +amanece():void
-<<<<<<< HEAD
 +matar(Personaje:aMatar,Personaje asesino):void
     'ver si cumple con MVC'
 +linchar(int:id):String
@@ -165,11 +165,6 @@ class Aldea{
 +juicio(id: int):Aldeano
 
 
-=======
-+matar(Aldeano:aMatar,Aldeano asesino):void
-+linchar(int:id);String
-+juicio(int:id):Aldeano
->>>>>>> 6bf5f4bb013726e9642f615edf162e195fe8de75
 +getAnocheciendo():EstadoAldea
 +getAmaneciendo():EstadoAldea
 }
@@ -251,6 +246,9 @@ ControladorJuego ..o Aldea
 
 
 class MenusJuego{
+    
+        'casi todos métodos distintos'
+    
     +run():void
     +seleccionarTipoJuego(): void
     +getJugadores():int
@@ -258,6 +256,10 @@ class MenusJuego{
     +getString():String
     +juego():void
     +rifa(lista:ArrayList<String>):LinkedList<Aldeano>
+
+    +instruccionesTipoJuego(numeroTipoJuego : int): void
+
+
 }
 
 class ControladorJuego{

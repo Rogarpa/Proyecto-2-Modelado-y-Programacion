@@ -27,28 +27,44 @@ public class ControladorJuego implements ControladorSujeto {
 
     public void rellenarAldea(){
         int tipoJuego = menusAControlar.seleccionarTipoJuego();
+        String[] listaNicknames;
         switch (tipoJuego) {
             case 1:
-                iniciarTipoJuego1();    
+                listaNicknames = iniciarTipoJuego1();    
                 break;
             case 1:
-                iniciarTipoJuego2();
+                listaNicknames = iniciarTipoJuego2();
                 break;
             case 3:
-                iniciarTipoJuego3();
+                listaNicknames = iniciarTipoJuego3();
                 break;
             default:
                 break;
         }
+
+        //sortear y rellenar aldeaAControlar metiendo en un for each el arreglgo de nicknames y creándolos con builder, metiéndolos a la aldea con el método
+
     }
     
-    public void iniciarTipoJuego1(){
-        //aquí comienza a rellenar aldea y la manda a mostrar() de menusAControlar al finalizar
+    public String[] iniciarTipoJuego1(){
+        menusAControlar.instruccionesTipoJuego(1);
+        String[] listaNicknames = new String[10];
+        for(String nuevoNickname: listaNicknames)   
+            nuevoNickname = menusAControlar.getNicknameJugadorNuevo();
+        return listaNicknames;
     }
-    public void iniciarTipoJuego2(){
-
+    public String[] iniciarTipoJuego2(){
+        menusAControlar.instruccionesTipoJuego(1);
+        String[] listaNicknames = new String[10];
+        for(String nuevoNickname: listaNicknames)   
+            nuevoNickname = menusAControlar.getNicknameJugadorNuevo();
+        return listaNicknames;
     }
-    public void iniciarTipoJuego3(){
-
+    public String[] iniciarTipoJuego3(){
+        menusAControlar.instruccionesTipoJuego(1);
+        String[] listaNicknames = new String[10];
+        for(String nuevoNickname: listaNicknames)   
+            nuevoNickname = menusAControlar.getNicknameJugadorNuevo();
+        return listaNicknames;
     }
 }

@@ -1,5 +1,8 @@
+import java.util.LinkedList;
 
 public class Aldea implements EstadoAldea{
+
+    protected ControladorJuego controladorAldea;
 
     protected EstadoAldea noche;
     protected EstadoAldea dia;
@@ -7,17 +10,20 @@ public class Aldea implements EstadoAldea{
     protected EstadoAldea EstadoActual;
 
     LinkedList<Aldeano> todos;
-    //ArrayList<Jugador> lobos=new ArrayList();
+    ArrayList<Jugador> lobos;
     //
 
     /**
      *Constructor de la Clase.
      */
-    public Aldea(){
+    public Aldea(ControladorJuego : controladorAldea){
+        this.controladorAldea = controladorAldea;
+        
         dia=new EstadoDia(this);
         noche=new EstadoNoche(this);
 
-        todos=new LinkedList();
+        todos=new LinkedList<>();
+        lobos=new LinkedList<>();
 
         EstadoActual=dia;
     }
@@ -31,24 +37,18 @@ public class Aldea implements EstadoAldea{
 
         dia=new EstadoDia(this);
         noche= new EstadoNoche(this);
+        
+        todos=new LinkedList<>();
+        lobos=new LinkedList<>();
     }
 
+    public ControladorJuego getControladorAldea(){return controladorAldea;}
 
+    public void agregarAldeano(Aldeano aAgregar){todos.add(aAgregar;)}
 
+    public void agregarLobo(Lobo aAgregar){lobos.add(aAgregar);}
 
-    public iniciarMenuVotacionLobos(){
-
-    }
-
-    public iniciarMenuvotacionAldeanos(){
-
-    }
-
-    public informeDiario(){
-
-    }
-
-
+    
     /**
     *Metodo para cambiár el Estado de la Aldea.
     *@param EstadoActual el nuevo estado.
