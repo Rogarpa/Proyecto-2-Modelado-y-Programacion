@@ -20,7 +20,7 @@ public class BuilderAldeano implements BuilderJugador{
         personajeAConstruir.ropa=ropa;
     }
 
-    public void setAldea(String aldea){
+    public void setAldea(Aldea aldea){
         personajeAConstruir.aldea=aldea;
     }
 
