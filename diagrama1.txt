@@ -143,7 +143,7 @@ class Aldea{
 #noche:EstadoAldea
 #EstadoActual:EstadoAldea
 
-    'agregarestructuras de personajes'
+#todos:LinkedList<Aldeano>    'agregarestructuras de personajes'
 
 +Aldea()
 +Aldea(EstadoActual:EstadoAldea)
@@ -158,7 +158,9 @@ class Aldea{
 +matar(Personaje:aMatar,Personaje asesino):void
     'ver si cumple con MVC'
 +linchar(int:id):String
-
++iniciarMenuVotacionLobos():
++iniciarMenuvotacionAldeanos():
++informeDiario():
     'NECESARIO??? (aunque yo lo puse jajajaja)'
 +juicio(id: int):Aldeano
 
@@ -243,7 +245,7 @@ class "BuilderAldeano"{
 }
     'MVC puro y duro'
 MenusJuego ..> ObservadorVista
-ControladorJuego ..> ControladorSujeto 
+ControladorJuego ..> ControladorSujeto
 ControladorJuego ..o ObservadorVista
 ControladorJuego ..o Aldea
 
@@ -272,5 +274,3 @@ interface ControladorSujeto{
     + desuscribir(aDesuscribir : Observador): void
 }
 @enduml
-
-

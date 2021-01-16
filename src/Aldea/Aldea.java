@@ -1,39 +1,43 @@
 
 public class Aldea implements EstadoAldea{
-    
+
     protected EstadoAldea noche;
     protected EstadoAldea dia;
 
     protected EstadoAldea EstadoActual;
-    
-    LinkedList<Jugador> todos;
+
+    LinkedList<Aldeano> todos;
     //ArrayList<Jugador> lobos=new ArrayList();
     //
-    
+
     /**
      *Constructor de la Clase.
      */
     public Aldea(){
         dia=new EstadoDia(this);
         noche=new EstadoNoche(this);
-        
+
         todos=new LinkedList();
 
         EstadoActual=dia;
     }
-    
+
+    /**
+    *Constructor para cambiar el estado de la aldea.
+    *@param EstadoActual el estado al que pasa la aldea.
+    */
     public Aldea(EstadoAldea EstadoActual){
         this.EstadoActual=EstadoActual;
-        
+
         dia=new EstadoDia(this);
         noche= new EstadoNoche(this);
     }
-    
-    
-    
-    
+
+
+
+
     public iniciarMenuVotacionLobos(){
-        
+
     }
 
     public iniciarMenuvotacionAldeanos(){
@@ -52,13 +56,13 @@ public class Aldea implements EstadoAldea{
     public void setEstadoActual(EstadoAldea EstadoActual){
         this. EstadoActual = EstadoActual;
     }
-    
-    
+
+
     @Override
     public void convocarJuicio(){
         EstadoActual.convocarJuicio();
     }
-    
+
     @Override
     public void recuentoNoche(){
         EstadoActual.recuentoNoche();
