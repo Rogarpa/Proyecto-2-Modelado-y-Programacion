@@ -26,6 +26,7 @@ public class EstadoNoche implements EstadoAldea{
     @Override
     public void convocarBanquete(){
         System.out.println("Hombres-Lobo transformandose para comer.");
+        narrador.iniciarMenuVotacionLobos();
     }
 
     @Override
@@ -37,7 +38,7 @@ public class EstadoNoche implements EstadoAldea{
     @Override
     public void amanece(){
         System.out.println("Esta amaneciendo.");
-        System.out.println(narrador.getAmaneciendo());
+        narrador.setEstadoActual(narrador.getAmaneciendo());
     }
 
 }

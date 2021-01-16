@@ -1,4 +1,4 @@
-
+ 
 public class EstadoDia implements EstadoAldea{
 
     protected Aldea narrador;
@@ -14,12 +14,13 @@ public class EstadoDia implements EstadoAldea{
     @Override
     public void convocarJuicio(){
         System.out.println("No es posible convocar al Juicio comunal");
-        throw new UnsupportedOperationException("Acción no disponible para la aldea.");
+        narrador.iniciarMenuvotacionAldeanos();
     }
 
     @Override
     public void recuentoNoche(){
         System.out.println("A continuación los aldeanos encontrados muertos.");
+        narrador.informeDiario();
     }
 
     @Override

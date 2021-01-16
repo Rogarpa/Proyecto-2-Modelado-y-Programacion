@@ -1,0 +1,6 @@
+poniendo en orden ideas:
+
+Necesito solicitar la cantidad de votos a favor y a quien van dirigidos, 
+Método para votaciones con mensaje.
+Introducción de personajes.
+Los estados necesitan narrador?

@@ -1,4 +1,4 @@
-
+ 
 public interface EstadoAldea{
 
     /**
@@ -25,3 +25,4 @@ public interface EstadoAldea{
     */
     public void amanece();
 }
+ 

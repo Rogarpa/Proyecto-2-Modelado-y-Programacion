@@ -1,38 +1,64 @@
 
 public class Aldea implements EstadoAldea{
+    
+    protected EstadoAldea noche;
+    protected EstadoAldea dia;
 
-    private EstadoAldea noche;
-    private EstadoAldea dia;
-
-    private EstadoAldea EstadoActual;
-
-    //LinkedList<Jugador> todos=new LinkedList();
+    protected EstadoAldea EstadoActual;
+    
+    LinkedList<Jugador> todos;
     //ArrayList<Jugador> lobos=new ArrayList();
     //
-
+    
     /**
-    *Constructor de la Clase.
-    */
+     *Constructor de la Clase.
+     */
     public Aldea(){
         dia=new EstadoDia(this);
         noche=new EstadoNoche(this);
+        
+        todos=new LinkedList();
 
         EstadoActual=dia;
     }
-
+    
     public Aldea(EstadoAldea EstadoActual){
         this.EstadoActual=EstadoActual;
-
+        
         dia=new EstadoDia(this);
         noche= new EstadoNoche(this);
     }
+    
+    
+    
+    
+    public iniciarMenuVotacionLobos(){
+        
+    }
+
+    public iniciarMenuvotacionAldeanos(){
+
+    }
+
+    public informeDiario(){
+
+    }
 
 
+    /**
+    *Metodo para cambiár el Estado de la Aldea.
+    *@param EstadoActual el nuevo estado.
+    */
+    public void setEstadoActual(EstadoAldea EstadoActual){
+        this. EstadoActual = EstadoActual;
+    }
+    
+    
     @Override
     public void convocarJuicio(){
         EstadoActual.convocarJuicio();
     }
-
+    
     @Override
     public void recuentoNoche(){
         EstadoActual.recuentoNoche();
@@ -60,6 +86,9 @@ public class Aldea implements EstadoAldea{
     */
     public void matar(Aldeano aMatar,Aldeano asesino){
         aMatar.morir();
+
+        todos.remove(aMatar);
+
         System.out.println(aMatar.getNickname()+" fue asesinado por "+asesino.getNickname()+" con "+asesino.getArma());
     }
 
@@ -68,24 +97,8 @@ public class Aldea implements EstadoAldea{
     *@param id el id del Jugador que fue votado para morir.
     */
     public String linchar(int id){
-        /**
-        *Aldeano aLinchar= null;
-        *for(Jugador e:todos){
-        *   if(e.getId()==id){
-        *       aLinchar=e;
-        *   }
-        *}
-        *aLinchar,morir();
-        */
+        todos.removeIf(x -> x.id == id);
         return "La aldea voto matar a"/**e.getNickname()+"con id"+e.getId()*/;
-    }
-
-    /**
-    *Metodo para cambiár el Estado de la Aldea.
-    *@param EstadoActual el nuevo estado.
-    */
-    public void setEstadoActual(EstadoAldea EstadoActual){
-        this. EstadoActual = EstadoActual;
     }
 
     /**

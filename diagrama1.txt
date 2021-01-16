@@ -140,19 +140,29 @@ EstadoNoche..|>EstadoAldea
 EstadoDia..|>EstadoAldea
 
 class Aldea{
--dia:EstadoAldea
--noche:EstadoAldea
--EstadoActual:EstadoAldea
+#dia:EstadoAldea
+#noche:EstadoAldea
+#EstadoActual:EstadoAldea
+
+    'agregarestructuras de personajes'
+
 +Aldea()
 +Aldea(EstadoActual:EstadoAldea)
+
 +setEstadoActual(EstadoActual:AldeaEstado):void
 +convocarJuicio():void
-+convocarBanquete():void
 +recuentoNoche():void
++convocarBanquete():void
 +anochece():void
 +amanece():void
 +matar(Personaje:aMatar,Personaje asesino):void
-+linchar(int:id);String
+    'ver si cumple con MVC'
++linchar(int:id):String
+
+    'NECESARIO??? (aunque yo lo puse jajajaja)'
++juicio(id: int):Aldeano
+
+
 +getAnocheciendo():EstadoAldea
 +getAmaneciendo():EstadoAldea
 }
@@ -226,6 +236,12 @@ class "BuilderAldeano"{
 
     + getPersonaje(): Jugador
 }
+    'MVC puro y duro'
+MenusJuego ..> ObservadorVista
+ControladorJuego ..> ControladorSujeto 
+ControladorJuego ..o ObservadorVista
+ControladorJuego ..o Aldea
+
 
 class MenusJuego{
     +run():void
@@ -235,4 +251,20 @@ class MenusJuego{
     +getString():String
     +juego():void
 }
+
+class ControladorJuego{
+
+}
+
+interface ObservadorVista{
+    +mostrar(String mensaje);
+
+}
+
+interface ControladorSujeto{
+    +suscribir(aSuscribir : Observador): void
+    + desuscribir(aDesuscribir : Observador): void
+}
 @enduml
+
+
