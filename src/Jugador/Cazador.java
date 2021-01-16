@@ -2,14 +2,14 @@
 public class Cazador extends Aldeano{
 
     private static Cazador uniqueinstanceof;
-    private Aldeano esbirro;
+    private static Aldeano esbirro;
 
     /**
     *Metodo para obtener la unica instancia de la clase.
     *@return la instancia.
     */
     public static Cazador getinstance(){
-        uniqueinstanceof=new Cazador();
+        uniqueinstanceof=new Cazador(esbirro);
         return uniqueinstanceof;
     }
 

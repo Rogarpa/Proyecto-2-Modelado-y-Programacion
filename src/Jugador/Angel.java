@@ -2,14 +2,14 @@
 public class Angel extends Aldeano{
 
     private static Angel uniqueinstanceof;
-    private Aldeano lobo;
+    private static Aldeano lobo;
 
     /**
     *Metodo para obtener la unica instancia de la clase.
     *@return la instancia.
     */
     public static Angel getinstance(){
-        uniqueinstanceof=new Angel();
+        uniqueinstanceof=new Angel(lobo);
         return uniqueinstanceof;
     }
 
