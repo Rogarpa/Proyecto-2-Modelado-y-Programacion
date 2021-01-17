@@ -27,7 +27,7 @@ public class ControladorJuego implements ControladorSujeto {
     *Metodo para inciar el juego.
     */
     public void iniciarJuego(){
-        int opcionInicial = menusAControlar.menuInicial;
+        int opcionInicial = menusAControlar.menuInicial();
         switch (opcionInicial) {
             case 1:
             menusAControlar.tutorial();
@@ -55,7 +55,7 @@ public class ControladorJuego implements ControladorSujeto {
             case 1:
                 listaNicknames = obtenerListaNicknamesJuego1();
                 break;
-            case 1:
+            case 2:
                 listaNicknames = obtenerListaNicknamesJuego2();
                 break;
             case 3:
@@ -83,7 +83,7 @@ public class ControladorJuego implements ControladorSujeto {
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
 
         if(tipoJuego == 1) return;
-        
+
         director.creaAldeanoComun(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
         for(int i=0; i<2; i++) aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
         director.creaLobo(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
@@ -135,7 +135,7 @@ public class ControladorJuego implements ControladorSujeto {
 
     @Override
     public void suscribir(ObservadorVista aSuscribir){
-        observadoresr.add(aSuscribir);
+        observadores.add(aSuscribir);
     }
 
     @Override

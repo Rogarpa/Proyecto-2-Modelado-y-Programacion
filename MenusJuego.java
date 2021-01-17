@@ -26,10 +26,10 @@ public class MenusJuego implements ObservadorVista{
     public int menuInicial(){
         String opcion,error;
         opcion=
-        "Digita la opcion que quieras.\n
-        1.-Turorial \n
-        2.-Seleccionar Partida \n
-        3.-SALIR";
+        "Digita la opcion que quieras.\n"+
+        "1.-Turorial \n"+
+        "2.-Seleccionar Partida \n"+
+        "3.-SALIR";
         error="Digite una opción valida";
 
         return getInputInt(opcion,error,1,3);
@@ -39,16 +39,14 @@ public class MenusJuego implements ObservadorVista{
     *Metodo inmediato despues de que el usuario indique que quiera hacer el tutorial.
     */
     public int tutorial(){
-        String erro,indicacion;
+        String error,indicacion;
         indicacion=
-        "
-        A continuación las opciones para correr el tutorial. \n
-        1.-Juego de 8 \n
-        2.-Juego de 12 \n
-        3.-Juego de 16 \n
-        4.-SALIR
-        "
-        error="Digite una opcion valida."
+        "A continuación las opciones para correr el tutorial. \n"+
+        "1.-Juego de 8 \n"+
+        "2.-Juego de 12 \n"+
+        "3.-Juego de 16 \n"+
+        "4.-SALIR";
+        error="Digite una opcion valida.";
 
         return getInputInt(indicacion,error,1,4);
     }
@@ -61,11 +59,10 @@ public class MenusJuego implements ObservadorVista{
     public int seleccionarTipoJuego(){
         Scanner sc = new Scanner(System.in);
         String indicacion, error;
-        indicacion =
-        "Digite el número de la opcion de su preferencia y presione enter.\n
-        1.-juego1/10   \n
-        2.-juego2/15   \n
-        3.-juego3/20   \n";
+        indicacion="Digite el número de la opcion de su preferencia y presione enter.\n"+
+        "1.-juego1/10   \n"+
+        "2.-juego2/15   \n"+
+        "3.-juego3/20   \n";
         error = "Digite un tipo de partida correcta.";
 
         return getInputInt(indicacion, error, 1, 3);
@@ -126,7 +123,7 @@ public class MenusJuego implements ObservadorVista{
             }
         }while(true);
 
-        return num;
+        return entradaNumerica;
     }
 
     /**
@@ -154,7 +151,7 @@ public class MenusJuego implements ObservadorVista{
             }
         }while(true);
 
-        return num;
+        return entradaNumerica;
     }
 
     /**
@@ -179,7 +176,7 @@ public class MenusJuego implements ObservadorVista{
             }
         }while(true);
 
-        return num;
+        return entradaNumerica;
     }
 
     @Override
