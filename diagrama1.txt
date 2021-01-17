@@ -61,8 +61,8 @@ class Cazador{
 -esbirro:Aldeano
 -static uniqueinstanceof:Cazador
 +static getinstance(Aldeano):Cazador
-#Cazador(esbirro:Aldeano)
-+setEsbirro(esbirro:Aldeano):void
+#Cazador(Aldeano)
++setEsbirro(Aldeano):void
 +getEsbirro():Aldeano
 +morir():Magia
 }
@@ -71,8 +71,8 @@ class Vidente{
 -identidad:Aldeano
 -static uniqueinstanceof:Vidente
 +static getinstance(Aldeano):Vidente
-#Vidente(identidad:Aldeano)
-+descubrirIdentidad(identidad:Aldeano):void
+#Vidente(Aldeano)
++descubrirIdentidad(Aldeano):void
 +morir():Magia
 }
 
@@ -80,8 +80,8 @@ class Caballero{
 -rehen:Aldeano
 -static uniqueinstanceof:Caballero
 +static getinstance(Aldeano):Caballero
-#Caballero(rehen:Aldeano)
-+setRehen(rehen:Aldeano):void
+#Caballero(Aldeano)
++setRehen(Aldeano):void
 +getRehen():Aldeano
 +morir():Magia
 }
@@ -90,8 +90,8 @@ class Angel{
 -lobo:Aldeano
 -static uniqueinstanceof:Angel
 +static getinstance(Aldeano):Angel
-#Angel(lobo:Aldeano)
-+setLobo(lobo:Aldeano):void
+#Angel(Aldeano)
++setLobo(Aldeano):void
 +getLobo():Aldeano
 +morir():Magia
 }
@@ -262,7 +262,7 @@ interface "BuilderJugador"{
 
 class "BuilderAldeano"{
     # personajeAConstruir: Aldeano
-
+    +BuilderAldeano()
     + setCabello(cabello:String): void
     + setArma(arma:String): void
     + setRopa(ropa:String): void
@@ -272,12 +272,56 @@ class "BuilderAldeano"{
 
 class BuilderLobo{
 +personajeAConstruir:Lobo
++BuilderLobo()
 + setCabello(): void
 + setArma(): void
 + setRopa(): void
 + setAldea(): void
 + getPersonaje:Lobo
-+ setRelacion(Aldeano):void
+}
+
+class BuilderCazador{
+    # personajeAConstruir: Cazador
+    +BuilderCazador()
+    + setCabello(cabello:String): void
+    + setArma(arma:String): void
+    + setRopa(ropa:String): void
+    + setAldea(aldeaHogar:Aldea): void
+    + getPersonaje(): Aldeano
+    + setRelacion(Aldeano):void
+}
+
+class BuilderCaballero{
+    # personajeAConstruir: Caballero
+    +BuilderCaballero()
+    + setCabello(cabello:String): void
+    + setArma(arma:String): void
+    + setRopa(ropa:String): void
+    + setAldea(aldeaHogar:Aldea): void
+    + getPersonaje(): Aldeano
+    + setRelacion(Aldeano):void
+}
+
+class BuilderAngel{
+    # personajeAConstruir:Angel
+    +BuilderAngel()
+    + setCabello(cabello:String):void
+    + setArma(arma:String): void
+    + setRopa(ropa:String): void
+    + setAldea(aldeaHogar:Aldea): void
+    + getPersonaje(): Aldeano
+    + setRelacion(Aldeano):void
+}
+
+class BuilderVidente{
+    # personajeAConstruir: Vidente
+    +BuilderVidente()
+    + setCabello(cabello:String): void
+    + setArma(arma:String): void
+    + setRopa(ropa:String): void
+    + setAldea(aldeaHogar:Aldea): void
+    + getPersonaje(): Aldeano
+    + setRelacion(Aldeano):void
 }
     'MVC puro y duro'
 MenusJuego ..> ObservadorVista
@@ -292,10 +336,10 @@ class MenusJuego{
     +menuInicial():int
     +tutorial():int
     +seleccionarTipoJuego():void
-    +instruccionesTipoJuego(numeroTipoJuego:int):void
+    +instruccionesTipoJuego(int):void
     +getNicknameJugadorNuevo():String
-    +getInputString(indicacion:String,error:String):String
-    +getInputIntint(String.String,int,int):int
+    +getInputString(String,String):String
+    +getInputIntint(String,String,int,int):int
     +getInputInt(String,String):int
     +mostrar():void
     +actualiza():void
@@ -304,7 +348,7 @@ class MenusJuego{
         'casi todos métodos distintos'
 
     '+juego():void'
-    '+rifa(lista:ArrayList<String>):LinkedList<Aldeano>'
+    '+rifa(ArrayList<String>):LinkedList<Aldeano>'
 
 
 }
@@ -314,7 +358,7 @@ class ControladorJuego{
     #aldeaAControlar:Aldea
     #observadores:LinkedList<ObservadorVista>
 
-    +ControladorJuego(aldeaAControlar:Aldea,menusAControlar:MenusJuego)
+    +ControladorJuego(Aldea,MenusJuego)
     +bienvenida():void
     +iniciarJuego():void
     +rellenarAldea():void
@@ -324,10 +368,10 @@ class ControladorJuego{
     +obtenerListaNicknamesJuego2():String[]
     +obtenerListaNicknamesJuego3():Stirng[]
 
-    +suscribir(aSuscribir:ObservadorVista):void
-    +desuscribir(aDesuscribir:ObservadorVista):void
+    +suscribir(ObservadorVista):void
+    +desuscribir(ObservadorVista):void
 
-    +publicar(mensaje:String):void
+    +publicar(String):void
 }
 
 interface ObservadorVista{
