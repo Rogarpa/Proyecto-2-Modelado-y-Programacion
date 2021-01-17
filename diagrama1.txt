@@ -145,11 +145,14 @@ class Aldea{
 #EstadoActual:EstadoAldea
 
 #todos:LinkedList<Aldeano>    'agregarestructuras de personajes'
+#lobos: LinkedListj<Lobos>
+#muertos: LinkedList<Jugador>
 
 +Aldea(controladorAldea: ControladorJuego)
 +Aldea(EstadoActual:EstadoAldea)
 
 +setEstadoActual(EstadoActual:AldeaEstado):void
++getJugadores(): void
 +convocarJuicio():void
 +recuentoNoche():void
 +convocarBanquete():void
@@ -157,12 +160,12 @@ class Aldea{
 +amanece():void
 +matar(Personaje:aMatar,Personaje asesino):void
     'ver si cumple con MVC'
-+linchar(int:id):String
++linchar(int:id):void
 +iniciarMenuVotacionLobos():
 +iniciarMenuvotacionAldeanos():
 +informeDiario():
     'NECESARIO??? (aunque yo lo puse jajajaja)'
-+juicio(id: int):Aldeano
++juicio(id: int):void
 
 
 +getAnocheciendo():EstadoAldea
@@ -276,4 +279,6 @@ interface ControladorSujeto{
     + desuscribir(aDesuscribir : Observador): void
     +publicar(mensaje : String): void
 }
+
+
 @enduml

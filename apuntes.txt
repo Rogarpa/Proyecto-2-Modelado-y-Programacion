@@ -29,3 +29,5 @@ Metodo rifa en "MenusJuego".;EMPEZADO
 
 
 Se modificó el 
+agregado inciar ciclo dia y noche
+agregado 

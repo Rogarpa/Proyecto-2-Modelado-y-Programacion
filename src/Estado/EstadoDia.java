@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+
+import src.Aldea.Aldea;
 
 public class EstadoDia implements EstadoAldea{
 
@@ -13,20 +16,33 @@ public class EstadoDia implements EstadoAldea{
 
     @Override
     public void convocarJuicio(){
-        narrador.getControladorAldea().muestra("No es posible convocar al Juicio comunal");
-        narrador.iniciarMenuvotacionAldeanos();
+        narrador.getControladorAldea().muestra("Tras las muertes de anoche es necesario un linchamiento:");
+        LinkedList<int[]> idsNominaciones = narrador.getControladorAldea().obtenerCorrelacionIdsNominaciones();
+        int idMaximo;
+        int nominacionesIdMaximo = 0;
+        for(int[] i : idsNominaciones){
+            if(i[1] > nominacionesIdMaximo){
+                idMaximo = i[0];
+                nominacionesIdMaximo = i[1];
+            }
+        }
+
+        narrador.linchar(idMaximo);
     }
 
     @Override
     public void recuentoNoche(){
         narrador.getControladorAldea().muestra("A continuación los aldeanos encontrados muertos.");
-        narrador.informeDiario();
+        for(Jugador j: narrador.getMuertosUltimaNoche())
+            narrador.getControladorAldea().muestra(j.getDescripcion());
+
     }
 
     @Override
     public void convocarBanquete(){
         narrador.getControladorAldea().muestra("Ya ocurrio la noche pasada.");
         throw new UnsupportedOperationException("Acción no disponible para la aldea");
+
     }
 
     @Override

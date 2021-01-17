@@ -25,8 +25,20 @@ public class EstadoNoche implements EstadoAldea{
 
     @Override
     public void convocarBanquete(){
-        narrador.getControladorAldea().muestra("Hombres-Lobo transformandose para comer.");
-        narrador.iniciarMenuVotacionLobos();
+        narrador.getControladorAldea().muestra("Hombres-Lobo transformandose para comer, es necesario que maten a un aldeano:");
+        narrador.getJugadores;
+        
+        LinkedList<int[]> idsNominaciones = narrador.getControladorAldea().obtenerCorrelacionIdsNominaciones();
+        int idMaximo;
+        int nominacionesIdMaximo = 0;
+        for(int[] i : idsNominaciones){
+            if(i[1] > nominacionesIdMaximo){
+                idMaximo = i[0];
+                nominacionesIdMaximo = i[1];
+            }
+        }
+
+        narrador.linchar(idMaximo);
     }
 
     @Override

@@ -95,6 +95,8 @@ public class ControladorJuego implements ControladorSujeto {
         for(int i=0; i<3; i++) aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
         director.creaLobo(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
         for(int i=0; i<2; i++) aldeaAControlar.agregarLobo(builderPersonajes.getPersonaje());
+
+        aldeaAControlar.comenzarCicloDiaNoche();
     }
 
     /**
@@ -131,6 +133,10 @@ public class ControladorJuego implements ControladorSujeto {
         for(String nuevoNickname: listaNicknames)
             nuevoNickname = menusAControlar.getNicknameJugadorNuevo();
         return listaNicknames;
+    }
+
+    public LinkedList<int[]> obtenerCorrelacionIdsNominaciones(){
+        menusAControlar.getNominacion();
     }
 
     @Override

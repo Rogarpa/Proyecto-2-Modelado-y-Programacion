@@ -22,4 +22,5 @@ public interface Jugador{
     *Metodo para cuando un personaje muera.
     */
     public Magia morir();
+
 }
