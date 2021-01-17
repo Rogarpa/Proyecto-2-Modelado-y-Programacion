@@ -60,7 +60,7 @@ abstract Aldeano{
 class Cazador{
 -esbirro:Aldeano
 -static uniqueinstanceof:Cazador
-+static getinstance()
++static getinstance(Aldeano):Cazador
 #Cazador(esbirro:Aldeano)
 +setEsbirro(esbirro:Aldeano):void
 +getEsbirro():Aldeano
@@ -70,7 +70,7 @@ class Cazador{
 class Vidente{
 -identidad:Aldeano
 -static uniqueinstanceof:Vidente
-+static getinstance()
++static getinstance(Aldeano):Vidente
 #Vidente(identidad:Aldeano)
 +descubrirIdentidad(identidad:Aldeano):void
 +morir():Magia
@@ -79,7 +79,7 @@ class Vidente{
 class Caballero{
 -rehen:Aldeano
 -static uniqueinstanceof:Caballero
-+static getinstance()
++static getinstance(Aldeano):Caballero
 #Caballero(rehen:Aldeano)
 +setRehen(rehen:Aldeano):void
 +getRehen():Aldeano
@@ -89,7 +89,7 @@ class Caballero{
 class Angel{
 -lobo:Aldeano
 -static uniqueinstanceof:Angel
-+static getinstance()
++static getinstance(Aldeano):Angel
 #Angel(lobo:Aldeano)
 +setLobo(lobo:Aldeano):void
 +getLobo():Aldeano
@@ -226,6 +226,7 @@ class EstadoNoche{
     BuilderJugador ..o DirectorBuilderJugador
     Jugador ..o DirectorBuilderJugador
     BuilderAldeano ..|> BuilderJugador
+    BuilderLobo..|>BuilderJugador
     main "use"..|> MenusJuego
 
 class DirectorBuilderJugador{
@@ -238,10 +239,10 @@ class DirectorBuilderJugador{
 
     +creaLobo(id: int, nickname: String, aldeaHogar: Aldea): void
     +creaAldeanoComun(id: int, nickname: String, aldeaHogar: Aldea): void
-    +creaAngel(id: int, nickname: String, aldeaHogar: Aldea): void
-    +creaVidente(id: int, nickname: String, aldeaHogar: Aldea): void
-    +creaCazador(id: int, nickname: String, aldeaHogar: Aldea): void
-    +creaCaballero(id: int, nickname: String, aldeaHogar: Aldea): void
+    +creaAngel(id: int, nickname: String, aldeaHogar: Aldea,Aldeano): void
+    +creaVidente(id: int, nickname: String, aldeaHogar: Aldea,Aldeano): void
+    +creaCazador(id: int, nickname: String, aldeaHogar: Aldea,Aldeano): void
+    +creaCaballero(id: int, nickname: String, aldeaHogar: Aldea,Aldeano): void
 
 }
 
@@ -261,6 +262,15 @@ class "BuilderAldeano"{
     + setAldea(aldeaHogar:Aldea): void
 
     + getPersonaje(): Aldeano
+}
+
+class BuilderLobo{
++personajeAConstruir:Lobo
++ setCabello(): void
++ setArma(): void
++ setRopa(): void
++ setAldea(): void
++ getPersonaje:Lobo
 }
     'MVC puro y duro'
 MenusJuego ..> ObservadorVista
