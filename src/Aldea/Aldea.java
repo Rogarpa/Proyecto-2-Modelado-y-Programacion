@@ -22,8 +22,8 @@ public class Aldea implements EstadoAldea{
         dia=new EstadoDia(this);
         noche=new EstadoNoche(this);
 
-        todos=new LinkedList<>();
-        lobos=new LinkedList<>();
+        todos=new LinkedList<Aldeano>();
+        lobos=new LinkedList<Lobo>();
 
         EstadoActual=dia;
     }

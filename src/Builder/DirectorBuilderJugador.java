@@ -3,7 +3,7 @@ class DirectorBuilderJugador{
     protected Aldeano personajeAConstruir;
 
 
-    Director(BuilderJugador tipoBuilder){
+    DirectorBuilderJugador(BuilderJugador tipoBuilder){
 
     }
 

@@ -108,13 +108,13 @@ public class MenusJuego implements ObservadorVista{
     *@return la cadena correcta.
     */
     public String getInputString(String indicacion, String error){
-        int entradaNumerica=0;
+        String entradaNumerica="";
 
         Scanner scn=new Scanner(System.in);
         do{
             System.out.println(indicacion);
-            if(scn.hasNextInt()){
-                entradaNumerica=scn.nextInt();
+            if(scn.hasNextLine()){
+                entradaNumerica=scn.nextLine();
                 break;
             }
             else{
