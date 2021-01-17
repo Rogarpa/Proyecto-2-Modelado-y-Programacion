@@ -138,6 +138,10 @@ public class ControladorJuego implements ControladorSujeto {
         return listaNicknames;
     }
 
+    /**
+    *Metodo para obtener las nominaciones para la votación.
+    *@return una lista con los id de los nominados.
+    */
     public LinkedList<int[]> obtenerCorrelacionIdsNominaciones(){
         menusAControlar.getNominacion();
     }

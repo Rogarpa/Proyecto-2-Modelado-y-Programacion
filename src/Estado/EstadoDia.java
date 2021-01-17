@@ -1,7 +1,5 @@
 import java.util.LinkedList;
 
-import src.Aldea.Aldea;
-
 public class EstadoDia implements EstadoAldea{
 
     protected Aldea narrador;
@@ -16,7 +14,7 @@ public class EstadoDia implements EstadoAldea{
 
     @Override
     public void convocarJuicio(){
-        narrador.getControladorAldea().muestra("Tras las muertes de anoche es necesario un linchamiento:");
+        narrador.getControladorAldea().publicar("Tras las muertes de anoche es necesario un linchamiento:");
         LinkedList<int[]> idsNominaciones = narrador.getControladorAldea().obtenerCorrelacionIdsNominaciones();
         int idMaximo;
         int nominacionesIdMaximo = 0;
@@ -32,9 +30,9 @@ public class EstadoDia implements EstadoAldea{
 
     @Override
     public void recuentoNoche(){
-        narrador.getControladorAldea().muestra("A continuación los aldeanos encontrados muertos.");
+        narrador.getControladorAldea().publicar("A continuación los aldeanos encontrados muertos.");
         for(Jugador j: narrador.getMuertosUltimaNoche())
-            narrador.getControladorAldea().muestra(j.getDescripcion());
+            narrador.getControladorAldea().publicar(j.getDescripcion());
 
     }
 
