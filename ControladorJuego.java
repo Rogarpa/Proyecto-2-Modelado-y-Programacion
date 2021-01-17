@@ -1,3 +1,6 @@
+
+import java.util.*;
+
 public class ControladorJuego implements ControladorSujeto {
     protected MenusJuego menusAControlar;
     protected Aldea aldeaAControlar;

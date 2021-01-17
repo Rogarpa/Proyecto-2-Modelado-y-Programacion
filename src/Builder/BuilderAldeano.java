@@ -8,7 +8,7 @@ public class BuilderAldeano implements BuilderJugador{
     *@param nickname el nombre del aldeano.
     *@param aldeaHogar la aldea a la que pertenece.
     */
-    public BuilderAldeano(int id,String nickname,Aldea aldeHogar){
+    public BuilderAldeano(int id,String nickname,Aldea aldeaHogar){
         personajeAConstruir.id=id;
         personajeAConstruir.nickname=nickname;
         personajeAConstruir.aldea=aldeaHogar;
@@ -25,7 +25,7 @@ public class BuilderAldeano implements BuilderJugador{
     }
 
     @Override
-    public void setRopa(Strnig ropa){
+    public void setRopa(String ropa){
         personajeAConstruir.ropa=ropa;
     }
 

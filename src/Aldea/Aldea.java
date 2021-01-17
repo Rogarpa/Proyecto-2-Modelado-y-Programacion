@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.*;
 
 public class Aldea implements EstadoAldea{
 
@@ -108,7 +108,7 @@ public class Aldea implements EstadoAldea{
 
         todos.remove(aMatar);
 
-        this.controladorAldea.mostrar(aMatar.getNickname()+" fue asesinado por "+asesino.getNickname()+" con "+asesino.getArma());
+        this.controladorAldea.publicar(aMatar.getNickname()+" fue asesinado por "+asesino.getNickname()+" con "+asesino.getArma());
     }
 
     /**
@@ -117,7 +117,7 @@ public class Aldea implements EstadoAldea{
     */
     public String linchar(int id){
         todos.removeIf(x -> x.id == id);
-        this.controladorAldea.mostrar("La aldea voto matar a"/**e.getNickname()+"con id"+e.getId()*/);
+        this.controladorAldea.publicar("La aldea voto matar a"/**e.getNickname()+"con id"+e.getId()*/);
     }
 
     /**
