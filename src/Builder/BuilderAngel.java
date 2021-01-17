@@ -3,6 +3,10 @@ public class BuilderAngel implements BuilderJugador{
 
     public Angel personajeAConstruir;
 
+    public BuilderAngel(){
+        personajeAConstruir = new Angel(null);
+    }
+
     @Override
     public void setCabello(String cabello){
         personajeAConstruir.cabello=cabello;
@@ -34,16 +38,12 @@ public class BuilderAngel implements BuilderJugador{
     }
 
     /**
-    *Metodo para obtener el aldeano a construir.
-    *@return el Aldeano.
+    *Metodo para obtener el angel a construir.
+    *@return el angel.
     */
-    public Aldeano getPersonaje(){
+    public Angel getPersonaje(){
         return this.personajeAConstruir;
     }
 
-    @Override
-    public default setRelacion(Jugador relacionad){
-
-    }
 
 }

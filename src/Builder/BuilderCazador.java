@@ -3,6 +3,10 @@ public class BuilderCazador implements BuilderJugador{
 
     public Cazador personajeAConstruir;
 
+    public BuilderCazador(){
+        personajeAConstruir = new Cazador(null);
+    }
+
     @Override
     public void setCabello(String cabello){
         personajeAConstruir.cabello=cabello;
@@ -34,15 +38,15 @@ public class BuilderCazador implements BuilderJugador{
     }
 
     /**
-    *Metodo para obtener el aldeano a construir.
-    *@return el Aldeano.
+    *Metodo para obtener el Cazador a construir.
+    *@return el Cazador.
     */
-    public Aldeano getPersonaje(){
+    public Cazador getPersonaje(){
         return this.personajeAConstruir;
     }
 
     @Override
-    public default setRelacion(Jugador relacionad){
-
+    public default setRelacion(Jugador relacionado){
+        personajeAConstruir.setEsbirro(relacionado);
     }
 }

@@ -68,10 +68,11 @@ class Cazador{
 }
 
 class Vidente{
--identidad:Aldeano
+-identidad:Jugador
 -static uniqueinstanceof:Vidente
 +static getinstance(Aldeano):Vidente
 #Vidente(Aldeano)
++setIdentidad(Jugador identidad): void
 +descubrirIdentidad(Aldeano):void
 +morir():Magia
 }

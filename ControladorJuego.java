@@ -69,11 +69,15 @@ public class ControladorJuego implements ControladorSujeto {
         }
 
         //sortear y rellenar aldeaAControlar metiendo en un for each el arreglgo de nicknames y creándolos con builder, metiéndolos a la aldea con el método
-        BuilderAldeano builderPersonajes = new BuilderAldeano();
+        BuilderAldeano builderAldeano = new BuilderAldeano();
+        BuilderAngel builderAngel = new BuilderAngel();
+        BuilderCaballero builderCaballero = new BuilderCaballero();
+        BuilderVidente builderVidente = new BuilderVidente();
+        BuilderCazador builderCazador = new BuilderCazador();
 
-        DirectorBuilderJugador director = new DirectorBuilderJugador(builderPersonajes);
+        DirectorBuilderJugador director = new DirectorBuilderJugador(builderAldeano);
+
         int indiceArregloNicknames = 0;
-        director.creaAldeanoComun(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
 
         int numeroLobos = 0;
         int numeroAldeanos = 0;
@@ -95,29 +99,34 @@ public class ControladorJuego implements ControladorSujeto {
                 break;
         }
 
-
+        director.cambiarBuilder(builderAldeano);
         for(int i=0; i<numeroAldeanos; i++) {
             director.creaAldeanoComun(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
             aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
 
         }
 
+        director.cambiarBuilder(builderLobo);
         for(int i=0; i<numeroLobos; i++){
             director.creaLobo(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
             aldeaAControlar.agregarLobo(builderLobo.getPersonaje());
         }
 
-
+        director.cambiarBuilder(builderAngel);
         director.creaAngel(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+        
+        director.cambiarBuilder(builderCaballero);
         director.creaCaballero(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+
+        director.cambiarBuilder(builderCazador);
         director.creaCazador(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+        
+        director.cambiarBuilder(builderVidente);
         director.creaVidente(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
-
-
 
         aldeaAControlar.comenzarCicloDiaNoche();
     }
