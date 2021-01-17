@@ -37,4 +37,6 @@ public interface BuilderJugador{
     */
     public void setNickname(String nickname);
 
+    public default void setRelacion(Jugador relacionado){}
+
 }
