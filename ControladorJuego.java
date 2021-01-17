@@ -80,42 +80,44 @@ public class ControladorJuego implements ControladorSujeto {
 
         switch (tipoJuego) {
             case 1:
-                numeroLobos =     
-            
+                numeroAldeanos = 3;
+                numeroLobos =  3;
                 break;
-            case 1:
-                
+            case 2:
+                numeroAldeanos = 5;
+                numeroLobos = 6;
                 break;
+            case 2:
+                numeroLobos = 8;
+                numeroAldeanos = 8;
+                break
             default:
                 break;
         }
-        for(int i=0; i<3; i++) aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
-        director.creaLobo(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-        for(int i=0; i<3; i++) aldeaAControlar.agregarLobo(builderPersonajes.getPersonaje());
+        
+        
+        for(int i=0; i<numeroAldeanos; i++) {
+            director.creaAldeanoComun(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+            aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+
+        }
+        
+        for(int i=0; i<numeroLobos; i++){
+            director.creaLobo(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+            aldeaAControlar.agregarLobo(builderPersonajes.getPersonaje());
+        }
 
 
-        director.creaAngel(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        director.creaAngel(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
-        director.creaCaballero(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        director.creaCaballero(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
-        director.creaCazador(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        director.creaCazador(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
-        director.creaVidente(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        director.creaVidente(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
 
-        if(tipoJuego == 1) return;
 
-        director.creaAldeanoComun(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-        for(int i=0; i<2; i++) aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
-        director.creaLobo(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-        for(int i=0; i<3; i++) aldeaAControlar.agregarLobo(builderPersonajes.getPersonaje());
-
-        if(tipoJuego == 2) return;
-
-        director.creaAldeanoComun(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-        for(int i=0; i<3; i++) aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
-        director.creaLobo(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-        for(int i=0; i<2; i++) aldeaAControlar.agregarLobo(builderPersonajes.getPersonaje());
 
         aldeaAControlar.comenzarCicloDiaNoche();
     }
