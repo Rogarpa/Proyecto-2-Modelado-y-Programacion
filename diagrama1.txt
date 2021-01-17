@@ -227,6 +227,10 @@ class EstadoNoche{
     Jugador ..o DirectorBuilderJugador
     BuilderAldeano ..|> BuilderJugador
     BuilderLobo..|>BuilderJugador
+    BuilderAngel..|>BuilderJugador
+    BuilderCaballero..|>BuilderJugador
+    BuilderCazador..|>BuilderJugador
+    BuilderVidente..|>BuilderJugador
     main "use"..|> MenusJuego
 
 class DirectorBuilderJugador{
@@ -253,6 +257,7 @@ interface "BuilderJugador"{
     + setAldea(Aldea): void
     + setId(int):void
     + setNickname(String):void
+    + default setRelacion(Aldeano):void
 }
 
 class "BuilderAldeano"{
@@ -262,7 +267,6 @@ class "BuilderAldeano"{
     + setArma(arma:String): void
     + setRopa(ropa:String): void
     + setAldea(aldeaHogar:Aldea): void
-
     + getPersonaje(): Aldeano
 }
 
@@ -273,6 +277,7 @@ class BuilderLobo{
 + setRopa(): void
 + setAldea(): void
 + getPersonaje:Lobo
++ setRelacion(Aldeano):void
 }
     'MVC puro y duro'
 MenusJuego ..> ObservadorVista
