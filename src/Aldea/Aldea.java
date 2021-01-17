@@ -123,13 +123,13 @@ public class Aldea implements EstadoAldea{
     *@return el aldeano que buscamos.
     */
     public Aldeano juicio(int id){
-        /**
-        *for(Aldeano elem:todos){
-        *   if(elem.getId()==id){
-        *     return elem;
-        *   }
-        *}
-        */
+        
+        for(Aldeano elem:todos){
+           if(elem.getId()==id){
+             return elem;
+           }
+        }
+        
         return null;
     }
 

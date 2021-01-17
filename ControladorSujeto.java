@@ -11,4 +11,6 @@ public interface ControladorSujeto{
     *@param aDesuscribir el observador a desuscribir.
     */
     public void desuscribir(Observador aDesuscribir);
+
+    public void publicar(String mensaje);
 }
