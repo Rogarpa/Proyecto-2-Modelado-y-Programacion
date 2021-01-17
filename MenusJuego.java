@@ -9,14 +9,14 @@ public class MenusUsuario implements ObservadorVista{
     *Metodo para darle la bienvenida al usuario.
     */
     public void bienvenida(){
-        System.out.println("Bienvenidos a la aldea de Castronegro.");
-        System.out.println("Ahora mismo hay una maldición de licantropismo entre ustedes.");
-        System.out.println(" /\\_______/\\");
-        System.out.println(" \\         /");
-        System.out.println("  \\ <> <> / ");
-        System.out.println(" --\\     /--");
-        System.out.println("  --\\   /--");
-        System.out.println("     \\O/");
+        narrador.getControladorAldea().muestra("Bienvenidos a la aldea de Castronegro.");
+        narrador.getControladorAldea().muestra("Ahora mismo hay una maldición de licantropismo entre ustedes.");
+        narrador.getControladorAldea().muestra(" /\\_______/\\");
+        narrador.getControladorAldea().muestra(" \\         /");
+        narrador.getControladorAldea().muestra("  \\ <> <> / ");
+        narrador.getControladorAldea().muestra(" --\\     /--");
+        narrador.getControladorAldea().muestra("  --\\   /--");
+        narrador.getControladorAldea().muestra("     \\O/");
     }
 
     /**

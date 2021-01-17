@@ -13,31 +13,31 @@ public class EstadoNoche implements EstadoAldea{
 
     @Override
     public void convocarJuicio(){
-        System.out.println("No es posible convocar al Juicio comunal");
+        narrador.getControladorAldea().muestra("No es posible convocar al Juicio comunal");
         throw new UnsupportedOperationException("Accion no disponible para la aldea");
     }
 
     @Override
     public void recuentoNoche(){
-        System.out.println("Aún no hay muertos.");
+        narrador.getControladorAldea().muestra("Aún no hay muertos.");
         throw new UnsupportedOperationException("Accion no disponible para la aldea");
     }
 
     @Override
     public void convocarBanquete(){
-        System.out.println("Hombres-Lobo transformandose para comer.");
+        narrador.getControladorAldea().muestra("Hombres-Lobo transformandose para comer.");
         narrador.iniciarMenuVotacionLobos();
     }
 
     @Override
     public void anochece(){
-        System.out.println("Ya es de noche.");
+        narrador.getControladorAldea().muestra("Ya es de noche.");
         throw new UnsupportedOperationException("Accion no disponible para la aldea");
     }
 
     @Override
     public void amanece(){
-        System.out.println("Esta amaneciendo.");
+        narrador.getControladorAldea().muestra("Esta amaneciendo.");
         narrador.setEstadoActual(narrador.getAmaneciendo());
     }
 
