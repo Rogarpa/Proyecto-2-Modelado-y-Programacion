@@ -33,7 +33,7 @@ public class BuilderAldeano implements BuilderJugador{
     public void setAldea(Aldea aldea){
         personajeAConstruir.aldea=aldea;
     }
-
+    //este creo que no implementa, deberemos borrarlo
     @Override
     public Aldeano getPersonaje(){
         return this.personajeAConstruir;

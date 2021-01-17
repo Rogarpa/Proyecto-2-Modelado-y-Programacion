@@ -46,27 +46,55 @@ public class ControladorJuego implements ControladorSujeto {
         String[] listaNicknames;
         switch (tipoJuego) {
             case 1:
-                listaNicknames = iniciarTipoJuego1();
+                listaNicknames = obtenerListaNicknamesJuego1();
                 break;
             case 1:
-                listaNicknames = iniciarTipoJuego2();
+                listaNicknames = obtenerListaNicknamesJuego2();
                 break;
             case 3:
-                listaNicknames = iniciarTipoJuego3();
+                listaNicknames = obtenerListaNicknamesJuego3();
                 break;
             default:
                 break;
         }
 
         //sortear y rellenar aldeaAControlar metiendo en un for each el arreglgo de nicknames y creándolos con builder, metiéndolos a la aldea con el método
+        BuilderJugador builderPersonajes = new BuilderAldeano();
+        DirectorBuilderJugador director = new DirectorBuilderJugador(builderPersonajes);
+        int indiceArregloNicknames = 0;
+        director.creaAldeanoComun(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        for(int i=0; i<3; i++) aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+        director.creaLobo(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        for(int i=0; i<3; i++) aldeaAControlar.agregarLobo(builderPersonajes.getPersonaje());
+        director.creaAngel(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+        director.creaCaballero(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+        director.creaCazador(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+        director.creaVidente(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
 
+        if(tipoJuego == 1) return;
+        
+        director.creaAldeanoComun(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        for(int i=0; i<2; i++) aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+        director.creaLobo(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        for(int i=0; i<3; i++) aldeaAControlar.agregarLobo(builderPersonajes.getPersonaje());
+
+        if(tipoJuego == 2) return;
+
+        director.creaAldeanoComun(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        for(int i=0; i<3; i++) aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+        director.creaLobo(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        for(int i=0; i<2; i++) aldeaAControlar.agregarLobo(builderPersonajes.getPersonaje());
     }
 
     /**
     *Metodo para iniciar un juego de tipo 1.
     *@return un array con todos los nicknames.
     */
-    public String[] iniciarTipoJuego1(){
+    public String[] obtenerListaNicknamesJuego1(){
         menusAControlar.instruccionesTipoJuego(1);
         String[] listaNicknames = new String[10];
         for(String nuevoNickname: listaNicknames)
@@ -78,7 +106,7 @@ public class ControladorJuego implements ControladorSujeto {
     *Metodo para iniciar un juego de tipo .
     *@return un array con todos los nicknames.
     */
-    public String[] iniciarTipoJuego2(){
+    public String[] obtenerListaNicknamesJuego2(){
         menusAControlar.instruccionesTipoJuego(1);
         String[] listaNicknames = new String[10];
         for(String nuevoNickname: listaNicknames)
@@ -90,7 +118,7 @@ public class ControladorJuego implements ControladorSujeto {
     *Metodo para iniciar un juego de tipo .
     *@return un array con todos los nicknames.
     */
-    public String[] iniciarTipoJuego3(){
+    public String[] obtenerListaNicknamesJuego3(){
         menusAControlar.instruccionesTipoJuego(1);
         String[] listaNicknames = new String[10];
         for(String nuevoNickname: listaNicknames)
