@@ -16,7 +16,7 @@ public class Aldea implements EstadoAldea{
     /**
      *Constructor de la Clase.
      */
-    public Aldea(ControladorJuego : controladorAldea){
+    public Aldea(ControladorJuego controladorAldea){
         this.controladorAldea = controladorAldea;
 
         dia=new EstadoDia(this);
@@ -52,7 +52,7 @@ public class Aldea implements EstadoAldea{
     *Metodo para agregar un aldeano.
     *@param aAgregar el aldeano a agregar.
     */
-    public void agregarAldeano(Aldeano aAgregar){todos.add(aAgregar;)}
+    public void agregarAldeano(Aldeano aAgregar){todos.add(aAgregar);}
 
     /**
     *Metodo para agregar un hombre lobo a el grupo de hombres lobos.
@@ -126,13 +126,13 @@ public class Aldea implements EstadoAldea{
     *@return el aldeano que buscamos.
     */
     public Aldeano juicio(int id){
-        
+
         for(Aldeano elem:todos){
            if(elem.getId()==id){
              return elem;
            }
         }
-        
+
         return null;
     }
 
