@@ -47,7 +47,7 @@ public class BuilderVidente implements BuilderJugador{
     }
 
     @Override
-    public default setRelacion(Jugador relacionado){
+    public void setRelacion(Jugador relacionado){
         personajeAConstruir.setIdentidad(relacionado);
     }
 }

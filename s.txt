@@ -5,10 +5,14 @@
 ./src/Magia/Magia.java
 ./src/Magia/MagiaCaballero.java
 ./src/Magia/MagiaVidente.java
+./src/Builder/BuilderCazador.java
 ./src/Builder/DirectorBuilderJugador.java
+./src/Builder/BuilderAngel.java
 ./src/Builder/BuilderLobo.java
+./src/Builder/BuilderCaballero.java
 ./src/Builder/BuilderAldeano.java
 ./src/Builder/BuilderJugador.java
+./src/Builder/BuilderVidente.java
 ./src/Aldea/Aldea.java
 ./src/Jugador/Aldeano.java
 ./src/Jugador/Cazador.java

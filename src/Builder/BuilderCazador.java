@@ -46,7 +46,7 @@ public class BuilderCazador implements BuilderJugador{
     }
 
     @Override
-    public default setRelacion(Jugador relacionado){
+    public void setRelacion(Jugador relacionado){
         personajeAConstruir.setEsbirro(relacionado);
     }
 }

@@ -3,7 +3,7 @@ public class BuilderCaballero implements BuilderJugador{
 
     public Caballero personajeAConstruir;
 
-    public Caballero(){
+    public BuilderCaballero(){
         personajeAConstruir = new Caballero(null);
     }
 
@@ -46,7 +46,7 @@ public class BuilderCaballero implements BuilderJugador{
     }
 
     @Override
-    public default setRelacion(Jugador relacionad){
+    public void  setRelacion(Jugador relacionado){
         personajeAConstruir.setRehen(relacionado);
     }
 }

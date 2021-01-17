@@ -31,8 +31,8 @@ public class Vidente extends Aldeano{
     }
 
 
-    public setIdentidad(Aldeano iden){
-
+    public void setIdentidad(Jugador identidad){
+        this.identidad = identidad;
     }
 
     @Override
