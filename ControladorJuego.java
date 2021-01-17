@@ -29,13 +29,20 @@ public class ControladorJuego implements ControladorSujeto {
     public void iniciarJuego(){
         int opcionInicial = menusAControlar.menuInicial;
         switch (opcionInicial) {
-            case value:
-
-                break;
+            case 1:
+            menusAControlar.tutorial();
+            break;
+            case 2:
+            menusAControlar.bienvenida();
+            menusAControlar.seleccionarTipoJuego();
+            break;
+            case 3:
+            return;
 
             default:
-                break;
+            break;
         }
+        rellenarAldea();
     }
 
     /**
@@ -108,7 +115,7 @@ public class ControladorJuego implements ControladorSujeto {
         observadores.remove(aDesuscribir);
     }
 
-    @Override 
+    @Override
     public void publicar(String mensaje){
         for(ObservadorVista obs : observadores) obs.mostrar(mensaje);
     }
