@@ -110,7 +110,7 @@ public class ControladorJuego implements ControladorSujeto {
         director.cambiarBuilder(builderLobo);
         for(int i=0; i<numeroLobos; i++){
             director.creaLobo(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-            aldeaAControlar.agregarLobo(builderLobo.getPersonaje());
+            aldeaAControlar.agregarLobo(builderPersonajes.getPersonaje());
         }
 
         director.cambiarBuilder(builderAngel);
@@ -190,4 +190,5 @@ public class ControladorJuego implements ControladorSujeto {
     public void publicar(String mensaje){
         for(ObservadorVista obs : observadores) obs.mostrar(mensaje);
     }
+
 }
