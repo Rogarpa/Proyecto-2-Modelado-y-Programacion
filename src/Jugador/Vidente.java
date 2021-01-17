@@ -18,7 +18,7 @@ public class Vidente extends Aldeano{
     *El constructor de la clase.
     *@param identidad el aldenao sobre el cual va a actuar su magia.
     */
-    protected Vidente(Aldeano identidad){
+    protected Vidente(Jugador identidad){
         this.identidad=identidad;
     }
 

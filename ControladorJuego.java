@@ -110,7 +110,7 @@ public class ControladorJuego implements ControladorSujeto {
         director.cambiarBuilder(builderLobo);
         for(int i=0; i<numeroLobos; i++){
             director.creaLobo(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-            aldeaAControlar.agregarLobo(builderPersonajes.getPersonaje());
+            aldeaAControlar.agregarLobo(builderLobo.getPersonaje());
         }
 
         director.cambiarBuilder(builderAngel);
@@ -123,7 +123,8 @@ public class ControladorJuego implements ControladorSujeto {
 
         director.cambiarBuilder(builderCazador);
         director.creaCazador(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-        aldeaAControlar.agregarAldeano(builderCazador.getPersonaje());
+        aldeaAControlar.agregarAldeano(builderCazador.getPersonaje(git checkout
+        
         
         director.cambiarBuilder(builderVidente);
         director.creaVidente(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
