@@ -9,7 +9,7 @@ public class Vidente extends Aldeano{
     *Metodo para obtener la unica instancia de la clase.
     *@return la instancia.
     */
-    public static Vidente getinstance(){
+    public static Vidente getinstance(Aldeano identidad){
         uniqueinstanceof=new Vidente(identidad);
         return uniqueinstanceof;
     }

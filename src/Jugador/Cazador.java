@@ -8,7 +8,7 @@ public class Cazador extends Aldeano{
     *Metodo para obtener la unica instancia de la clase.
     *@return la instancia.
     */
-    public static Cazador getinstance(){
+    public static Cazador getinstance(Aldeano esbirro){
         uniqueinstanceof=new Cazador(esbirro);
         return uniqueinstanceof;
     }

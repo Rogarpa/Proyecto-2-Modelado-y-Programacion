@@ -1,4 +1,3 @@
-import src.Jugador.Aldeano;
 
 class DirectorBuilderJugador{
     protected BuilderJugador builderActual;
@@ -27,7 +26,7 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaLobo(int id, String nickname, Aldea aldeaHogar){
-        personajeAConstruir = new Lobo();
+        Lobo personajeAConstruir = new Lobo();
 
         personajeAConstruir.setId(id);
         personajeAConstruir.setNickname(nickname);
@@ -46,7 +45,7 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaAldeanoComun(int id, String nickname, Aldea aldeaHogar){
-        personajeAConstruir = new AldeanoComun();
+        AldeanoComun personajeAConstruir = new AldeanoComun();
 
         personajeAConstruir.setId(id);
         personajeAConstruir.setNickname(nickname);
@@ -64,8 +63,8 @@ class DirectorBuilderJugador{
     *@param nickname el nombre del aldeano.
     *@param aldeaHogar la aldea a la que pertenece.
     */
-    public void creaAngel(int id, String nickname, Aldea aldeaHogar){
-        personajeAConstruir = new Angel();
+    public void creaAngel(int id, String nickname, Aldea aldeaHogar,Aldeano victima){
+        Angel personajeAConstruir = Angel.getinstance(victima);
 
         personajeAConstruir.setId(id);
         personajeAConstruir.setNickname(nickname);
@@ -83,13 +82,13 @@ class DirectorBuilderJugador{
     *@param nickname el nombre del aldeano.
     *@param aldeaHogar la aldea a la que pertenece.
     */
-    public void creaVidente(int id, String nickname, Aldea aldeaHogar){
-        personajeAConstruir = new Vidente();
+    public void creaVidente(int id, String nickname, Aldea aldeaHogar,Aldeano victima){
+        Vidente personajeAConstruir = Vidente.getinstance(victima);
 
         personajeAConstruir.setId(id);
         personajeAConstruir.setNickname(nickname);
         personajeAConstruir.setAldea(aldeaHogar);
-        
+
         builderActual.setArma("Ninguna, solo una bola de cristal.");
         builderActual.setRopa("Holzkary moderno, tradicional gitano.");
         builderActual.setCabello("Desconocido, trae un turbante.");
@@ -102,13 +101,13 @@ class DirectorBuilderJugador{
     *@param nickname el nombre del aldeano.
     *@param aldeaHogar la aldea a la que pertenece.
     */
-    public void creaCazador(int id, String nickname,Aldea aldeaHogar){
-        personajeAConstruir = new Cazador();
+    public void creaCazador(int id, String nickname,Aldea aldeaHogar,Aldeano victima){
+        Cazador personajeAConstruir =Cazador.getinstance(victima);
 
         personajeAConstruir.setId(id);
         personajeAConstruir.setNickname(nickname);
         personajeAConstruir.setAldea(aldeaHogar);
-        
+
         builderActual.setArma("Rifle de candado.");
         builderActual.setRopa("Chamarra de lana y pantalon de lana también.");
         builderActual.setCabello("Negro, tapado por sombrero bombardero ruso.");
@@ -121,8 +120,8 @@ class DirectorBuilderJugador{
     *@param nickname el nombre del aldeano.
     *@param aldeaHogar la aldea a la que pertenece.
     */
-    public void creaCaballero(int id, String nickname,Aldea aldeaHogar, ){
-        personajeAConstruir = new Caballero();
+    public void creaCaballero(int id, String nickname,Aldea aldeaHogar,Aldeano victima ){
+        Caballero personajeAConstruir = Caballero.getinstance(victima);
 
         personajeAConstruir.setId(id);
         personajeAConstruir.setNickname(nickname);
