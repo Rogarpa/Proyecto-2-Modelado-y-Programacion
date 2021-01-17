@@ -37,6 +37,7 @@ public class MenusJuego implements ObservadorVista{
 
     /**
     *Metodo inmediato despues de que el usuario indique que quiera hacer el tutorial.
+    *@return la elección del usuario.
     */
     public int tutorial(){
         String error,indicacion;
@@ -188,28 +189,4 @@ public class MenusJuego implements ObservadorVista{
     public void actualiza(){
         System.out.println("Mensaje de actualización");
     }
-
-    /**
-    *Método para asegurarnos de solo recibir cadenas sin numeros o caracteres especiales.
-    *@param cad es la cadena que va a imprimir para pedirle los datos al ususario.
-    *@param mog representa los unicos caracteres permitidos.
-    *@return regresa la cadena ingresada.
-    *
-    public static String onlyString(String cad, String mog){
-        Scanner scc=new Scanner(System.in);
-        String uso;
-        boolean w = true, correcto;
-        do{
-            System.out.println(cad);
-            uso=scc.nextLine();
-            correcto=uso.matches(mog);
-            if (!correcto) {
-              w = false;
-              System.out.println("Vuelve a intentar con solo letras.");
-            } else {
-              w = true;
-          }
-        }while(!w);
-        return uso;
-    }*/
 }

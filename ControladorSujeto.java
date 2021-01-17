@@ -12,5 +12,9 @@ public interface ControladorSujeto{
     */
     public void desuscribir(ObservadorVista aDesuscribir);
 
+    /**
+    *Metodo para imprimir mensajes sin romper a MVC.
+    *@param mensaje lo que se quiere imprimir.
+    */
     public void publicar(String mensaje);
 }

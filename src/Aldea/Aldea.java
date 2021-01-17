@@ -136,6 +136,15 @@ public class Aldea implements EstadoAldea{
         return null;
     }
 
+    /**
+    *Metodo para obtener el estado de dia de la aldea.
+    *@return el estado de la aldea.
+    */
     public EstadoAldea getAnocheciendo(){ return noche;}
+
+    /**
+    *Metodo para obtener el estado de noche de la aldea,
+    *@return el estado de la aldea.
+    */
     public EstadoAldea getAmaneciendo(){ return dia;}
 }
