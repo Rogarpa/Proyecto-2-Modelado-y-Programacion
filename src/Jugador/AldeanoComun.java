@@ -17,8 +17,5 @@ public class AldeanoComun extends Aldeano{
     *Constructor de la clase.
     */
     public AldeanoComun(){
-        cabello="Peinado hacia atras.";
-        arma="Lanza de Madera";
-        ropa="Camisa de Seda, pantalones hilados de algodón.";
     }
 }

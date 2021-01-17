@@ -18,7 +18,7 @@ public class Aldea implements EstadoAldea{
      */
     public Aldea(ControladorJuego : controladorAldea){
         this.controladorAldea = controladorAldea;
-        
+
         dia=new EstadoDia(this);
         noche=new EstadoNoche(this);
 
@@ -37,15 +37,27 @@ public class Aldea implements EstadoAldea{
 
         dia=new EstadoDia(this);
         noche= new EstadoNoche(this);
-        
+
         todos=new LinkedList<>();
         lobos=new LinkedList<>();
     }
 
+    /**
+    *Metodo para obtener el controlador de la aldea.
+    *@return el controlador de la aldea.
+    */
     public ControladorJuego getControladorAldea(){return controladorAldea;}
 
+    /**
+    *Metodo para agregar un aldeano.
+    *@param aAgregar el aldeano a agregar.
+    */
     public void agregarAldeano(Aldeano aAgregar){todos.add(aAgregar;)}
 
+    /**
+    *Metodo para agregar un hombre lobo a el grupo de hombres lobos.
+    *@param aAgregar el hombre lo a agregar.
+    */
     public void agregarLobo(Lobo aAgregar){lobos.add(aAgregar);}
 
 
