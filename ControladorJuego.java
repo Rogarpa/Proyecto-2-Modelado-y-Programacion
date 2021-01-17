@@ -113,39 +113,21 @@ public class ControladorJuego implements ControladorSujeto {
             aldeaAControlar.agregarLobo(builderLobo.getPersonaje());
         }
 
-<<<<<<< HEAD
-
+        director.cambiarBuilder(builderAngel);
         director.creaAngel(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(1));
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
 
+        director.cambiarBuilder(builderCaballero);
         director.creaCaballero(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(2));
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
 
+        director.cambiarBuilder(builderCazador);
         director.creaCazador(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(3));
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
-        
+
+        director.cambiarBuilder(builderVidente);
         director.creaVidente(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(4));
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
-
-
-=======
-        director.cambiarBuilder(builderAngel);
-        director.creaAngel(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-        aldeaAControlar.agregarAldeano(builderAngel.getPersonaje());
-        
-        director.cambiarBuilder(builderCaballero);
-        director.creaCaballero(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-        aldeaAControlar.agregarAldeano(builderCaballero.getPersonaje());
-
-        director.cambiarBuilder(builderCazador);
-        director.creaCazador(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-        aldeaAControlar.agregarAldeano(builderCazador.getPersonaje(git checkout
-        
-        
-        director.cambiarBuilder(builderVidente);
-        director.creaVidente(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-        aldeaAControlar.agregarAldeano(builderVidente.getPersonaje());
->>>>>>> 01deb02f043c8acb3b169771337b3ea3a14f8f58
 
         aldeaAControlar.comenzarCicloDiaNoche();
     }

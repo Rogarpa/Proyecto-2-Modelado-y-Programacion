@@ -8,7 +8,6 @@
 ./src/Magia/MagiaAngel.java
 ./src/Magia/MagiaCazador.java
 ./src/Magia/MagiaVidente.java
-<<<<<<< HEAD
 ./src/Magia/MagiaCaballero.java
 ./src/Builder/BuilderCazador.java
 ./src/Builder/BuilderLobo.java
@@ -18,19 +17,6 @@
 ./src/Builder/BuilderAldeano.java
 ./src/Builder/BuilderCaballero.java
 ./src/Builder/DirectorBuilderJugador.java
-=======
-./src/Builder/BuilderCazador.java
-./src/Builder/DirectorBuilderJugador.java
-./src/Builder/BuilderAngel.java
-./src/Builder/BuilderLobo.java
-./src/Builder/BuilderCaballero.java
-./src/Builder/BuilderAldeano.java
-./src/Builder/BuilderJugador.java
-./src/Builder/BuilderVidente.java
-./src/Aldea/Aldea.java
-./src/Jugador/Aldeano.java
-./src/Jugador/Cazador.java
->>>>>>> 01deb02f043c8acb3b169771337b3ea3a14f8f58
 ./src/Jugador/Angel.java
 ./src/Jugador/AldeanoComun.java
 ./src/Jugador/Cazador.java
