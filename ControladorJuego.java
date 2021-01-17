@@ -110,10 +110,13 @@ public class ControladorJuego implements ControladorSujeto {
 
         director.creaAngel(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(1));
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+
         director.creaCaballero(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(2));
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+
         director.creaCazador(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(3));
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+        
         director.creaVidente(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(4));
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
 

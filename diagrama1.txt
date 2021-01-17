@@ -189,9 +189,9 @@ todos:LinkedList<Aldeano>
 +getControladorAldea():ControladorJuego
 +agregarAldeano(aAgregar:Aldeano):void
 +agregarLobo(aAgregar:Lobo):void
-
 +getAnocheciendo():EstadoAldea
 +getAmaneciendo():EstadoAldea
++getPersonaje(int):Aldeano
 }
 
 interface EstadoAldea{
