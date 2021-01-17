@@ -23,7 +23,15 @@ public class BuilderLobo implements BuilderJugador{
     public void setAldea(Aldea aldea){
         personajeAConstruir.aldea=aldea;
     }
+    @Override
+    public void setId(int id){
+        personajeAConstruir.setId(id);
+    }
 
+    @Override
+    public void setNickname(String nickname){
+        personajeAConstruir.setNickname(nickname);
+    }
     //este creo que no implementa, deberemos borrarlo
     /**
     *Metodo para obtener el aldeano a construir.

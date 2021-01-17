@@ -45,7 +45,6 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaAldeanoComun(int id, String nickname, Aldea aldeaHogar){
-        AldeanoComun personajeAConstruir = new AldeanoComun();
 
         personajeAConstruir.setId(id);
         personajeAConstruir.setNickname(nickname);

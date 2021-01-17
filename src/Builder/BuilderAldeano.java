@@ -24,7 +24,15 @@ public class BuilderAldeano implements BuilderJugador{
         personajeAConstruir.aldea=aldea;
     }
 
-    //este creo que no implementa, deberemos borrarlo
+    public void setId(int id){
+        personajeAConstruir.
+    }
+
+    @Override
+    public void setNickname(String nickname){
+        personajeAConstruir.setNickname(nickname);
+    }
+
     /**
     *Metodo para obtener el aldeano a construir.
     *@return el Aldeano.
