@@ -1,4 +1,7 @@
 
+
+import java.util.LinkedList;
+
 public class EstadoNoche implements EstadoAldea{
 
     protected Aldea narrador;
@@ -25,9 +28,9 @@ public class EstadoNoche implements EstadoAldea{
 
     @Override
     public void convocarBanquete(){
-        narrador.getControladorAldea().muestra("Hombres-Lobo transformandose para comer, es necesario que maten a un aldeano:");
-        narrador.getJugadores;
-        
+        narrador.getControladorAldea().publicar("Hombres-Lobo transformandose para comer, es necesario que maten a un aldeano:");
+        narrador.getJugadores();
+
         LinkedList<int[]> idsNominaciones = narrador.getControladorAldea().obtenerCorrelacionIdsNominaciones();
         int idMaximo;
         int nominacionesIdMaximo = 0;

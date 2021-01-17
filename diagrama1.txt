@@ -162,9 +162,9 @@ class Aldea{
 lobos:ArrayLista<Lobo>
 todos:LinkedList<Aldeano>
 
-#todos:LinkedList<Aldeano>    'agregarestructuras de personajes'
+#todos:LinkedList<Aldeano>
 #lobos: LinkedListj<Lobos>
-#muertos: LinkedList<Jugador>
+#muertosUltimaNoche: LinkedList<Jugador>
 
 +Aldea(controladorAldea: ControladorJuego)
 +Aldea(EstadoActual:EstadoAldea)
@@ -177,6 +177,8 @@ todos:LinkedList<Aldeano>
 +anochece():void
 +amanece():void
 +matar(Personaje:aMatar,Personaje asesino):void
++getMuertosUltimaNoche():LinkedList<Jugador>
++comenzarCicloDiaNoche():void
     'ver si cumple con MVC'
 +linchar(int:id):void
 +iniciarMenuVotacionLobos():
@@ -280,6 +282,7 @@ class MenusJuego{
     +getInputInt(String,String):int
     +mostrar():void
     +actualiza():void
+    +getNominacion():LinkedList<int[]>
 
         'casi todos métodos distintos'
 
@@ -299,6 +302,7 @@ class ControladorJuego{
     +iniciarJuego():void
     +rellenarAldea():void
 
+    +obtenerCorrelacionIdsNominaciones():LinkedList<int[]>
     +obtenerListaNicknamesJuego1():String[]
     +obtenerListaNicknamesJuego2():String[]
     +obtenerListaNicknamesJuego3():Stirng[]

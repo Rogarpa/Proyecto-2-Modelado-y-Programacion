@@ -3,8 +3,6 @@ import java.util.*;
 
 public class MenusJuego implements ObservadorVista{
 
-    //puedo usar un Scanner único.
-
     /**
     *Metodo para darle la bienvenida al usuario.
     */
@@ -101,21 +99,25 @@ public class MenusJuego implements ObservadorVista{
         return getInputString("Introduce el Nickname que usarás dentro del juego.", "Nickname invalido");
     }
 
+    /**
+    *Metodo para simular las votaciones de la aldea.
+    *@return una lista con las votaciones.
+    */
     public LinkedList<int[]> getNominacion(){
         boolean flag = true;
         boolean ultimaNominacion = false;
         int[] nominacionActual = new int[2];
         LinkedList<int[]> listaNominaciones;
-        
+
         do{
-            if(getInputInt("¿Desea terminar con las nominaciones? \n Digite 0 para salir" , "Opcion Invalida") == 0) 
+            if(getInputInt("¿Desea terminar con las nominaciones? \n Digite 0 para salir" , "Opcion Invalida") == 0)
                 return listaNominaciones;
-            
-            
+
+
 
             int idNominado = getInputInt("A continuacion digite el id entero del personaje nominado a la hoguera:", "Id invalido");
-            int cantidadNominaciones = ("A continuacion digite el numero de personas que votaron por el mismo: ", "Numero de votaciones invalido") ;
-            
+            int cantidadNominaciones = getInputInt("A continuacion digite el numero de personas que votaron por el mismo: ", "Numero de votaciones invalido") ;
+
             nominacionActual[0] = idNominado;
             nominacionActual[1] = cantidadNominaciones;
 

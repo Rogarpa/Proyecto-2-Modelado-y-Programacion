@@ -1,7 +1,5 @@
 import java.util.*;
 
-import src.Estado.EstadoAldea;
-
 public class Aldea implements EstadoAldea{
 
     protected ControladorJuego controladorAldea;
@@ -45,6 +43,9 @@ public class Aldea implements EstadoAldea{
         lobos=new ArrayList<Lobo>();
     }
 
+    /**
+    *Metodo para que comience un ciclo y que el estado de la aldea cambie.
+    */
     public void comenzarCicloDiaNoche(){
         EstadoActual = dia;
         while(todos.size() != 0 && lobos.size() != 0){
@@ -57,9 +58,12 @@ public class Aldea implements EstadoAldea{
 
     }
 
+    /**
+    *Metodo para cuando queramos obtener todos los jugadores en la simulación.
+    */
     public void getJugadores(){
-        for(Jugador aMostrar : todos) 
-            controladorAldea.mostrar(aMostrar.getDescripcion);
+        for(Jugador aMostrar : todos)
+            controladorAldea.publicar(aMostrar.getDescripcion());
     }
 
     /**
@@ -83,7 +87,11 @@ public class Aldea implements EstadoAldea{
         lobos.add(aAgregar);
     }
 
-    public void getMuertosUltimaNoche(){
+    /**
+    *Metodo para obtener los muertos durante el estado de Noche.
+    *@return una lista de los muertos.
+    */
+    public LinkedList<Jugador> getMuertosUltimaNoche(){
         return muertosUltimaNoche;
     }
 
@@ -139,16 +147,16 @@ public class Aldea implements EstadoAldea{
     *@param id el id del Jugador que fue votado para morir.
     */
     public void linchar(int id){
-        Aldeano encontrado;
-        
+        Aldeano encontrado=null;
+
         for(Aldeano aBuscar : todos){
-            if(aBuscar.getId == id){
+            if(aBuscar.getId() == id){
                 encontrado = aBuscar;
                 break;
             }
         }
-        
-        this.controladorAldea.mostrar("La aldea voto matar a " + encontrado.getDescripcion());
+
+        this.controladorAldea.publicar("La aldea voto matar a " + encontrado.getDescripcion());
     }
 
     /**
@@ -156,7 +164,7 @@ public class Aldea implements EstadoAldea{
     *@param id el id del aldeano que buscamos.
     */
     public Aldeano juicio(int id){
-        Aldeano encontrado;
+        Aldeano encontrado=null;
 
         for(Aldeano elem:todos){
            if(elem.getId()==id){
@@ -164,8 +172,8 @@ public class Aldea implements EstadoAldea{
            }
         }
 
-        this.controladorAldea.mostrar("Los lobos decidieron matar a " + encontrado.getDescripcion());
-
+        this.controladorAldea.publicar("Los lobos decidieron matar a " + encontrado.getDescripcion());
+        return encontrado;
     }
 
     /**
