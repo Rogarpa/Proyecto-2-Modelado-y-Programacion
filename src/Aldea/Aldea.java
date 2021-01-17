@@ -48,7 +48,7 @@ public class Aldea implements EstadoAldea{
 
     public void agregarLobo(Lobo aAgregar){lobos.add(aAgregar);}
 
-    
+
     /**
     *Metodo para cambiár el Estado de la Aldea.
     *@param EstadoActual el nuevo estado.
@@ -111,13 +111,13 @@ public class Aldea implements EstadoAldea{
     *@return el aldeano que buscamos.
     */
     public Aldeano juicio(int id){
-        /**
-        *for(Aldeano elem:todos){
-        *   if(elem.getId()==id){
-        *     return elem;
-        *   }
-        *}
-        */
+        
+        for(Aldeano elem:todos){
+           if(elem.getId()==id){
+             return elem;
+           }
+        }
+        
         return null;
     }
 

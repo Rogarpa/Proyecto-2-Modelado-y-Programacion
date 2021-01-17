@@ -79,4 +79,9 @@ public class ControladorJuego implements ControladorSujeto {
     public void desuscribir(ObservadorVista aDesuscribir){
         observadores.remove(aDesuscribir);
     }
+
+    @Override 
+    public void publicar(String mensaje){
+        for(ObservadorVista obs : observadores) obs.mostrar(mensaje);
+    }
 }

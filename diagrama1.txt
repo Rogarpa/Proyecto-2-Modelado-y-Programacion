@@ -274,5 +274,6 @@ interface ObservadorVista{
 interface ControladorSujeto{
     +suscribir(aSuscribir : Observador): void
     + desuscribir(aDesuscribir : Observador): void
+    +publicar(mensaje : String): void
 }
 @enduml
