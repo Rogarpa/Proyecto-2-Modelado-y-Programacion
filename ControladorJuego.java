@@ -104,17 +104,17 @@ public class ControladorJuego implements ControladorSujeto {
 
         for(int i=0; i<numeroLobos; i++){
             director.creaLobo(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-            aldeaAControlar.agregarLobo(builderLobo.getPersonaje());
+            aldeaAControlar.agregarLobo(builderPersonajes.getPersonaje());
         }
 
 
-        director.creaAngel(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        director.creaAngel(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(1));
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
-        director.creaCaballero(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        director.creaCaballero(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(2));
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
-        director.creaCazador(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        director.creaCazador(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(3));
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
-        director.creaVidente(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+        director.creaVidente(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(4));
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
 
 
@@ -180,4 +180,5 @@ public class ControladorJuego implements ControladorSujeto {
     public void publicar(String mensaje){
         for(ObservadorVista obs : observadores) obs.mostrar(mensaje);
     }
+
 }

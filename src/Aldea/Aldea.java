@@ -187,4 +187,14 @@ public class Aldea implements EstadoAldea{
     *@return el estado de la aldea.
     */
     public EstadoAldea getAmaneciendo(){ return dia;}
+
+    /**
+    *Metodo para definir el rehen de una aldeano especial.
+    *@param indice la posicion en la lista.
+    */
+    public Aldeano getPersonaje(int indice){
+        Aldeano rehen=null;
+        rehen=todos.get(indice);
+        return rehen;
+    }
 }
