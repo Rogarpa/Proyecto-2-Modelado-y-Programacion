@@ -21,21 +21,21 @@ public class Angel extends Aldeano{
         this.lobo=lobo;
     }
 
-    /**
-    *Metodo para que el angel pueda usar su poder.
-    *@param lobo el aldenao sobre el cual va a actuar.
-    */
-    public void setLobo(Aldeano lobo){
-        this.lobo=lobo;
-    }
+    ///**
+    //*Metodo para que el angel pueda usar su poder.
+    //*@param lobo el aldenao sobre el cual va a actuar.
+    //*/
+    //public void setLobo(Aldeano lobo){
+    //    this.lobo=lobo;
+    //}
 
-    /**
-    *Metodo para obtener el lobo a morir.
-    *@return el lobo.
-    */
-    public Aldeano getLobo(){
-        return this.lobo;
-    }
+    ///**
+    //*Metodo para obtener el lobo a morir.
+    //*@return el lobo.
+    //*/
+    //public Aldeano getLobo(){
+    //    return this.lobo;
+    //}
 
 
     @Override

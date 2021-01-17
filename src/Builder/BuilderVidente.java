@@ -3,6 +3,11 @@ public class BuilderVidente implements BuilderJugador{
 
     public Vidente personajeAConstruir;
 
+
+    public BuilderVidente(){
+        personajeAConstruir = new Vidente(null);
+    }
+
     @Override
     public void setCabello(String cabello){
         personajeAConstruir.cabello=cabello;
@@ -34,15 +39,15 @@ public class BuilderVidente implements BuilderJugador{
     }
 
     /**
-    *Metodo para obtener el aldeano a construir.
-    *@return el Aldeano.
+    *Metodo para obtener el Vidente a construir.
+    *@return el Vidente.
     */
-    public Aldeano getPersonaje(){
+    public Vidente getPersonaje(){
         return this.personajeAConstruir;
     }
 
     @Override
-    public default setRelacion(Jugador relacionad){
-
+    public void setRelacion(Jugador relacionado){
+        personajeAConstruir.setIdentidad(relacionado);
     }
 }

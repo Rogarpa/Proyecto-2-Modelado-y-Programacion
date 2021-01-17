@@ -3,13 +3,13 @@
 public class Vidente extends Aldeano{
 
     private static Vidente uniqueinstanceof;
-    private static Aldeano identidad;
+    private static Jugador identidad;
 
     /**
     *Metodo para obtener la unica instancia de la clase.
     *@return la instancia.
     */
-    public static Vidente getinstance(Aldeano identidad){
+    public static Vidente getinstance(Jugador identidad){
         uniqueinstanceof=new Vidente(identidad);
         return uniqueinstanceof;
     }
@@ -18,7 +18,7 @@ public class Vidente extends Aldeano{
     *El constructor de la clase.
     *@param identidad el aldenao sobre el cual va a actuar su magia.
     */
-    protected Vidente(Aldeano identidad){
+    protected Vidente(Jugador identidad){
         this.identidad=identidad;
     }
 
@@ -30,6 +30,10 @@ public class Vidente extends Aldeano{
         return null;
     }
 
+
+    public void setIdentidad(Jugador identidad){
+        this.identidad = identidad;
+    }
 
     @Override
     public Magia morir(){

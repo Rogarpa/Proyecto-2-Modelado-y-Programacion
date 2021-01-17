@@ -2,7 +2,7 @@
 public class Cazador extends Aldeano{
 
     private static Cazador uniqueinstanceof;
-    private static Aldeano esbirro;
+    private static Jugador esbirro;
 
     /**
     *Metodo para obtener la unica instancia de la clase.
@@ -25,7 +25,7 @@ public class Cazador extends Aldeano{
     *Metodo para que el cazador pueda saber sobre quien usar su poder.
     *@param esbirro el aldeano sobre el que va a actuar.
     */
-    public void setEsbirro(Aldeano esbirro){
+    public void setEsbirro(Jugador esbirro){
         this.esbirro=esbirro;
     }
 

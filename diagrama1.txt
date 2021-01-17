@@ -58,20 +58,21 @@ abstract Aldeano{
 }
 
 class Cazador{
--esbirro:Aldeano
+-esbirro:Jugador
 -static uniqueinstanceof:Cazador
 +static getinstance(Aldeano):Cazador
 #Cazador(Aldeano)
-+setEsbirro(Aldeano):void
++setEsbirro(Jugador):void
 +getEsbirro():Aldeano
 +morir():Magia
 }
 
 class Vidente{
--identidad:Aldeano
+-identidad:Jugador
 -static uniqueinstanceof:Vidente
-+static getinstance(Aldeano):Vidente
-#Vidente(Aldeano)
++static getinstance(Jugador : identidad):Vidente
+#Vidente(Jugador: identidad)
++setIdentidad(Jugador identidad): void
 +descubrirIdentidad(Aldeano):void
 +morir():Magia
 }
