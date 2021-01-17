@@ -34,7 +34,10 @@ public class BuilderAldeano implements BuilderJugador{
         personajeAConstruir.aldea=aldea;
     }
     //este creo que no implementa, deberemos borrarlo
-    @Override
+    /**
+    *Metodo para obtener el aldeano a construir.
+    *@return el Aldeano.
+    */
     public Aldeano getPersonaje(){
         return this.personajeAConstruir;
     }

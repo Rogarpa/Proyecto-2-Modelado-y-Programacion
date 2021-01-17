@@ -69,7 +69,7 @@ public class ControladorJuego implements ControladorSujeto {
         }
 
         //sortear y rellenar aldeaAControlar metiendo en un for each el arreglgo de nicknames y creándolos con builder, metiéndolos a la aldea con el método
-        BuilderJugador builderPersonajes = new BuilderAldeano();
+        BuilderAldeano builderPersonajes = new BuilderAldeano();
         DirectorBuilderJugador director = new DirectorBuilderJugador(builderPersonajes);
         int indiceArregloNicknames = 0;
         director.creaAldeanoComun(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);

@@ -10,7 +10,7 @@ public class Aldea implements EstadoAldea{
     protected EstadoAldea EstadoActual;
 
     LinkedList<Aldeano> todos;
-    ArrayList<Jugador> lobos;
+    ArrayList<Lobo> lobos;
     //
 
     /**
@@ -23,7 +23,7 @@ public class Aldea implements EstadoAldea{
         noche=new EstadoNoche(this);
 
         todos=new LinkedList<Aldeano>();
-        lobos=new LinkedList<Lobo>();
+        lobos=new ArrayList<Lobo>();
 
         EstadoActual=dia;
     }
@@ -38,8 +38,8 @@ public class Aldea implements EstadoAldea{
         dia=new EstadoDia(this);
         noche= new EstadoNoche(this);
 
-        todos=new LinkedList<>();
-        lobos=new LinkedList<>();
+        todos=new LinkedList<Aldeano>();
+        lobos=new ArrayList<Lobo>();
     }
 
     /**
@@ -115,7 +115,7 @@ public class Aldea implements EstadoAldea{
     *Metodo para cuando se muera alguien por linchamiento.
     *@param id el id del Jugador que fue votado para morir.
     */
-    public String linchar(int id){
+    public void linchar(int id){
         todos.removeIf(x -> x.id == id);
         this.controladorAldea.publicar("La aldea voto matar a"/**e.getNickname()+"con id"+e.getId()*/);
     }

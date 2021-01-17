@@ -2,8 +2,7 @@
 public class main{
         public static void main(String[] args){
 
-        Aldea primera=new Aldea();
-        AldeanoComun uno=new AldeanoComun();
+        /**AldeanoComun uno=new AldeanoComun();
         Vidente moni=Vidente.getinstance();
         Cazador dos=Cazador.getinstance();
         Caballero tres=Caballero.getinstance();
@@ -24,10 +23,9 @@ public class main{
         dos.getCabello();
         tres.getArma();
         cuatro.getArma();
-        cinco.mefui(cuatro);
         System.out.println(tres.getRehen());
 
-        primera.matar(dos,cuatro);
+        primera.matar(dos,cuatro);*/    
 
 
 
