@@ -32,7 +32,7 @@ public class Vidente extends Aldeano{
 
     @Override
     public Magia morir(){
-        Magia magia=new MagiaVidente(this.identidad,this.getAldea());
+        Magia magia=new MagiaVidente(this.identidad,this.getAldea(),this);
         return magia;
     }
 }

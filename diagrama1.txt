@@ -106,26 +106,34 @@ interface Magia{
 }
 
 class MagiaAngel{
--aDormir:Jugador
-+MagiaAngel(aDormir:Jugador,aldeaSobreLaCualActuar:Aldea)
+-aDormir:Aldeano
+-aldeaHogar:Aldea
+-usuario:Aldeano
++MagiaAngel(aDormir:Aldeano|,aldeaSobreLaCualActuar:Aldea,usuario:Aldeano)
 +actua():void
 }
 
 class MagiaCazador{
--aDisparar:Jugador
-+MagiaCazador(aDisparar:Jugador,aldeaSobreLaCualActuar:Aldea)
+-aDisparar:Aldeano
+-aldeaHogar:Aldea
+-usuario:Aldeano
++MagiaCazador(aDisparar:Aldeano|,aldeaSobreLaCualActuar:Aldea,usuario:Aldeano)
 +actua():void
 }
 
 class MagiaVidente{
--aVer:Jugador
-+MagiaVidente(aVer:Jugador,aldeaSobreLaCualActuar:Aldea)
+-aVer:Aldeano
+-aldeaHogar:Aldea
+-usuario:Aldeano
++MagiaVidente(aVer:Aldeano|,aldeaSobreLaCualActuar:Aldea,usuario:Aldeano)
 +actua():void
 }
 
 class MagiaCaballero{
--sacrificar:Jugador
-+MagiaCaballero(sacrificar:Jugador,aldeaSobreLaCualActuar:Aldea)
+-sacrificar:Aldeano
+-aldeaHogar:Aldea
+-usuario:Aldeano
++MagiaCaballero(sacrificar:Aldeano|,aldeaSobreLaCualActuar:Aldea,usuario:Aldeano)
 +actua():void
 }
 
