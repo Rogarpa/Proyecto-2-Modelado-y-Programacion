@@ -58,7 +58,10 @@ public class Aldea implements EstadoAldea{
     *Metodo para agregar un hombre lobo a el grupo de hombres lobos.
     *@param aAgregar el hombre lo a agregar.
     */
-    public void agregarLobo(Lobo aAgregar){lobos.add(aAgregar);}
+    public void agregarLobo(Lobo aAgregar){
+        todos.add(aAgregar);
+        lobos.add(aAgregar);
+    }
 
 
     /**
