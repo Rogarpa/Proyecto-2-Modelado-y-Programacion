@@ -16,6 +16,7 @@ Vidente--|>Aldeano
 AldeanoComun--|>Aldeano
 Angel--|>Aldeano
 Lobo--|>Aldeano
+MagiaVidente..>Magia
 
     'verificar entradas nulas con compaeTo o equals'
 
@@ -24,6 +25,7 @@ interface Jugador{
 +morir():Magia
 +getAldea():Aldea
 +getNickname():String
++getDescripcion():String
 }
 
 class Lobo{
@@ -47,6 +49,7 @@ abstract Aldeano{
 +getRopa():void
 +morir():Magia
 +clone():Object
++getDescripcion():String
 }
 
 class Cazador{
@@ -99,33 +102,40 @@ class AldeanoComun{
 MagiaCaballero..>Magia
 MagiaCazador..>Magia
 MagiaAngel..>Magia
-MagiaVidente..>Magia
 
 interface Magia{
 +actua():void
 }
 
 class MagiaAngel{
--aDormir:Jugador
-+MagiaAngel(aDormir:Jugador,aldeaSobreLaCualActuar:Aldea)
+-aDormir:Aldeano
+-aldeaHogar:Aldea
+-usuario:Aldeano
++MagiaAngel(Aldeano,Aldea,Aldeano)
 +actua():void
 }
 
 class MagiaCazador{
--aDisparar:Jugador
-+MagiaCazador(aDisparar:Jugador,aldeaSobreLaCualActuar:Aldea)
+-aDisparar:Aldeano
+-aldeaHogar:Aldea
+-usuario:Aldeano
++MagiaCazador(Aldeano,Aldea,Aldeano)
 +actua():void
 }
 
 class MagiaVidente{
--aVer:Jugador
-+MagiaVidente(aVer:Jugador,aldeaSobreLaCualActuar:Aldea)
+-aVer:Aldeano
+-aldeaHogar:Aldea
+-usuario:Aldeano
++MagiaVidente(Aldeano,Aldea,Aldeano)
 +actua():void
 }
 
 class MagiaCaballero{
--sacrificar:Jugador
-+MagiaCaballero(sacrificar:Jugador,aldeaSobreLaCualActuar:Aldea)
+-sacrificar:Aldeano
+-aldeaHogar:Aldea
+-usuario:Aldeano
++MagiaCaballero(Aldeano,Aldea,Aldeano)
 +actua():void
 }
 
@@ -143,6 +153,8 @@ class Aldea{
 #dia:EstadoAldea
 #noche:EstadoAldea
 #EstadoActual:EstadoAldea
+lobos:ArrayLista<Lobo>
+todos:LinkedList<Aldeano>
 
 #todos:LinkedList<Aldeano>    'agregarestructuras de personajes'
 #lobos: LinkedListj<Lobos>
@@ -165,8 +177,10 @@ class Aldea{
 +iniciarMenuvotacionAldeanos():
 +informeDiario():
     'NECESARIO??? (aunque yo lo puse jajajaja)'
-+juicio(id: int):void
-
++juicio(id: int):Aldeano
++getControladorAldea():ControladorJuego
++agregarAldeano(aAgregar:Aldeano):void
++agregarLobo(aAgregar:Lobo):void
 
 +getAnocheciendo():EstadoAldea
 +getAmaneciendo():EstadoAldea
@@ -211,7 +225,7 @@ class DirectorBuilderJugador{
     # personajeAConstruir: Aldeano
 
 
-    Director(tipoBuilder: BuilderJugador)
+    +DirectorBuilderJugador(tipoBuilder: BuilderJugador)
     +cambiarBuilder(tipoBuilder: BuilderJugador): void
 
     +creaLobo(id: int, nickname: String, aldeaHogar: Aldea): void
@@ -250,34 +264,56 @@ ControladorJuego ..o Aldea
 
 class MenusJuego{
 
+    +bienvenida():void
+    +menuInicial():int
+    +tutorial():int
+    +seleccionarTipoJuego():void
+    +instruccionesTipoJuego(numeroTipoJuego:int):void
+    +getNicknameJugadorNuevo():String
+    +getInputString(indicacion:String,error:String):String
+    +getInputIntint(String.String,int,int):int
+    +getInputInt(String,String):int
+    +mostrar():void
+    +actualiza():void
+
         'casi todos métodos distintos'
 
-    +run():void
-    +seleccionarTipoJuego(): void
-    +getJugadores():int
-    +getint():int
-    +getString():String
-    +juego():void
-    +rifa(lista:ArrayList<String>):LinkedList<Aldeano>
-
-    +instruccionesTipoJuego(numeroTipoJuego : int): void
+    '+juego():void'
+    '+rifa(lista:ArrayList<String>):LinkedList<Aldeano>'
 
 
 }
 
 class ControladorJuego{
+    #menusAControlar:MenusJuego
+    #aldeaAControlar:Aldea
+    #observadores:LinkedList<ObservadorVista>
 
+    +ControladorJuego(aldeaAControlar:Aldea,menusAControlar:MenusJuego)
+    +bienvenida():void
+    +iniciarJuego():void
+    +rellenarAldea():void
+
+    +obtenerListaNicknamesJuego1():String[]
+    +obtenerListaNicknamesJuego2():String[]
+    +obtenerListaNicknamesJuego3():Stirng[]
+
+    +suscribir(aSuscribir:ObservadorVista):void
+    +desuscribir(aDesuscribir:ObservadorVista):void
+
+    +publicar(mensaje:String):void
 }
 
 interface ObservadorVista{
-    +mostrar(String mensaje);
+    +mostrar(String mensaje):void
+    +actualiza():void
 
 }
 
 interface ControladorSujeto{
-    +suscribir(aSuscribir : Observador): void
-    + desuscribir(aDesuscribir : Observador): void
-    +publicar(mensaje : String): void
+    +suscribir(aSuscribir : ObservadorVista): void
+    + desuscribir(aDesuscribir : ObservadorVista): void
+    +publicar(mensaje:String): void
 }
 
 

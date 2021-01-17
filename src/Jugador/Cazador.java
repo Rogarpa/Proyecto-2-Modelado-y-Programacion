@@ -39,7 +39,7 @@ public class Cazador extends Aldeano{
 
     @Override
     public Magia morir(){
-        Magia magia=new MagiaCazador(this.esbirro,this.getAldea());
+        Magia magia=new MagiaCazador(this.esbirro,this.getAldea(),this);
         return magia;
     }
 

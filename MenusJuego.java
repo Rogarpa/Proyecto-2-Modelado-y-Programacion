@@ -1,6 +1,5 @@
 
-import java.util.Scanner;
-import java.util.LinkedList;
+import java.util.*;
 
 public class MenusJuego implements ObservadorVista{
 
@@ -38,6 +37,7 @@ public class MenusJuego implements ObservadorVista{
 
     /**
     *Metodo inmediato despues de que el usuario indique que quiera hacer el tutorial.
+    *@return la elección del usuario.
     */
     public int tutorial(){
         String error,indicacion;
@@ -130,13 +130,13 @@ public class MenusJuego implements ObservadorVista{
     *@return la cadena correcta.
     */
     public String getInputString(String indicacion, String error){
-        int entradaNumerica=0;
+        String entradaNumerica="";
 
         Scanner scn=new Scanner(System.in);
         do{
             System.out.println(indicacion);
-            if(scn.hasNextInt()){
-                entradaNumerica=scn.nextInt();
+            if(scn.hasNextLine()){
+                entradaNumerica=scn.nextLine();
                 break;
             }
             else{
@@ -210,28 +210,4 @@ public class MenusJuego implements ObservadorVista{
     public void actualiza(){
         System.out.println("Mensaje de actualización");
     }
-
-    /**
-    *Método para asegurarnos de solo recibir cadenas sin numeros o caracteres especiales.
-    *@param cad es la cadena que va a imprimir para pedirle los datos al ususario.
-    *@param mog representa los unicos caracteres permitidos.
-    *@return regresa la cadena ingresada.
-    *
-    public static String onlyString(String cad, String mog){
-        Scanner scc=new Scanner(System.in);
-        String uso;
-        boolean w = true, correcto;
-        do{
-            System.out.println(cad);
-            uso=scc.nextLine();
-            correcto=uso.matches(mog);
-            if (!correcto) {
-              w = false;
-              System.out.println("Vuelve a intentar con solo letras.");
-            } else {
-              w = true;
-          }
-        }while(!w);
-        return uso;
-    }*/
 }

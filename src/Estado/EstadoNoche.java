@@ -13,13 +13,13 @@ public class EstadoNoche implements EstadoAldea{
 
     @Override
     public void convocarJuicio(){
-        narrador.getControladorAldea().muestra("No es posible convocar al Juicio comunal");
+        narrador.getControladorAldea().publicar("No es posible convocar al Juicio comunal");
         throw new UnsupportedOperationException("Accion no disponible para la aldea");
     }
 
     @Override
     public void recuentoNoche(){
-        narrador.getControladorAldea().muestra("Aún no hay muertos.");
+        narrador.getControladorAldea().publicar("Aún no hay muertos.");
         throw new UnsupportedOperationException("Accion no disponible para la aldea");
     }
 
@@ -43,13 +43,13 @@ public class EstadoNoche implements EstadoAldea{
 
     @Override
     public void anochece(){
-        narrador.getControladorAldea().muestra("Ya es de noche.");
+        narrador.getControladorAldea().publicar("Ya es de noche.");
         throw new UnsupportedOperationException("Accion no disponible para la aldea");
     }
 
     @Override
     public void amanece(){
-        narrador.getControladorAldea().muestra("Esta amaneciendo.");
+        narrador.getControladorAldea().publicar("Esta amaneciendo.");
         narrador.setEstadoActual(narrador.getAmaneciendo());
     }
 

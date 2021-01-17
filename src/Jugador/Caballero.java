@@ -40,7 +40,7 @@ public class Caballero extends Aldeano{
 
     @Override
     public Magia morir(){
-        Magia magia=new MagiaCaballero(this.rehen,this.getAldea());
+        Magia magia=new MagiaCaballero(this.rehen,this.getAldea(),this);
         return magia;
     }
 

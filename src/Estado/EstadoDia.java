@@ -40,20 +40,20 @@ public class EstadoDia implements EstadoAldea{
 
     @Override
     public void convocarBanquete(){
-        narrador.getControladorAldea().muestra("Ya ocurrio la noche pasada.");
+        narrador.getControladorAldea().publicar("Ya ocurrio la noche pasada.");
         throw new UnsupportedOperationException("Acción no disponible para la aldea");
 
     }
 
     @Override
     public void anochece(){
-        narrador.getControladorAldea().muestra("Se está ocultando el sol.");
+        narrador.getControladorAldea().publicar("Se está ocultando el sol.");
         narrador.setEstadoActual(narrador.getAnocheciendo());
     }
 
     @Override
     public void amanece(){
-        narrador.getControladorAldea().muestra("Ya es de día.");
+        narrador.getControladorAldea().publicar("Ya es de día.");
         throw new UnsupportedOperationException("Acción no disponible para la aldea");
     }
 }

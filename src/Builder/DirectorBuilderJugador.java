@@ -2,8 +2,11 @@ class DirectorBuilderJugador{
     protected BuilderJugador builderActual;
     protected Aldeano personajeAConstruir;
 
-
-    Director(BuilderJugador tipoBuilder){
+    /**
+    *Constructor de la clase.
+    *@param tipoBuilder el tipo de builder.
+    */
+    DirectorBuilderJugador(BuilderJugador tipoBuilder){
 
     }
 

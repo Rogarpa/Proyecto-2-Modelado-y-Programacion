@@ -30,7 +30,6 @@ public abstract class Aldeano implements Jugador,Cloneable{
     *Metodo para obtener su ropa.
     */
     public String getRopa(){
-        System.out.println(this.ropa);
         return this.ropa;
     }
 
@@ -38,7 +37,6 @@ public abstract class Aldeano implements Jugador,Cloneable{
     *Metodo para obtener su arma.
     */
     public String getArma(){
-        System.out.println(this.arma);
         return this.arma;
     }
 
@@ -46,7 +44,6 @@ public abstract class Aldeano implements Jugador,Cloneable{
     *Metodo para obtener el cabello.
     */
     public String getCabello(){
-        System.out.println(this.cabello);
         return this.cabello;
     }
 
@@ -63,4 +60,8 @@ public abstract class Aldeano implements Jugador,Cloneable{
         return clone;
     }
 
+    @Override
+    public String getDescripcion(){
+        return "El ALdeano con ropa:"+getRopa()+" un arma de tipo:"+getArma()+" y nickname:"+getNickname()+"ha muerto";
+    }
 }

@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.*;
 
 import src.Estado.EstadoAldea;
 
@@ -12,8 +12,8 @@ public class Aldea implements EstadoAldea{
     protected EstadoAldea EstadoActual;
 
     LinkedList<Aldeano> todos;
-    ArrayList<Jugador> lobos;
     LinkedList<Jugador> muertosUltimaNoche;
+    ArrayList<Lobo> lobos;
     //
 
     /**
@@ -25,8 +25,8 @@ public class Aldea implements EstadoAldea{
         dia=new EstadoDia(this);
         noche=new EstadoNoche(this);
 
-        todos=new LinkedList<>();
-        lobos=new LinkedList<>();
+        todos=new LinkedList<Aldeano>();
+        lobos=new ArrayList<Lobo>();
 
         EstadoActual=dia;
     }
@@ -41,8 +41,8 @@ public class Aldea implements EstadoAldea{
         dia=new EstadoDia(this);
         noche= new EstadoNoche(this);
 
-        todos=new LinkedList<>();
-        lobos=new LinkedList<>();
+        todos=new LinkedList<Aldeano>();
+        lobos=new ArrayList<Lobo>();
     }
 
     public void comenzarCicloDiaNoche(){
@@ -131,7 +131,7 @@ public class Aldea implements EstadoAldea{
 
         todos.remove(aMatar);
 
-        this.controladorAldea.mostrar(aMatar.getNickname()+" fue asesinado por "+asesino.getNickname()+" con "+asesino.getArma());
+        this.controladorAldea.publicar(aMatar.getNickname()+" fue asesinado por "+asesino.getNickname()+" con "+asesino.getArma());
     }
 
     /**
@@ -140,7 +140,7 @@ public class Aldea implements EstadoAldea{
     */
     public void linchar(int id){
         Aldeano encontrado;
-        todos.removeIf(x -> x.id == id);
+        
         for(Aldeano aBuscar : todos){
             if(aBuscar.getId == id){
                 encontrado = aBuscar;
@@ -168,6 +168,15 @@ public class Aldea implements EstadoAldea{
 
     }
 
+    /**
+    *Metodo para obtener el estado de dia de la aldea.
+    *@return el estado de la aldea.
+    */
     public EstadoAldea getAnocheciendo(){ return noche;}
+
+    /**
+    *Metodo para obtener el estado de noche de la aldea,
+    *@return el estado de la aldea.
+    */
     public EstadoAldea getAmaneciendo(){ return dia;}
 }
