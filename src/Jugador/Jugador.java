@@ -7,13 +7,13 @@ public interface Jugador{
     public int getId();
 
     /**
-    *Metodo que obtiene la aldea a la que pertenece el Aldeano.
+    *Metodo que obtiene la aldea a la que pertenece el Jugador.
     *@return la aldea.
     */
     public Aldea getAldea();
 
     /**
-    *Metodo para obtener el nombre del Aldeano.
+    *Metodo para obtener el nombre del Jugador.
     *@return el nombre.
     */
     public String getNickname();
@@ -22,4 +22,10 @@ public interface Jugador{
     *Metodo para cuando un personaje muera.
     */
     public Magia morir();
+
+    /**
+    *Metodo para obtener una descripción del Jugador
+    *@return la descripción
+    */
+    public String getDescripcion();
 }
