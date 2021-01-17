@@ -21,4 +21,8 @@ public interface BuilderJugador{
     */
     public void setAldea(Aldea aldea);
 
+    public void setId(int id);
+
+    public void setNickname(String nickname);
+
 }

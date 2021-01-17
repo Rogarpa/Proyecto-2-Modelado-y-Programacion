@@ -8,7 +8,7 @@ public class Caballero extends Aldeano{
     *Metodo para obtener la unica instancia del Caballero.
     *@return la unica instancia.
     */
-    public static Caballero getinstance(){
+    public static Caballero getinstance(Aldeano rehen){
         uniqueinstanceof=new Caballero(rehen);
         return uniqueinstanceof;
 
