@@ -247,10 +247,12 @@ class DirectorBuilderJugador{
 }
 
 interface "BuilderJugador"{
-    + setCabello(): void
-    + setArma(): void
-    + setRopa(): void
-    + setAldea(): void
+    + setCabello(String): void
+    + setArma(String): void
+    + setRopa(String):void
+    + setAldea(Aldea): void
+    + setId(int):void
+    + setNickname(String):void
 }
 
 class "BuilderAldeano"{

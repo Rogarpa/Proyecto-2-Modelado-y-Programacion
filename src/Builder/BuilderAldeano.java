@@ -24,8 +24,9 @@ public class BuilderAldeano implements BuilderJugador{
         personajeAConstruir.aldea=aldea;
     }
 
+    @Override
     public void setId(int id){
-        personajeAConstruir.
+        personajeAConstruir.setId(id);
     }
 
     @Override

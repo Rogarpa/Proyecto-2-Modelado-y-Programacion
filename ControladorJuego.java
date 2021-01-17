@@ -70,6 +70,7 @@ public class ControladorJuego implements ControladorSujeto {
 
         //sortear y rellenar aldeaAControlar metiendo en un for each el arreglgo de nicknames y creándolos con builder, metiéndolos a la aldea con el método
         BuilderAldeano builderPersonajes = new BuilderAldeano();
+        BuilderLobo builderLobo=new BuilderLobo();
 
         DirectorBuilderJugador director = new DirectorBuilderJugador(builderPersonajes);
         int indiceArregloNicknames = 0;
@@ -87,24 +88,24 @@ public class ControladorJuego implements ControladorSujeto {
                 numeroAldeanos = 5;
                 numeroLobos = 6;
                 break;
-            case 2:
+            case 3:
                 numeroLobos = 8;
                 numeroAldeanos = 8;
-                break
+                break;
             default:
                 break;
         }
-        
-        
+
+
         for(int i=0; i<numeroAldeanos; i++) {
             director.creaAldeanoComun(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
             aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
 
         }
-        
+
         for(int i=0; i<numeroLobos; i++){
             director.creaLobo(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
-            aldeaAControlar.agregarLobo(builderPersonajes.getPersonaje());
+            aldeaAControlar.agregarLobo(builderLobo.getPersonaje());
         }
 
 
