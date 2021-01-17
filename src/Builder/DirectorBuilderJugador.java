@@ -1,3 +1,5 @@
+import src.Jugador.Aldeano;
+
 class DirectorBuilderJugador{
     protected BuilderJugador builderActual;
     protected Aldeano personajeAConstruir;
@@ -25,11 +27,16 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaLobo(int id, String nickname, Aldea aldeaHogar){
-        BuilderAldeano builder=new BuilderAldeano(id,nickname,aldeaHogar);
-        builder.setArma("Garras y dientes afilados.");
-        builder.setRopa("Pelaje negro intenso.");
-        builder.setCabello("Pelaje facial y bigotes rojos de sangre.");
-        builder.setAldea(aldeaHogar);
+        personajeAConstruir = new Lobo();
+
+        personajeAConstruir.setId(id);
+        personajeAConstruir.setNickname(nickname);
+        personajeAConstruir.setAldea(aldeaHogar);
+
+        builderActual.setArma("Garras y dientes afilados.");
+        builderActual.setRopa("Pelaje negro intenso.");
+        builderActual.setCabello("Pelaje facial y bigotes rojos de sangre.");
+        builderActual.setAldea(aldeaHogar);
     }
 
     /**
@@ -39,11 +46,16 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaAldeanoComun(int id, String nickname, Aldea aldeaHogar){
-        BuilderAldeano builder=new BuilderAldeano(id,nickname,aldeaHogar);
-        builder.setArma("Lanza de madera con punta de hierro.");
-        builder.setRopa("Camisa, chaleco y pantalon de algodon.");
-        builder.setCabello("Rubio peinado de lado.");
-        builder.setAldea(aldeaHogar);
+        personajeAConstruir = new AldeanoComun();
+
+        personajeAConstruir.setId(id);
+        personajeAConstruir.setNickname(nickname);
+        personajeAConstruir.setAldea(aldeaHogar);
+
+        builderActual.setArma("Lanza de madera con punta de hierro.");
+        builderActual.setRopa("Camisa, chaleco y pantalon de algodon.");
+        builderActual.setCabello("Rubio peinado de lado.");
+        builderActual.setAldea(aldeaHogar);
     }
 
     /**
@@ -53,11 +65,16 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaAngel(int id, String nickname, Aldea aldeaHogar){
-        BuilderAldeano builder=new BuilderAldeano(id,nickname,aldeaHogar);
-        builder.setArma("Espada bendita con mango de oro.");
-        builder.setRopa("Toga blanca, pero entre aldeanos usa lo mismo que el aldeano común.");
-        builder.setCabello("Blanco hacia atras..");
-        builder.setAldea(aldeaHogar);
+        personajeAConstruir = new Angel();
+
+        personajeAConstruir.setId(id);
+        personajeAConstruir.setNickname(nickname);
+        personajeAConstruir.setAldea(aldeaHogar);
+
+        builderActual.setArma("Espada bendita con mango de oro.");
+        builderActual.setRopa("Toga blanca, pero entre aldeanos usa lo mismo que el aldeano común.");
+        builderActual.setCabello("Blanco hacia atras..");
+        builderActual.setAldea(aldeaHogar);
     }
 
     /**
@@ -67,11 +84,16 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaVidente(int id, String nickname, Aldea aldeaHogar){
-        BuilderAldeano builder=new BuilderAldeano(id,nickname,aldeaHogar);
-        builder.setArma("Ninguna, solo una bola de cristal.");
-        builder.setRopa("Holzkary moderno, tradicional gitano.");
-        builder.setCabello("Desconocido, trae un turbante.");
-        builder.setAldea(aldeaHogar);
+        personajeAConstruir = new Vidente();
+
+        personajeAConstruir.setId(id);
+        personajeAConstruir.setNickname(nickname);
+        personajeAConstruir.setAldea(aldeaHogar);
+        
+        builderActual.setArma("Ninguna, solo una bola de cristal.");
+        builderActual.setRopa("Holzkary moderno, tradicional gitano.");
+        builderActual.setCabello("Desconocido, trae un turbante.");
+        builderActual.setAldea(aldeaHogar);
     }
 
     /**
@@ -81,11 +103,16 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaCazador(int id, String nickname,Aldea aldeaHogar){
-        BuilderAldeano builder=new BuilderAldeano(id,nickname,aldeaHogar);
-        builder.setArma("Rifle de candado.");
-        builder.setRopa("Chamarra de lana y pantalon de lana también.");
-        builder.setCabello("Negro, tapado por sombrero bombardero ruso.");
-        builder.setAldea(aldeaHogar);
+        personajeAConstruir = new Cazador();
+
+        personajeAConstruir.setId(id);
+        personajeAConstruir.setNickname(nickname);
+        personajeAConstruir.setAldea(aldeaHogar);
+        
+        builderActual.setArma("Rifle de candado.");
+        builderActual.setRopa("Chamarra de lana y pantalon de lana también.");
+        builderActual.setCabello("Negro, tapado por sombrero bombardero ruso.");
+        builderActual.setAldea(aldeaHogar);
     }
 
     /**
@@ -94,12 +121,17 @@ class DirectorBuilderJugador{
     *@param nickname el nombre del aldeano.
     *@param aldeaHogar la aldea a la que pertenece.
     */
-    public void creaCaballero(int id, String nickname,Aldea aldeaHogar){
-        BuilderAldeano builder=new BuilderAldeano(id,nickname,aldeaHogar);
-        builder.setArma("Espada oxidada con Rosa de los vientos.");
-        builder.setRopa("Armadura de hierro templado.");
-        builder.setCabello("Desconocido por el casco.");
-        builder.setAldea(aldeaHogar);
+    public void creaCaballero(int id, String nickname,Aldea aldeaHogar, ){
+        personajeAConstruir = new Caballero();
+
+        personajeAConstruir.setId(id);
+        personajeAConstruir.setNickname(nickname);
+        personajeAConstruir.setAldea(aldeaHogar);
+
+        builderActual.setArma("Espada oxidada con Rosa de los vientos.");
+        builderActual.setRopa("Armadura de hierro templado.");
+        builderActual.setCabello("Desconocido por el casco.");
+        builderActual.setAldea(aldeaHogar);
     }
 
 }

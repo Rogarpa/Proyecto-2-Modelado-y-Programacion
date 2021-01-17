@@ -8,6 +8,18 @@ public abstract class Aldeano implements Jugador,Cloneable{
     protected int id;
     protected String nickname;
 
+    public void setId(int id){
+        this.id = id;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public void setAldea(Aldea aldea){
+        this.aldea = aldea;
+    }
+
     @Override
     public int getId(){
         return this.id;

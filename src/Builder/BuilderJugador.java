@@ -20,4 +20,5 @@ public interface BuilderJugador{
     *Metodo para ponerle una aldea al aldeano.
     */
     public void setAldea(Aldea aldea);
+
 }

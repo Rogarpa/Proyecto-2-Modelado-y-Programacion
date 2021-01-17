@@ -41,6 +41,11 @@ abstract Aldeano{
 #aldea:Aldea
 #id:int
 #nickname:String
+
++setId(id : int): void
++setNickname(nickname : String): void
++setAldea(aldea : Aldea): void
+
 +getId():int
 +getAldea():Aldea
 +getNickname():String
@@ -91,8 +96,9 @@ class Angel{
 +morir():Magia
 }
 
+
 class AldeanoComun{
-+AldeanoComun()
++AldeanoComun(nickname: String, id : int)
 +clone():AldeanoComun
 +morir():Magia
 }
@@ -247,7 +253,6 @@ interface "BuilderJugador"{
 class "BuilderAldeano"{
     # personajeAConstruir: Aldeano
 
-    + BuilderAldeano(id: int, nickname: String, aldeHogar: Aldea):
     + setCabello(cabello:String): void
     + setArma(arma:String): void
     + setRopa(ropa:String): void

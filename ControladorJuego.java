@@ -70,12 +70,30 @@ public class ControladorJuego implements ControladorSujeto {
 
         //sortear y rellenar aldeaAControlar metiendo en un for each el arreglgo de nicknames y creándolos con builder, metiéndolos a la aldea con el método
         BuilderAldeano builderPersonajes = new BuilderAldeano();
+        
         DirectorBuilderJugador director = new DirectorBuilderJugador(builderPersonajes);
         int indiceArregloNicknames = 0;
         director.creaAldeanoComun(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+
+        int numeroLobos = 0;
+        int numeroAldeanos = 0;
+
+        switch (tipoJuego) {
+            case 1:
+                numeroLobos =     
+            
+                break;
+            case 1:
+                
+                break;
+            default:
+                break;
+        }
         for(int i=0; i<3; i++) aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
         director.creaLobo(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
         for(int i=0; i<3; i++) aldeaAControlar.agregarLobo(builderPersonajes.getPersonaje());
+
+
         director.creaAngel(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
         aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
         director.creaCaballero(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);

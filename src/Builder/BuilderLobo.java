@@ -1,6 +1,6 @@
 
-public class BuilderAldeano implements BuilderJugador{
-    public Aldeano personajeAConstruir;
+public class BuilderLobo implements BuilderJugador{
+    public Lobo personajeAConstruir;
 
 
 
@@ -29,7 +29,7 @@ public class BuilderAldeano implements BuilderJugador{
     *Metodo para obtener el aldeano a construir.
     *@return el Aldeano.
     */
-    public Aldeano getPersonaje(){
+    public Lobo getPersonaje(){
         return this.personajeAConstruir;
     }
 }

@@ -1,4 +1,5 @@
 
+
 public class Vidente extends Aldeano{
 
     private static Vidente uniqueinstanceof;
