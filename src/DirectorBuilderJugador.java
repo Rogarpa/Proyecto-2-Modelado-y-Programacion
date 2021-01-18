@@ -115,6 +115,7 @@ class DirectorBuilderJugador{
     */
     public void creaCaballero(int id, String nickname,Aldea aldeaHogar,Aldeano victima ){
         builderActual.setRelacion(victima);
+
         builderActual.setId(id);
         builderActual.setNickname(nickname);
         builderActual.setAldea(aldeaHogar);
