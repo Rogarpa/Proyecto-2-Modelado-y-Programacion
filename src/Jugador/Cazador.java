@@ -33,7 +33,7 @@ public class Cazador extends Aldeano{
     *Metodo para obtener el rehen.
     *@return el rehen.
     */
-    public Aldeano getEsbirro(){
+    public Jugador getEsbirro(){
         return this.esbirro;
     }
 

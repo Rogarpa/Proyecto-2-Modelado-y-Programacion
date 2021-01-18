@@ -1,6 +1,7 @@
 
 import java.util.*;
 
+
 public class ControladorJuego implements ControladorSujeto {
     protected MenusJuego menusAControlar;
     protected Aldea aldeaAControlar;
@@ -65,10 +66,10 @@ public class ControladorJuego implements ControladorSujeto {
                 listaNicknames = obtenerListaNicknamesJuego3();
                 break;
             default:
+                listaNicknames = null;
                 break;
         }
 
-        //sortear y rellenar aldeaAControlar metiendo en un for each el arreglgo de nicknames y creándolos con builder, metiéndolos a la aldea con el método
         BuilderAldeano builderAldeano = new BuilderAldeano();
         BuilderLobo builderLobo = new BuilderLobo();
         BuilderAngel builderAngel = new BuilderAngel();
@@ -115,19 +116,19 @@ public class ControladorJuego implements ControladorSujeto {
 
         director.cambiarBuilder(builderAngel);
         director.creaAngel(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(1));
-        aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+        aldeaAControlar.agregarAldeano(builderAngel.getPersonaje());
 
         director.cambiarBuilder(builderCaballero);
         director.creaCaballero(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(2));
-        aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+        aldeaAControlar.agregarAldeano(builderCaballero.getPersonaje());
 
         director.cambiarBuilder(builderCazador);
         director.creaCazador(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(3));
-        aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+        aldeaAControlar.agregarAldeano(builderCazador.getPersonaje());
 
         director.cambiarBuilder(builderVidente);
         director.creaVidente(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(4));
-        aldeaAControlar.agregarAldeano(builderPersonajes.getPersonaje());
+        aldeaAControlar.agregarAldeano(builderVidente.getPersonaje());
 
         aldeaAControlar.comenzarCicloDiaNoche();
     }
@@ -173,7 +174,7 @@ public class ControladorJuego implements ControladorSujeto {
     *@return una lista con los id de los nominados.
     */
     public LinkedList<int[]> obtenerCorrelacionIdsNominaciones(){
-        menusAControlar.getNominacion();
+        return menusAControlar.getNominacion();
     }
 
     @Override

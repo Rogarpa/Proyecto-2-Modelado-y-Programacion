@@ -16,7 +16,7 @@ public class EstadoDia implements EstadoAldea{
     public void convocarJuicio(){
         narrador.getControladorAldea().publicar("Tras las muertes de anoche es necesario un linchamiento:");
         LinkedList<int[]> idsNominaciones = narrador.getControladorAldea().obtenerCorrelacionIdsNominaciones();
-        int idMaximo;
+        int idMaximo = 0;
         int nominacionesIdMaximo = 0;
         for(int[] i : idsNominaciones){
             if(i[1] > nominacionesIdMaximo){

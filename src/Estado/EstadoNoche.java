@@ -32,7 +32,7 @@ public class EstadoNoche implements EstadoAldea{
         narrador.getJugadores();
 
         LinkedList<int[]> idsNominaciones = narrador.getControladorAldea().obtenerCorrelacionIdsNominaciones();
-        int idMaximo;
+        int idMaximo = 0;
         int nominacionesIdMaximo = 0;
         for(int[] i : idsNominaciones){
             if(i[1] > nominacionesIdMaximo){
@@ -41,7 +41,7 @@ public class EstadoNoche implements EstadoAldea{
             }
         }
 
-        narrador.linchar(idMaximo);
+        narrador.juicio(idMaximo);
     }
 
     @Override

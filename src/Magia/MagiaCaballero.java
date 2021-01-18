@@ -1,16 +1,16 @@
 
 public class MagiaCaballero implements Magia{
 
-    private Aldeano sacrificar;
+    private Jugador sacrificar;
     private Aldea aldeaHogar;
-    private Aldeano usuario;
+    private Jugador usuario;
 
     /**
     *Constructor de la clase.
     *@param sacrificar la victima del caballero.
     *@param aldeaSobreLaCualActuar la aldea a la que pertenece la victima.
     */
-    public MagiaCaballero(Aldeano sacrificar,Aldea aldeaSobreLaCualActuar,Aldeano usuario){
+    public MagiaCaballero(Jugador sacrificar,Aldea aldeaSobreLaCualActuar,Jugador usuario){
         this.sacrificar=sacrificar;
         aldeaHogar=aldeaSobreLaCualActuar;
         this.usuario=usuario;

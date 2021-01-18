@@ -115,34 +115,34 @@ interface Magia{
 }
 
 class MagiaAngel{
--aDormir:Aldeano
+-aDormir:Jugador
 -aldeaHogar:Aldea
--usuario:Aldeano
-+MagiaAngel(Aldeano,Aldea,Aldeano)
+-usuario:Jugador
++MagiaAngel(aDormir: Jugador,aldeaSobreLaCualActuar: Aldea,Aldeano: Jugador: usuario)
 +actua():void
 }
 
 class MagiaCazador{
--aDisparar:Aldeano
+-aDisparar:Jugador
 -aldeaHogar:Aldea
--usuario:Aldeano
-+MagiaCazador(Aldeano,Aldea,Aldeano)
+-usuario:Jugador
++MagiaCazador(aDisparar: Jugador,aldeaSobreLaCualActuar: Aldea,Aldeano: Jugador: usuario)
 +actua():void
 }
 
 class MagiaVidente{
--aVer:Aldeano
+-aVer:Jugador
 -aldeaHogar:Aldea
--usuario:Aldeano
-+MagiaVidente(Aldeano,Aldea,Aldeano)
+-usuario:Jugador
++MagiaVidente(aVer: Jugador,aldeaSobreLaCualActuar: Aldea,Aldeano: Jugador: usuario)
 +actua():void
 }
 
 class MagiaCaballero{
--sacrificar:Aldeano
+-sacrificar:Jugador
 -aldeaHogar:Aldea
--usuario:Aldeano
-+MagiaCaballero(Aldeano,Aldea,Aldeano)
+-usuario:Jugador
++MagiaCaballero(aSacrificar: Jugador,aldeaSobreLaCualActuar: Aldea,Aldeano: Jugador: usuario)
 +actua():void
 }
 
@@ -177,7 +177,7 @@ todos:LinkedList<Aldeano>
 +convocarBanquete():void
 +anochece():void
 +amanece():void
-+matar(Personaje:aMatar,Personaje asesino):void
++matar(aMatar : Jugador,asesino : Jugador):void
 +getMuertosUltimaNoche():LinkedList<Jugador>
 +comenzarCicloDiaNoche():void
     'ver si cumple con MVC'
@@ -185,8 +185,7 @@ todos:LinkedList<Aldeano>
 +iniciarMenuVotacionLobos():
 +iniciarMenuvotacionAldeanos():
 +informeDiario():
-    'NECESARIO??? (aunque yo lo puse jajajaja)'
-+juicio(id: int):Aldeano
++juicio(id: int):void
 +getControladorAldea():ControladorJuego
 +agregarAldeano(aAgregar:Aldeano):void
 +agregarLobo(aAgregar:Lobo):void

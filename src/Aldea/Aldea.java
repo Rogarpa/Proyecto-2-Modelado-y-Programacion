@@ -134,12 +134,12 @@ public class Aldea implements EstadoAldea{
     *@param aMatar el aldeano a matar.
     *@param asesino el aldeano que mata.
     */
-    public void matar(Aldeano aMatar,Aldeano asesino){
+    public void matar(Jugador aMatar,Jugador asesino){
         aMatar.morir();
 
         todos.remove(aMatar);
 
-        this.controladorAldea.publicar(aMatar.getNickname()+" fue asesinado por "+asesino.getNickname()+" con "+asesino.getArma());
+        this.controladorAldea.publicar(aMatar.getNickname()+" fue asesinado por "+asesino.getNickname());
     }
 
     /**
@@ -156,6 +156,7 @@ public class Aldea implements EstadoAldea{
             }
         }
 
+        encontrado.morir();
         this.controladorAldea.publicar("La aldea voto matar a " + encontrado.getDescripcion());
     }
 
@@ -163,7 +164,7 @@ public class Aldea implements EstadoAldea{
     *Metodo para buscar a algun aldeano en especifico.
     *@param id el id del aldeano que buscamos.
     */
-    public Aldeano juicio(int id){
+    public void juicio(int id){
         Aldeano encontrado=null;
 
         for(Aldeano elem:todos){
@@ -172,8 +173,9 @@ public class Aldea implements EstadoAldea{
            }
         }
 
+        encontrado.morir();
         this.controladorAldea.publicar("Los lobos decidieron matar a " + encontrado.getDescripcion());
-        return encontrado;
+        
     }
 
     /**
