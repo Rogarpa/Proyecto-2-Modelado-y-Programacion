@@ -17,14 +17,14 @@ public class Aldea implements EstadoAldea{
     /**
      *Constructor de la Clase.
      */
-    public Aldea(ControladorJuego controladorAldea){
-        this.controladorAldea = controladorAldea;
+    public Aldea(){
 
         dia=new EstadoDia(this);
         noche=new EstadoNoche(this);
 
         todos=new LinkedList<Aldeano>();
         lobos=new ArrayList<Lobo>();
+        muertosUltimaNoche = new LinkedList<Jugador>();
 
         EstadoActual=dia;
     }
@@ -41,6 +41,15 @@ public class Aldea implements EstadoAldea{
 
         todos=new LinkedList<Aldeano>();
         lobos=new ArrayList<Lobo>();
+        muertosUltimaNoche = new LinkedList<Jugador>();
+    }
+
+    /**
+     * Asigna el controlador al que se reportará aldea
+     * @param controladorAldea a reportar
+     */
+    public void setControladorAldea(ControladorJuego controladorAldea){
+        this.controladorAldea = controladorAldea;
     }
 
     /**
@@ -49,6 +58,7 @@ public class Aldea implements EstadoAldea{
     public void comenzarCicloDiaNoche(){
         EstadoActual = dia;
         while(todos.size() != 0 && lobos.size() != 0){
+            getJugadores();
             anochece();
             convocarBanquete();
             amanece();

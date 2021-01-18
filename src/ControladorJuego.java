@@ -17,7 +17,6 @@ public class ControladorJuego implements ControladorSujeto {
         this.aldeaAControlar = aldeaAControlar;
         this.menusAControlar = menusAControlar;
         menusAControlar.bienvenida();
-        iniciarJuego();
     }
 
     /**
