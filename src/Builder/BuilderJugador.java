@@ -37,6 +37,10 @@ public interface BuilderJugador{
     */
     public void setNickname(String nickname);
 
+    /**
+    *Metodo para definir relaciones entre Aldeanos.
+    *@param relacionado el aldeano a relacionar.
+    */
     public default void setRelacion(Jugador relacionado){}
 
 }
