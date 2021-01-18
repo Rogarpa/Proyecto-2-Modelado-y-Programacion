@@ -1,0 +1,51 @@
+@startuml
+'Relaciones de Magia.'
+
+MagiaCaballero..>Magia
+MagiaCazador..>Magia
+MagiaAngel..>Magia
+MagiaVidente..>Magia
+
+interface Magia{
++actua():void
+}
+
+class MagiaAngel{
+-aDormir:Jugador
+-aldeaHogar:Aldea
+-usuario:Jugador
++MagiaAngel(aDormir: Jugador,aldeaSobreLaCualActuar: Aldea,usuario:Jugador)
++actua():void
+}
+
+class MagiaCazador{
+-aDisparar:Jugador
+-aldeaHogar:Aldea
+-usuario:Jugador
++MagiaCazador(aDisparar: Jugador,aldeaSobreLaCualActuar: Aldea,usuario:Jugador)
++actua():void
+}
+
+class MagiaVidente{
+-aVer:Jugador
+-aldeaHogar:Aldea
+-usuario:Jugador
++MagiaVidente(aVer: Jugador,aldeaSobreLaCualActuar: Aldea,usuario:Jugador)
++actua():void
+}
+
+class MagiaCaballero{
+-sacrificar:Jugador
+-aldeaHogar:Aldea
+-usuario:Jugador
++MagiaCaballero(aSacrificar: Jugador,aldeaSobreLaCualActuar: Aldea,usuario:Jugador)
++actua():void
+}
+
+note as N1
+  <u>Explicación</u>
+  <b><color:royalBlue>Como esto fue hecho usando plantuml, no podiamos como tal manejar las posiciones manualmente.</color>
+  <b><color:royalBlue>Entonces si no haciamos dos partes no cabría el diagrama en una imagen y se perderíarn clases</color>
+end note
+
+@enduml
