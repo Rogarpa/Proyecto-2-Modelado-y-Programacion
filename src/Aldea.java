@@ -3,16 +3,13 @@ import java.util.*;
 public class Aldea implements EstadoAldea{
 
     protected ControladorJuego controladorAldea;
-
     protected EstadoAldea noche;
     protected EstadoAldea dia;
-
     protected EstadoAldea EstadoActual;
 
     LinkedList<Aldeano> todos;
     LinkedList<Jugador> muertosUltimaNoche;
     ArrayList<Lobo> lobos;
-    //
 
     /**
      *Constructor de la Clase.
@@ -53,7 +50,7 @@ public class Aldea implements EstadoAldea{
     }
 
     /**
-    *Metodo para que comience un ciclo y que el estado de la aldea cambie.
+    *Metodo para que comience el ciclo aldea noche
     */
     public void comenzarCicloDiaNoche(){
         EstadoActual = dia;

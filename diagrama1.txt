@@ -160,32 +160,36 @@ class Aldea{
 #dia:EstadoAldea
 #noche:EstadoAldea
 #EstadoActual:EstadoAldea
-lobos:ArrayLista<Lobo>
-todos:LinkedList<Aldeano>
-muertosUltimaNoche: LinkedList<Jugador>
 
-+Aldea(controladorAldea: ControladorJuego)
+#lobos:ArrayLista<Lobo>
+#todos:LinkedList<Aldeano>
+#muertosUltimaNoche: LinkedList<Jugador>
+
+
++Aldea()
 +Aldea(EstadoActual:EstadoAldea)
 
-+setEstadoActual(EstadoActual:AldeaEstado):void
++setControladorAldea(controladorAldea : ControladorJuego ): void
+
++comenzarCicloDiaNoche(): void
 +getJugadores(): void
++getControladorAldea(): ControladorJuego
++agregarAldeano(aAgregar:Aldeano):void
++agregarLobo(aAgregar:Lobo):void
++getMuertosUltimaNoche(): LinkedList<Jugador>
++setEstadoActual(EstadoActual:AldeaEstado):void
+
+    
 +convocarJuicio():void
 +recuentoNoche():void
 +convocarBanquete():void
 +anochece():void
 +amanece():void
+
 +matar(aMatar : Jugador,asesino : Jugador):void
-+getMuertosUltimaNoche():LinkedList<Jugador>
-+comenzarCicloDiaNoche():void
-    'ver si cumple con MVC'
 +linchar(int:id):void
-+iniciarMenuVotacionLobos():
-+iniciarMenuvotacionAldeanos():
-+informeDiario():
 +juicio(id: int):void
-+getControladorAldea():ControladorJuego
-+agregarAldeano(aAgregar:Aldeano):void
-+agregarLobo(aAgregar:Lobo):void
+
 +getAnocheciendo():EstadoAldea
 +getAmaneciendo():EstadoAldea
 +getPersonaje(int):Aldeano

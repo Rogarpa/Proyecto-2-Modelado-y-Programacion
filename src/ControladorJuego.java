@@ -68,15 +68,17 @@ public class ControladorJuego implements ControladorSujeto {
                 listaNicknames = null;
                 break;
         }
-
-        BuilderAldeano builderAldeano = new BuilderAldeano();
-        BuilderLobo builderLobo = new BuilderLobo();
+        BuilderAldeano[] buildersAldeanos = new BuilderAldeano[8];
+        for(int i=0; i<8; i++) buildersAldeanos[i] = new BuilderAldeano();
+        BuilderLobo[] buildersLobos = new BuilderLobo[8];
+        for(int i=0; i<8; i++) buildersLobos[i] = new BuilderLobo();
+            
         BuilderAngel builderAngel = new BuilderAngel();
         BuilderCaballero builderCaballero = new BuilderCaballero();
         BuilderVidente builderVidente = new BuilderVidente();
         BuilderCazador builderCazador = new BuilderCazador();
 
-        DirectorBuilderJugador director = new DirectorBuilderJugador(builderAldeano);
+        DirectorBuilderJugador director = new DirectorBuilderJugador(buildersAldeanos[0]);
 
         int indiceArregloNicknames = 0;
 
@@ -100,19 +102,20 @@ public class ControladorJuego implements ControladorSujeto {
                 break;
         }
 
-        director.cambiarBuilder(builderAldeano);
         for(int i=0; i<numeroAldeanos; i++) {
+            director.cambiarBuilder(buildersAldeanos[i]);
             director.creaAldeanoComun(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+            aldeaAControlar.agregarAldeano(buildersAldeanos[i].getPersonaje());
             indiceArregloNicknames++;
-            aldeaAControlar.agregarAldeano(builderAldeano.getPersonaje());
+
 
         }
 
-        director.cambiarBuilder(builderLobo);
         for(int i=0; i<numeroLobos; i++){
+            director.cambiarBuilder(buildersLobos[i]);
             director.creaLobo(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+            aldeaAControlar.agregarLobo(buildersLobos[i].getPersonaje());
             indiceArregloNicknames++;
-            aldeaAControlar.agregarLobo(builderLobo.getPersonaje());
         }
 
         director.cambiarBuilder(builderAngel);

@@ -74,6 +74,6 @@ public abstract class Aldeano implements Jugador,Cloneable{
 
     @Override
     public String getDescripcion(){
-        return "El ALdeano con ropa:"+getRopa()+" un arma de tipo:"+getArma()+" y nickname:"+getNickname()+"ha muerto";
+        return getNickname()+ "con  id"+ id+"con ropa:"+getRopa()+" un arma de tipo:"+getArma() ;
     }
 }

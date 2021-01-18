@@ -42,4 +42,5 @@ public class BuilderLobo implements BuilderJugador{
     public Lobo getPersonaje(){
         return this.personajeAConstruir;
     }
+    
 }
