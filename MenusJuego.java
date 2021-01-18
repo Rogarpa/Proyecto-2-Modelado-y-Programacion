@@ -2,6 +2,11 @@
 import java.util.*;
 
 public class MenusJuego implements ObservadorVista{
+    public ControladorJuego suscrito;
+
+    public MenusJuego(ControladorJuego aSuscribir){
+        aSuscribir.suscribir(this);
+    }
 
     /**
     *Metodo para darle la bienvenida al usuario.
