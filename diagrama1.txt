@@ -6,7 +6,7 @@ class main{
 }
 
 
-Aldeano..>Jugador
+Aldeano..|>Jugador
 
     'Relaciones que van hacia aldeano'
 
