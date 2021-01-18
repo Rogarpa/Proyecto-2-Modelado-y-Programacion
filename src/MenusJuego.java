@@ -43,8 +43,7 @@ public class MenusJuego implements ObservadorVista{
         "A continuación las opciones para correr el tutorial. \n"+
         "1.-Juego de 8 \n"+
         "2.-Juego de 12 \n"+
-        "3.-Juego de 16 \n"+
-        "4.-SALIR";
+        "3.-Juego de 16 \n";
         error="Digite una opcion valida.";
 
         return getInputInt(indicacion,error,1,4);
@@ -73,7 +72,7 @@ public class MenusJuego implements ObservadorVista{
     */
     public void instruccionesTipoJuego(int numeroTipoJuego){
         //necesita más desarrollo de introduccion
-        System.out.println("Bienvenida a la aldea");
+        System.out.println("Bienvenid@ a la aldea");
         String s = "Usted ha escogido el tipo de juego" + numeroTipoJuego + " con capacidad para %s jugadores";
         switch (numeroTipoJuego) {
             case 1:
@@ -110,7 +109,7 @@ public class MenusJuego implements ObservadorVista{
         LinkedList<int[]> listaNominaciones = new LinkedList<int[]>();
 
         do{
-            if(getInputInt("¿Desea terminar con las nominaciones? \n Digite 0 para salir" , "Opcion Invalida") == 0)
+            if(getInputInt("¿Desea terminar con las nominaciones? \n Digite 0 para salir \n 1 para continuar con la votación." , "Opcion Invalida") == 0)
                 return listaNominaciones;
 
 
