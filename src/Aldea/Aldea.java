@@ -156,6 +156,8 @@ public class Aldea implements EstadoAldea{
             }
         }
 
+        todos.remove(encontrado);
+        lobos.remove(encontrado);
         encontrado.morir();
         this.controladorAldea.publicar("La aldea voto matar a " + encontrado.getDescripcion());
     }
@@ -172,8 +174,10 @@ public class Aldea implements EstadoAldea{
             encontrado = elem;
            }
         }
-
+        todos.remove(encontrado);
+        lobos.remove(encontrado);
         encontrado.morir();
+        
         this.controladorAldea.publicar("Los lobos decidieron matar a " + encontrado.getDescripcion());
         
     }
