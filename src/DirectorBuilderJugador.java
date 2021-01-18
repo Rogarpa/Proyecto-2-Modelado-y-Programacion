@@ -26,11 +26,9 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaLobo(int id, String nickname, Aldea aldeaHogar){
-        Lobo personajeAConstruir = new Lobo();
-
-        personajeAConstruir.setId(id);
-        personajeAConstruir.setNickname(nickname);
-        personajeAConstruir.setAldea(aldeaHogar);
+        builderActual.setId(id);
+        builderActual.setNickname(nickname);
+        builderActual.setAldea(aldeaHogar);
 
         builderActual.setArma("Garras y dientes afilados.");
         builderActual.setRopa("Pelaje negro intenso.");
@@ -45,10 +43,9 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaAldeanoComun(int id, String nickname, Aldea aldeaHogar){
-
-        personajeAConstruir.setId(id);
-        personajeAConstruir.setNickname(nickname);
-        personajeAConstruir.setAldea(aldeaHogar);
+        builderActual.setId(id);
+        builderActual.setNickname(nickname);
+        builderActual.setAldea(aldeaHogar);
 
         builderActual.setArma("Lanza de madera con punta de hierro.");
         builderActual.setRopa("Camisa, chaleco y pantalon de algodon.");
@@ -63,11 +60,10 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaAngel(int id, String nickname, Aldea aldeaHogar,Aldeano victima){
-        Angel personajeAConstruir = Angel.getinstance(victima);
-
-        personajeAConstruir.setId(id);
-        personajeAConstruir.setNickname(nickname);
-        personajeAConstruir.setAldea(aldeaHogar);
+        builderActual.setRelacion(victima);
+        builderActual.setId(id);
+        builderActual.setNickname(nickname);
+        builderActual.setAldea(aldeaHogar);
 
         builderActual.setArma("Espada bendita con mango de oro.");
         builderActual.setRopa("Toga blanca, pero entre aldeanos usa lo mismo que el aldeano común.");
@@ -82,11 +78,10 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaVidente(int id, String nickname, Aldea aldeaHogar,Aldeano victima){
-        Vidente personajeAConstruir = Vidente.getinstance(victima);
-
-        personajeAConstruir.setId(id);
-        personajeAConstruir.setNickname(nickname);
-        personajeAConstruir.setAldea(aldeaHogar);
+        builderActual.setRelacion(victima);
+        builderActual.setId(id);
+        builderActual.setNickname(nickname);
+        builderActual.setAldea(aldeaHogar);
 
         builderActual.setArma("Ninguna, solo una bola de cristal.");
         builderActual.setRopa("Holzkary moderno, tradicional gitano.");
@@ -101,11 +96,10 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaCazador(int id, String nickname,Aldea aldeaHogar,Aldeano victima){
-        Cazador personajeAConstruir =Cazador.getinstance(victima);
-
-        personajeAConstruir.setId(id);
-        personajeAConstruir.setNickname(nickname);
-        personajeAConstruir.setAldea(aldeaHogar);
+        builderActual.setRelacion(victima);
+        builderActual.setId(id);
+        builderActual.setNickname(nickname);
+        builderActual.setAldea(aldeaHogar);
 
         builderActual.setArma("Rifle de candado.");
         builderActual.setRopa("Chamarra de lana y pantalon de lana también.");
@@ -120,11 +114,10 @@ class DirectorBuilderJugador{
     *@param aldeaHogar la aldea a la que pertenece.
     */
     public void creaCaballero(int id, String nickname,Aldea aldeaHogar,Aldeano victima ){
-        Caballero personajeAConstruir = Caballero.getinstance(victima);
-
-        personajeAConstruir.setId(id);
-        personajeAConstruir.setNickname(nickname);
-        personajeAConstruir.setAldea(aldeaHogar);
+        builderActual.setRelacion(victima);
+        builderActual.setId(id);
+        builderActual.setNickname(nickname);
+        builderActual.setAldea(aldeaHogar);
 
         builderActual.setArma("Espada oxidada con Rosa de los vientos.");
         builderActual.setRopa("Armadura de hierro templado.");
