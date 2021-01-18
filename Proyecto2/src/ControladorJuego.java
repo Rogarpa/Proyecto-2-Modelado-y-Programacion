@@ -53,7 +53,7 @@ public class ControladorJuego implements ControladorSujeto {
     */
     public void rellenarAldea(){
         int tipoJuego = menusAControlar.seleccionarTipoJuego();
-        String[] listaNicknames;
+        String[] listaNicknames = null;
         switch (tipoJuego) {
             case 1:
                 listaNicknames = obtenerListaNicknamesJuego1();
@@ -65,9 +65,13 @@ public class ControladorJuego implements ControladorSujeto {
                 listaNicknames = obtenerListaNicknamesJuego3();
                 break;
             default:
-                listaNicknames = null;
                 break;
         }
+
+        
+        System.out.println("la lista obtenida fue");
+        for(String s: listaNicknames) System.out.println(s);
+
         BuilderAldeano[] buildersAldeanos = new BuilderAldeano[8];
         for(int i=0; i<8; i++) buildersAldeanos[i] = new BuilderAldeano();
         BuilderLobo[] buildersLobos = new BuilderLobo[8];
@@ -147,8 +151,11 @@ public class ControladorJuego implements ControladorSujeto {
     public String[] obtenerListaNicknamesJuego1(){
         menusAControlar.instruccionesTipoJuego(1);
         String[] listaNicknames = new String[10];
-        for(String nuevoNickname: listaNicknames)
-            nuevoNickname = menusAControlar.getNicknameJugadorNuevo();
+        int contador = 0;
+        while(contador<10){
+            listaNicknames[contador] = menusAControlar.getNicknameJugadorNuevo();
+            contador++;
+        }
         return listaNicknames;
     }
 
@@ -159,8 +166,11 @@ public class ControladorJuego implements ControladorSujeto {
     public String[] obtenerListaNicknamesJuego2(){
         menusAControlar.instruccionesTipoJuego(1);
         String[] listaNicknames = new String[15];
-        for(String nuevoNickname: listaNicknames)
-            nuevoNickname = menusAControlar.getNicknameJugadorNuevo();
+        int contador = 0;
+        while(contador++<15){
+            listaNicknames[contador] = menusAControlar.getNicknameJugadorNuevo();
+            contador++;
+        }
         return listaNicknames;
     }
 
@@ -171,8 +181,11 @@ public class ControladorJuego implements ControladorSujeto {
     public String[] obtenerListaNicknamesJuego3(){
         menusAControlar.instruccionesTipoJuego(1);
         String[] listaNicknames = new String[20];
-        for(String nuevoNickname: listaNicknames)
-            nuevoNickname = menusAControlar.getNicknameJugadorNuevo();
+        int contador = 0;
+        while(contador++<10){
+            listaNicknames[contador] = menusAControlar.getNicknameJugadorNuevo();
+            contador++;
+        }
         return listaNicknames;
     }
 
