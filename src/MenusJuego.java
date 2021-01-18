@@ -23,7 +23,7 @@ public class MenusJuego implements ObservadorVista{
     */
     public int menuInicial(){
         String opcion,error;
-        opcion=
+        opcion="//////////////////////////////////\n"+
         "Digita la opcion que quieras.\n"+
         "1.-Turorial \n"+
         "2.-Seleccionar Partida \n"+
@@ -39,7 +39,7 @@ public class MenusJuego implements ObservadorVista{
     */
     public int tutorial(){
         String error,indicacion;
-        indicacion=
+        indicacion="//////////////////////////////////////////\n"+
         "A continuación las opciones para correr el tutorial. \n"+
         "1.-Juego de 8 \n"+
         "2.-Juego de 12 \n"+
@@ -57,7 +57,8 @@ public class MenusJuego implements ObservadorVista{
     public int seleccionarTipoJuego(){
         Scanner sc = new Scanner(System.in);
         String indicacion, error;
-        indicacion="Digite el número de la opcion de su preferencia y presione enter.\n"+
+        indicacion="//////////////////////////////////////////////////// \n"+
+        "Digite el número de la opcion de su preferencia y presione enter.\n"+
         "1.-juego1/10   \n"+
         "2.-juego2/15   \n"+
         "3.-juego3/20   \n";
@@ -72,6 +73,7 @@ public class MenusJuego implements ObservadorVista{
     */
     public void instruccionesTipoJuego(int numeroTipoJuego){
         //necesita más desarrollo de introduccion
+        System.out.println("/////////////////////////////");
         System.out.println("Bienvenid@ a la aldea");
         String s = "Usted ha escogido el tipo de juego" + numeroTipoJuego + " con capacidad para %s jugadores";
         switch (numeroTipoJuego) {
@@ -95,6 +97,7 @@ public class MenusJuego implements ObservadorVista{
     *@return el nombre del jugador.
     */
     public String getNicknameJugadorNuevo(){
+        System.out.println("////////////////////////////////////////////\n");
         return getInputString("Introduce el Nickname que usarás dentro del juego.", "Nickname invalido");
     }
 
