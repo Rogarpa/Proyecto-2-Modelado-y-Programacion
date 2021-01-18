@@ -32,6 +32,7 @@ public class EstadoNoche implements EstadoAldea{
         narrador.getJugadores();
 
         LinkedList<int[]> idsNominaciones = narrador.getControladorAldea().obtenerCorrelacionIdsNominaciones();
+        if(idsNominaciones.size() == 0) return;
         int idMaximo = 0;
         int nominacionesIdMaximo = 0;
         for(int[] i : idsNominaciones){
