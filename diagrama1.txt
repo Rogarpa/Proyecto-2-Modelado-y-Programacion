@@ -118,7 +118,7 @@ class MagiaAngel{
 -aDormir:Jugador
 -aldeaHogar:Aldea
 -usuario:Jugador
-+MagiaAngel(aDormir: Jugador,aldeaSobreLaCualActuar: Aldea,Aldeano: Jugador: usuario)
++MagiaAngel(aDormir: Jugador,aldeaSobreLaCualActuar: Aldea,usuario:Jugador)
 +actua():void
 }
 
@@ -126,7 +126,7 @@ class MagiaCazador{
 -aDisparar:Jugador
 -aldeaHogar:Aldea
 -usuario:Jugador
-+MagiaCazador(aDisparar: Jugador,aldeaSobreLaCualActuar: Aldea,Aldeano: Jugador: usuario)
++MagiaCazador(aDisparar: Jugador,aldeaSobreLaCualActuar: Aldea,usuario:Jugador)
 +actua():void
 }
 
@@ -134,7 +134,7 @@ class MagiaVidente{
 -aVer:Jugador
 -aldeaHogar:Aldea
 -usuario:Jugador
-+MagiaVidente(aVer: Jugador,aldeaSobreLaCualActuar: Aldea,Aldeano: Jugador: usuario)
++MagiaVidente(aVer: Jugador,aldeaSobreLaCualActuar: Aldea,usuario:Jugador)
 +actua():void
 }
 
@@ -142,7 +142,7 @@ class MagiaCaballero{
 -sacrificar:Jugador
 -aldeaHogar:Aldea
 -usuario:Jugador
-+MagiaCaballero(aSacrificar: Jugador,aldeaSobreLaCualActuar: Aldea,Aldeano: Jugador: usuario)
++MagiaCaballero(aSacrificar: Jugador,aldeaSobreLaCualActuar: Aldea,usuario:Jugador)
 +actua():void
 }
 
@@ -162,10 +162,7 @@ class Aldea{
 #EstadoActual:EstadoAldea
 lobos:ArrayLista<Lobo>
 todos:LinkedList<Aldeano>
-
-#todos:LinkedList<Aldeano>
-#lobos: LinkedListj<Lobos>
-#muertosUltimaNoche: LinkedList<Jugador>
+muertosUltimaNoche: LinkedList<Jugador>
 
 +Aldea(controladorAldea: ControladorJuego)
 +Aldea(EstadoActual:EstadoAldea)
@@ -277,7 +274,7 @@ class BuilderLobo{
 + setArma(): void
 + setRopa(): void
 + setAldea(): void
-+ getPersonaje:Lobo
++ getPersonaje():Lobo
 }
 
 class BuilderCazador{
