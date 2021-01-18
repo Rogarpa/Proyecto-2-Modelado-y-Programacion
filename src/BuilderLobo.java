@@ -2,7 +2,9 @@
 public class BuilderLobo implements BuilderJugador{
     public Lobo personajeAConstruir;
 
-
+    public BuilderLobo(){
+        personajeAConstruir = new Lobo();
+    }
 
     @Override
     public void setCabello(String cabello){

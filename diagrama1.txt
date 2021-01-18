@@ -355,7 +355,7 @@ class ControladorJuego{
     #aldeaAControlar:Aldea
     #observadores:LinkedList<ObservadorVista>
 
-    +ControladorJuego(Aldea,MenusJuego)
+    +ControladorJuego(aldeaAControlar: Aldea)
     +bienvenida():void
     +iniciarJuego():void
     +rellenarAldea():void

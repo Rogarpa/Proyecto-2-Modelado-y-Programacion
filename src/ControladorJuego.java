@@ -17,7 +17,6 @@ public class ControladorJuego implements ControladorSujeto {
         this.aldeaAControlar = aldeaAControlar;
         this.menusAControlar = menusAControlar;
         menusAControlar.bienvenida();
-        iniciarJuego();
     }
 
     /**
@@ -103,31 +102,36 @@ public class ControladorJuego implements ControladorSujeto {
 
         director.cambiarBuilder(builderAldeano);
         for(int i=0; i<numeroAldeanos; i++) {
-            director.creaAldeanoComun(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+            director.creaAldeanoComun(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+            indiceArregloNicknames++;
             aldeaAControlar.agregarAldeano(builderAldeano.getPersonaje());
 
         }
 
         director.cambiarBuilder(builderLobo);
         for(int i=0; i<numeroLobos; i++){
-            director.creaLobo(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+            director.creaLobo(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar);
+            indiceArregloNicknames++;
             aldeaAControlar.agregarLobo(builderLobo.getPersonaje());
         }
 
         director.cambiarBuilder(builderAngel);
-        director.creaAngel(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(1));
+        director.creaAngel(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(1));
         aldeaAControlar.agregarAldeano(builderAngel.getPersonaje());
 
+        indiceArregloNicknames++;
         director.cambiarBuilder(builderCaballero);
-        director.creaCaballero(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(2));
+        director.creaCaballero(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(2));
         aldeaAControlar.agregarAldeano(builderCaballero.getPersonaje());
 
+        indiceArregloNicknames++;
         director.cambiarBuilder(builderCazador);
-        director.creaCazador(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(3));
+        director.creaCazador(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(3));
         aldeaAControlar.agregarAldeano(builderCazador.getPersonaje());
 
+        indiceArregloNicknames++;
         director.cambiarBuilder(builderVidente);
-        director.creaVidente(indiceArregloNicknames++, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(4));
+        director.creaVidente(indiceArregloNicknames, listaNicknames[indiceArregloNicknames], aldeaAControlar,aldeaAControlar.getPersonaje(4));
         aldeaAControlar.agregarAldeano(builderVidente.getPersonaje());
 
         aldeaAControlar.comenzarCicloDiaNoche();
@@ -151,7 +155,7 @@ public class ControladorJuego implements ControladorSujeto {
     */
     public String[] obtenerListaNicknamesJuego2(){
         menusAControlar.instruccionesTipoJuego(1);
-        String[] listaNicknames = new String[10];
+        String[] listaNicknames = new String[15];
         for(String nuevoNickname: listaNicknames)
             nuevoNickname = menusAControlar.getNicknameJugadorNuevo();
         return listaNicknames;
@@ -163,7 +167,7 @@ public class ControladorJuego implements ControladorSujeto {
     */
     public String[] obtenerListaNicknamesJuego3(){
         menusAControlar.instruccionesTipoJuego(1);
-        String[] listaNicknames = new String[10];
+        String[] listaNicknames = new String[20];
         for(String nuevoNickname: listaNicknames)
             nuevoNickname = menusAControlar.getNicknameJugadorNuevo();
         return listaNicknames;

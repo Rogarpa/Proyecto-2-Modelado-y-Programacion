@@ -1,8 +1,11 @@
 
 public class BuilderAldeano implements BuilderJugador{
-    public Aldeano personajeAConstruir;
+    public AldeanoComun personajeAConstruir;
 
 
+    public BuilderAldeano(){
+        personajeAConstruir = new AldeanoComun();
+    }
 
     @Override
     public void setCabello(String cabello){

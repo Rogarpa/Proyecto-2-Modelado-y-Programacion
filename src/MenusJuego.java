@@ -107,7 +107,7 @@ public class MenusJuego implements ObservadorVista{
         boolean flag = true;
         boolean ultimaNominacion = false;
         int[] nominacionActual = new int[2];
-        LinkedList<int[]> listaNominaciones = null;
+        LinkedList<int[]> listaNominaciones = new LinkedList<int[]>();
 
         do{
             if(getInputInt("¿Desea terminar con las nominaciones? \n Digite 0 para salir" , "Opcion Invalida") == 0)
