@@ -37,7 +37,6 @@ public class ControladorJuego implements ControladorSujeto {
             break;
             case 2:
             menusAControlar.bienvenida();
-            menusAControlar.seleccionarTipoJuego();
             break;
             case 3:
             return;
